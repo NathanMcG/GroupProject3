@@ -8,6 +8,7 @@
 	<body>
 
 	<main>
+		<img src="Files/Logo.png">
 		<article>
 		<section>
 		<div>
