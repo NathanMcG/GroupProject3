@@ -4,7 +4,7 @@
 
 	$pageContent = 'hello';
 
-	$info = pdo()('SELECT * FROM products');
+	$info = pdo()->query('SELECT * FROM products');
 
 	$info = $info->fetch();
 
