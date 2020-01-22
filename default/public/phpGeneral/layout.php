@@ -3,19 +3,19 @@
 	<head>
 		<title>Last Orders</title>
 		 <meta charset="UTF-8" />
-		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="../phpGeneral/styles.css" />
 	</head>
 
 	<body>
 		<header>
             <div class="logo">
-                <img src="images/lastOrderLogo.jpg" alt="last orders" width="105px" height="85px">
+                <a href="../phpGeneral/index.php"><img src="../images/lastOrderLogo.jpg" alt="last orders" width="105px" height="85px"></a>
             </div>
             
-            <form action="#">
+            <form action="../phpListings/searchListings.php"  method="GET">
                 <div class="searchbar">
-                    <input type="text" name="search" placeholder="Search..." />
-                    <input type="image" name="submit" src="images/searchbar.png" />
+                    <input type="text" name="SRCH" placeholder="Search..." />
+                    <input type="image" name="submit" src="../images/searchbar.png" />
                 </div>
             </form>
             <div class="top-nav">
