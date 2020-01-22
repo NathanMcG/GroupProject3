@@ -10,6 +10,6 @@
 
 	$pageContent. $info;
 
-	require 'layout.php';
+	require 'phpGeneral/layout.php';
 
 ?>
