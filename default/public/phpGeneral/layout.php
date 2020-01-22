@@ -12,9 +12,9 @@
                 <img src="images/lastOrderLogo.jpg" alt="last orders" width="105px" height="85px">
             </div>
             
-            <form action="#">
+            <form action="../phpListings/searchListing"  method="GET">
                 <div class="searchbar">
-                    <input type="text" name="search" placeholder="Search..." />
+                    <input type="text" name="SRCH" placeholder="Search..." />
                     <input type="image" name="submit" src="images/searchbar.png" />
                 </div>
             </form>
