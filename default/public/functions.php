@@ -16,14 +16,17 @@
         return $pdo;
     }
 
-    // login check - might need improving
+    // login check function -  needs improving
     function logincheck(){
         session_start();
         // Checking if user is signed in when sessions starts
         if (isset($_SESSION['loggedin'])) {
+            echo 'You are now signed in.';
         }
         else {
-        }
+            echo 'Sorry, you must be logged in to view this page.';
+            header('location: /index.php');
+           }
     }
 
     // signout function
@@ -33,12 +36,24 @@
 
     }
 
+    // Submit Post function
+    function SubmitPost(){
+        if(isset($_POST['submit'])){
+            unset($_POST['submit']);
+            $stmt->execute($_POST);
+          }
+    }
 
 
 
 
 
     //Formatting
+    
+    // Include layout function
+    function IncludeLayout(){
+        include '../layout.php';
+    }
 
 
 
