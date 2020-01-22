@@ -2,6 +2,7 @@
 
     //Database Commands
 
+    // connecting to the database
     function pdo(){
         $server = 'v.je';
         $username = 'student';
@@ -15,6 +16,28 @@
         return $pdo;
     }
 
+    // login check - might need improving
+    function logincheck(){
+        session_start();
+        // Checking if user is signed in when sessions starts
+        if (isset($_SESSION['loggedin'])) {
+        }
+        else {
+        }
+    }
+
+    // signout function
+    function logout(){
+        unset($_SESSION['loggedin']);
+        echo 'You are now signed out';
+
+    }
+
+
+
+
+
+
     //Formatting
 
 
@@ -23,4 +46,6 @@
 
 
 
-?>
+
+
+
