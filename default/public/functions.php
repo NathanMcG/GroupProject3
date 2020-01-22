@@ -35,7 +35,7 @@
     }
 
     // Submit Post function
-    function SubmitPost(){
+    function SubmitPost($stmt){
         if(isset($_POST['submit'])){
             unset($_POST['submit']);
             $stmt->execute($_POST);
@@ -53,7 +53,7 @@
         include '../layout.php';
     }
 
-
+ 
 
     //searches
 
