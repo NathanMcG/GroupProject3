@@ -175,7 +175,7 @@ CREATE TABLE `users` (
   `user_password` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
   `admin` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -184,7 +184,6 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Aaron','Frank','aaron.frank55@yahoo.co.uk','18 Tower close','Northampton','United Kingdom','NN7 5RR','07656589224','M','1978-09-07','',NULL),(2,'Dave','Chizokk','d.chizokk11@gmail.com','88 Oliver Road','Perth','United Kingdom','PH36 9GW','07008897088','M','1998-10-11','',NULL),(3,'Kian','Swift','kianswift@jourrapide.com','37 Front Street','Cardiff','United Kingdom','CF10 5TH','07008897088','M','1941-11-29','',NULL),(4,'Lola','Stevenson','lolaastevenson@googlemail.com','22 Apple Court','Nottingham','United Kingdom','NT45 9II','07750036429','F','1980-09-08','',NULL),(5,'Ellis','Wong','elliswong@aol.com','37 Old Chapel Road','GEDNEY DROVE END','United Kingdom','PE12 5LH','07750036429','M','1980-07-05','',NULL),(6,'Sophie','Bentley','sophiebentley@teleworm.us','32 Hendford Hill','MOUNTON','United Kingdom','NP6 4HS','07940138913','F','1990-11-15','',NULL),(7,'Evie','Whittaker','eviewhittaker@btinternet.com','46 York Road','OVINGDEAN','United Kingdowm','BN2 8LQ','07078587640','F','1998-12-08','',NULL),(8,'Anna','Chamberlain','annachamberlain@outlook.com','74 Shore Street','STOKE','United Kingdowm','SP11 8LS','07949561283','F','1992-03-20','',NULL),(9,'Luca','Tomlinson','lucatomlinson@dayrep.com','48 George Street','BROXBURN','United Kingdowm','EH52 8QX','07975791995','M','1988-12-20','',NULL),(10,'Jay','Barber','jaybarber@rhyta.com','53 Stroud Road','OLD DEER','United Kingdowm','AB42 6LD','07083129162','M','1998-06-03','',NULL),(11,'Brandon','Hooper','brandonhooper@dayrep.com','10 Baldock Street','NEWTON BEWLEY','United Kingdowm','TS22 4PJ','07011241157','M','1989-03-15','',NULL),(12,'Natasha','Flynn','natashaflynn@hotmail.com','12 North Road','NETHER WORTON','United Kingdowm','OX7 3ZZ','07945169987','F','1985-02-20','',NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1000,4 +999,4 @@ CREATE TABLE IF NOT EXISTS `slow_log` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-01-22 12:30:04
+-- Dump completed on 2020-01-22 14:43:01
