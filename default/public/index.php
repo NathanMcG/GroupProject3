@@ -4,10 +4,13 @@
 	$title = 'HOME';
 	$content = '';
 	
-	$images = glob('Files/Adverts' . "/*.jpg");
-	$image = $images[0];
-	require '../templates/advert.html.php';
-	$content .= ob_get_clean();
+	$adverts = scandir('Files/Adverts');
+	var_dump($adverts);
+	for($i=2;$i<count($adverts);$i++){
+		$image = $adverts[$i];
+		require '../templates/advert.html.php';
+		$content .= ob_get_clean();
+	}
 
 	require '../templates/layout.html.php';
 

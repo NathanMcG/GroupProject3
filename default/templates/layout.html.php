@@ -37,7 +37,7 @@
         </nav>
         <main>
 
-        <?$content?>
+        <?=$content?>
 
         </main>
         <footer> &copy; Last Orders </footer>
