@@ -12,7 +12,7 @@
                 <a href="../index.php"><img src="../images/lastOrderLogo.jpg" alt="last orders" width="105px" height="85px"></a>
             </div>
             
-            <form action="../phpListings/searchListings.php"  method="GET">
+            <form action="searchListings.php"  method="GET">
                 <div class="searchbar">
                     <input type="text" name="SRCH" placeholder="Search..." />
                     <input type="image" name="submit" src="../images/searchbar.png" />
@@ -20,7 +20,7 @@
             </form>
             <div class="top-nav">
             <ul>
-                <li><a href="#">LOG IN</a></li>
+                <li><a href="login.php">LOG IN</a></li>
                 <span class="pipe">|</span>
                 <li><a href="#">REGISTER</a></li>
             </ul>
