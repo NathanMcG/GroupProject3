@@ -1,15 +1,16 @@
 <?php
 
-	require 'functions.php';
+	ob_start();
+	$title = 'HOME';
+	$content = '';
+	
+	//$adverts = scandir('Files/Adverts');
+	//for($i=2;$i<count($adverts);$i++){
+	//	$image = $adverts[$i];
+	//	require '../templates/advert.html.php';
+	//	$content .= ob_get_clean();
+	//}
 
-	$pageContent = 'hello';
-
-	$info = pdo()->query('SELECT * FROM users');
-
-	$info = $info->fetch();
-
-	$pageContent. $info[0];
-
-	require '../templates/layout.php';
+	require '../templates/layout.html.php';
 
 ?>
