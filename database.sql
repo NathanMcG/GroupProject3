@@ -141,7 +141,7 @@ CREATE TABLE `reviews` (
   `user_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   PRIMARY KEY (`review_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -150,6 +150,7 @@ CREATE TABLE `reviews` (
 
 LOCK TABLES `reviews` WRITE;
 /*!40000 ALTER TABLE `reviews` DISABLE KEYS */;
+INSERT INTO `reviews` VALUES (1,'Great product!','Wine was a great choice!',0,0),(2,'Quick delivery!','5 stars!',0,0),(3,'Great prices!','Can\'t wait for the next time to purchase!',0,0),(4,'Customer service is very professional and undertan','I had a few problems but it was resolved within a few days!',0,0),(5,'Awesome!','I\'m a student and the savings are amazing!',0,0),(6,'Average.','Good product however delivery took longer than expected.',0,0);
 /*!40000 ALTER TABLE `reviews` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1000,4 +1001,4 @@ CREATE TABLE IF NOT EXISTS `slow_log` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-01-22 12:48:50
+-- Dump completed on 2020-01-29 11:30:06
