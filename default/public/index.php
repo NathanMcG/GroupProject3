@@ -1,15 +1,14 @@
 <?php
 
-	require 'functions.php';
+	ob_start();
+	$title = 'HOME';
+	$content = '';
+	
+	$images = glob('Files/Adverts' . "/*.jpg");
+	$image = $images[0];
+	require '../templates/advert.html.php';
+	$content .= ob_get_clean();
 
-	$pageContent = 'hello';
-
-	$info = pdo()->query('SELECT * FROM users');
-
-	$info = $info->fetch();
-
-	$pageContent. $info[0];
-
-	require '../templates/layout.php';
+	require '../templates/layout.html.php';
 
 ?>

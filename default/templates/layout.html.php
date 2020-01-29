@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-		<title>Last Orders</title>
+		<title>Last Orders - <?=$title?></title>
 		 <meta charset="UTF-8" />
-		<link rel="stylesheet" href="../public/styles.css" />
+		<link rel="stylesheet" href="styles.css" />
 	</head>
 
 	<body>
@@ -37,9 +37,7 @@
         </nav>
         <main>
 
-        <?php
-            echo $pageContent;
-        ?>
+        <?$content?>
 
         </main>
         <footer> &copy; Last Orders </footer>
