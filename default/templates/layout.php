@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
-	<head>
+    <head>
 		<title>Last Orders</title>
 		 <meta charset="UTF-8" />
-		<link rel="stylesheet" href="../phpGeneral/styles.css" />
+		<link rel="stylesheet" href="../public/styles.css" />
 	</head>
 
 	<body>
 		<header>
             <div class="logo">
-                <a href="../phpGeneral/index.php"><img src="../images/lastOrderLogo.jpg" alt="last orders" width="105px" height="85px"></a>
+                <a href="../index.php"><img src="../images/lastOrderLogo.jpg" alt="last orders" width="105px" height="85px"></a>
             </div>
             
             <form action="../phpListings/searchListings.php"  method="GET">
