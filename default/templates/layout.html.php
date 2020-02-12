@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html>
     <head>
-		<title>Last Orders - <?=$title?></title>
-		 <meta charset="UTF-8" />
-		<link rel="stylesheet" href="styles.css" />
-	</head>
-
-	<body>
-		<header>
-            <div class="logo">
-                <a href="../index.php"><img src="../images/lastOrderLogo.jpg" alt="last orders" width="105px" height="85px"></a>
-            </div>
-            
-            <form action="searchListings.php"  method="GET">
-                <div class="searchbar">
-                    <input type="text" name="SRCH" placeholder="Search..." />
-                    <input type="image" name="submit" src="../images/searchbar.png" />
-                </div>
+        <meta charset="utf-8">
+        <title>Home</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width-device-width, initial-scale-1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    </head>
+    <body>
+        <header id="header">
+            <img src="images/lastOrderLogo.jpg" alt="last orders" class="logo" width="105px" height="85px">
+            <form action="#" method="#" class="searching">
+                <input type="text" name="search" placeholder="Search..." class="searchText" />
+                <input type="image" name="submit" src="images/searchbar.png" class="searchBtn" width="50px" height="50px"/>
             </form>
-            <div class="top-nav">
-            <ul>
-                <li><a href="login.php">LOG IN</a></li>
+            <ul class="topNav">
+                <a href="#">LOG IN</a>
                 <span class="pipe">|</span>
-                <li><a href="#">REGISTER</a></li>
+                <a href="#">REGISTER</a>
             </ul>
-        </div>
+            <div class="space"></div>
         </header>
-        <nav>
-			<ul>
-				<li><a href="#">Alcohol</a></li>
-				<li><a href="#">Mixer</a></li>
-				<li><a href="#">Gift Ideas</a></li>
-				<li><a href="#">Favourites</a></li>
-				<li><a href="#">Offers</a></li>
-			</ul>
+        <nav id="nav">
+            <ul>
+                <li class="main-nav nav-drop"><a href="#" >Alcohol</a>
+                    <ul class="sub-nav">
+                        <ul>
+                            <h5>Wine</h5>
+                            <li><a href="#">- Red</a></li>
+                            <li><a href="#">- White</a></li>
+                            <li><a href="#">- Ros&eacute;</a></li>
+                            <h5>Beer</h5>
+                            <li><a href="#">- Ale</a></li>
+                            <li><a href="#">Larger</a></li>
+                            <li><a href="#">Cider</a></li> 
+                        </ul>
+                        <ul>
+                            <li><a href="#">Liquors</a></li>                            
+                            <h5>Sprits</h5>
+                            <li><a href="#">- Vodka</a></li>
+                            <li><a href="#">- Gin</a></li>
+                            <li><a href="#">- Rum</a></li>
+                            <li><a href="#">- Brandy</a></li>
+                            <li><a href="#">Champagne</a></li>
+                        </ul>
+                    </ul>
+                </li>
+                <li class="main-nav"><a href="#">Mixers</a></li>
+                <li class="main-nav"><a href="#">Gift Ideas</a></li>
+                <li class="main-nav"><a href="#">Favourites</a></li>
+                <li class="main-nav"><a href="#">Offers</a></li>
+            </ul>
         </nav>
-        <main>
-
-        <?=$content?>
-
-        </main>
-        <footer> &copy; Last Orders </footer>
+        <main><?=$content?></main>
+        <footter id="footer">&#169; Last Orders</footter>
     </body>
 </html>
