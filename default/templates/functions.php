@@ -4,10 +4,10 @@
 
     // connecting to the database
     function pdo(){
-        $server = 'v.je';
-        $username = 'student';
-        $password = 'student';
-        $schema = 'LastOrders';
+        $server = '194.81.104.22';
+        $username = 'group3_1920';
+        $password = 'gp';
+        $schema = 'db3_1920';
 
         $pdo = new PDO('mysql:dbname=' . $schema . ';host=' . $server, $username, $password,[ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
         
