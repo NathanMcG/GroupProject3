@@ -6,11 +6,11 @@
                     <h3>Reviewed:</h3>
                     <?php 
                         $totalStars = 5;
-                        for($i=0;i<$product['stars'];$i++){
+                        for($i=0;$i<$product['stars'];$i++){
                             echo '<img src="images/star.png" alt="star review" class="review-star" width="40px" height="40px">';
                             $totalStars--;
                         }
-                        for($i=0;i<$totalStars;$i++){
+                        for($i=0;$i<$totalStars;$i++){
                             echo '<img src="images/emptystar.png" alt="star review" class="review-star"  width="40px" height="40px">';
                         } 
                     ?>
