@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Last Orders</title>
+    <head>
+		<title>Last Orders - <?=$title?></title>
 		 <meta charset="UTF-8" />
-		<link rel="stylesheet" href="../phpGeneral/styles.css" />
+		<link rel="stylesheet" href="styles.css" />
 	</head>
 
 	<body>
 		<header>
             <div class="logo">
-                <a href="../phpGeneral/index.php"><img src="../images/lastOrderLogo.jpg" alt="last orders" width="105px" height="85px"></a>
+                <a href="../index.php"><img src="../images/lastOrderLogo.jpg" alt="last orders" width="105px" height="85px"></a>
             </div>
             
-            <form action="../phpListings/searchListings.php"  method="GET">
+            <form action="searchListings.php"  method="GET">
                 <div class="searchbar">
                     <input type="text" name="SRCH" placeholder="Search..." />
                     <input type="image" name="submit" src="../images/searchbar.png" />
@@ -20,7 +20,7 @@
             </form>
             <div class="top-nav">
             <ul>
-                <li><a href="#">LOG IN</a></li>
+                <li><a href="login.php">LOG IN</a></li>
                 <span class="pipe">|</span>
                 <li><a href="#">REGISTER</a></li>
             </ul>
@@ -37,9 +37,7 @@
         </nav>
         <main>
 
-        <?php
-            echo $pageContent;
-        ?>
+        <?=$content?>
 
         </main>
         <footer> &copy; Last Orders </footer>
