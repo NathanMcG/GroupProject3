@@ -268,9 +268,15 @@ main{
 }
 
 .add-inner form {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     padding-top: 15px;
-    margin-left: 5px;
+    align-items: center;
+
+}
+.basket-no {
+    margin-bottom: 10px;
 
 }
 .check-box {
@@ -278,8 +284,8 @@ main{
     transform: scale(1.5);
 }
 .add-inner label {
+    align-self: center;
     color: #fff;
-    padding-left: 5px;
 }
 
 .btn-add {
