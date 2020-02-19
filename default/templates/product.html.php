@@ -50,21 +50,25 @@
                 </section>
 
                 <section class="add-to-order">
-                    <h2><u>Add to Order</u></h2>
-                    <div class="add-inner">
-                        <li>Price: £16.00</li>
-                        <li>Get it in 5 - 10 days free delivery.</li>
-                        <li>Or next day delivery</li>
-                        <form class="add-form">
-                            <input type="text" name="quantity" class="basket-no"  placeholder="1">
-                            <label>Quantity</label>
-                            <input type="checkbox"  name="gift" value="Gift"  class="check-box">
-                            <label>Add Gift Options</label>
-                            <input type="submit" name="add_to_basket" value="Add to Basket" class="btn-add" />
-                            <br>
-                            <input type="submit" name="buy_now" value="Buy Now" class="btn-add" />
-                        </form>
-                        
+                    <div class="add-outer">
+                        <h2><u>Add to Order</u></h2>
+                        <div class="add-inner">
+                            <li>Price: £16.00</li>
+                            <li>Get it in 5 - 10 days free delivery.</li>
+                            <li>Or next day delivery</li>
+                        </div>
+                            <div class="add-form">
+                                <form>
+                                    <input type="text" name="quantity" class="basket-no"  placeholder="1">
+                                    <label>Quantity</label>
+                                    <input type="checkbox"  name="gift" value="Gift"  class="check-box">
+                                    <label>Add Gift Options</label>
+                                    <input type="submit" name="add_to_basket" value="Add to Basket" class="btn-add" />
+                                    <br>
+                                    <input type="submit" name="buy_now" value="Buy Now" class="btn-add" />
+                                </form>
+                            </div>
+                
                     </div>
                 </section>
  </div>

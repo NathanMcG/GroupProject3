@@ -83,12 +83,13 @@ body{
 }
 
 #nav ul .main-nav{
+    width: 100%;
     border:1px solid #f2b662;
+    padding: 10px 9.35em 10px 10px;
 }
 
 
 #nav > ul > .main-nav > a {
-    padding: 10px 9.35em 10px 10px;
     font-size: 20px;
     text-decoration: none;
 }
@@ -250,6 +251,7 @@ main{
     padding-left: 10px;
 }
 
+
 .add-inner {
     display: block;
     width: 260px;
@@ -269,9 +271,10 @@ main{
 .add-form {
     display: block;
     padding-top: 15px;
+    width: 100%;
 }
 
-.add-form > label {
+.add-form label {
     color: #fff;
     float: right;
     width: 200px;
@@ -330,12 +333,23 @@ and (max-width : 1024px) {
     .searchText{
         width: 60vw;
     }
+    #nav {
+        width: auto;
+    }
+
+    #nav > ul {
+        width: auto;
+    }
+    #nav ul .main-nav {
+        width: auto;
+        padding: 0em 3.19em;  
+    }
+    
     #nav > ul > .main-nav > a {
-        padding: 1px 6.4em 0 0;
         font-size: 15px;
     }
     #nav ul li:hover ul.sub-nav {
-        top: 143px;
+        top: 11px;
     }
 /*    #nav > ul > .main-nav > a {
         padding: 5px 4em 5px 5px;
@@ -384,12 +398,13 @@ and (max-width : 1024px) {
         height:auto;  
     }
    .add-to-order h2{
-        margin-top: 10px; 
+        margin-top: 5px;
+        font-size: 20px;
     }
     
     .add-to-order {
         align-self: flex-start;
-        width:auto;
+        width:250px;
         height:auto;
     }
 
@@ -399,15 +414,39 @@ and (max-width : 1024px) {
     }
 
     .add-inner li {
-        list-style: none;
-        margin-top: 5px;
+        font-size: 12px;
+        height: auto;
         margin-bottom: 1px;
         margin-left: 2px;
     }
-
-
+    .add-form {
+        display: flex;
+        flex-direction: column;
+        padding-left: 6px;
+        padding-top: 5px;
+    }
+    .add-form  label {
+        width: auto;
+    }
+    
+    
+    .basket-no {
+        margin-bottom: 5px;
+        width: 40px;
+        text-align: center;
+    
+    }
+    .check-box {
+        transform: scale(1);
+    }
+    
     .btn-add {
         width: 150px;
+        margin-left: 10px;
+    }
+
+    #footer {
+        position: absolute;
     }
 
 }
