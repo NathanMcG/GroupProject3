@@ -16,7 +16,7 @@
                             } 
                         ?>
                     </div>
-                </section>
+    </section>
 
                 <section class="alcohol-info">
                     <h3><u><?=$product['brand']." - ".$product['product_name'].", ".$product['volume']?></u></h3>
