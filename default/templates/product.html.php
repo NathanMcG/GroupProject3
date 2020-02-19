@@ -20,6 +20,19 @@
             <section class="alcohol-info">
                 <h3><u><?=$product['brand']." - ".$product['product_name'].", ".$product['volume']?></u></h3>
                 <ul>
+                    <?php
+                        $description = "<li>";
+                        for($i=0;$i<strlen($product['product_description']);$i++){
+                            if($product['product_description'][$i] == '^' ){
+                                $description.="</li><li>";
+                            }
+                            else{
+                                $description.=$product['product_description'][$i];
+                            }
+                        }
+                        $description.="</li>";
+                        echo $description;
+                    ?>
                     <li>Triple distilled vodka</li>
                     <li>Made using a traditional charcoal filtration method</li>
                     <li>Ten times filtered</li>
