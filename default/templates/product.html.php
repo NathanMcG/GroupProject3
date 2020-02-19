@@ -55,11 +55,11 @@
                         <li>Price: £16.00</li>
                         <li>Get it in 5 - 10 days free delivery.</li>
                         <li>Or next day delivery</li>
-                        <form>
-                            <input type="text" name="quantity" class="basket-no"  id="box" placeholder="1">
-                            <label for="box">Quantity</label>
-                            <input type="checkbox"  name="gift" value="Gift" id="check"  class="check-box">
-                            <label for="check">Add Gift Options</label>
+                        <form class="add-form">
+                            <input type="text" name="quantity" class="basket-no"  placeholder="1">
+                            <label>Quantity</label>
+                            <input type="checkbox"  name="gift" value="Gift"  class="check-box">
+                            <label>Add Gift Options</label>
                             <input type="submit" name="add_to_basket" value="Add to Basket" class="btn-add" />
                             <br>
                             <input type="submit" name="buy_now" value="Buy Now" class="btn-add" />
