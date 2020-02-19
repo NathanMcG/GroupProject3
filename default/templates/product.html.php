@@ -55,6 +55,8 @@
                     <li>Get it in 5 - 10 days free delivery.</li>
                     <li>Or next day delivery</li>
                     <form>
+                        <input type="text" name="quantity" placeholder="1">
+                        <label>Quantity</label>
                         <input type="checkbox" name="gift" value="Gift"  class="check-box">
                         <label for="gift">Add Gift Options</label>
                         <br>
