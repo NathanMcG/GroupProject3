@@ -20,7 +20,7 @@
             <section class="alcohol-info">
                 <h3><u><?=$product['brand']." - ".$product['product_name'].", ".$product['volume']?></u></h3>
                 <ul>
-                    <?php
+                    <?php //Description
                         $description = "<li>";
                         for($i=0;$i<strlen($product['product_description']);$i++){
                             if($product['product_description'][$i] == '^' ){
@@ -33,22 +33,18 @@
                         $description.="</li>";
                         echo $description;
                     ?>
-                    <li>Triple distilled vodka</li>
-                    <li>Made using a traditional charcoal filtration method</li>
-                    <li>Ten times filtered</li>
-                    <li>Continuing tradition</li>
                 </ul>
                 <table class="table">
                     <tr><th>Package Dimensions</th></tr>
-                    <tr><td>31.2 x 8.3 x 8.3 cm</td></tr>
+                    <tr><td><?=$product['dimensions']?></td></tr>
                     <tr><th>Volume</th></tr>
-                    <tr><td>1000 ml</td></tr>
+                    <tr><td><?=$product['volume']?></td></tr>
                     <tr><th>Alcohol Content</th></tr>
-                    <tr><td>37.5 % Vol</td></tr>
+                    <tr><td><?=$product['alcohol_content']?>37.5 % Vol</td></tr>
                     <tr><th>Brand</th></tr>
-                    <tr><td>Smirnoff</td></tr>
+                    <tr><td><?=$product['brand']?></td></tr>
                     <tr><th>Offer</th></tr>
-                    <tr><td>10%</td></tr>
+                    <tr><td><?=$product['product_discount'].'% OFF'?></td></tr>
                 </table>
             </section>
 
