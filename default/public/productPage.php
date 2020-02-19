@@ -7,8 +7,6 @@
 	$stmt->execute();
 	$product=$stmt->fetch();
 
-	var_dump($product);
-
 	$variables = array('product'=>$product);
 	$content = loadTemplate('../templates/product.html.php',$variables);
 

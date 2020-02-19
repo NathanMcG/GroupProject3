@@ -19,7 +19,7 @@
                 <span class="pipe">|</span>
                 <a href="#">REGISTER</a>
             </ul>
-            <div class="space"></div>
+            <!--<div class="space"></div>-->
         </header>
         <nav id="nav">
             <ul>
@@ -53,6 +53,6 @@
             </ul>
         </nav>
         <main><?=$content?></main>
-        <footter id="footer">&#169; Last Orders</footter>
+        <footer id="footer">&#169; Last Orders</footer>
     </body>
 </html>

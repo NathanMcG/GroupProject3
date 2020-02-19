@@ -4,8 +4,6 @@
 
     $products = pdo()->query('SELECT * FROM products WHERE product_name LIKE "%' . $_GET['SRCH'] . '%"');
 
-    var_dump($products);
-
     foreach($products as $product){
         echo $product['product_name'];
     }
