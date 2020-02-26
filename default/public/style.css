@@ -157,16 +157,18 @@ nav ul .main-nav a {
 
 main{
     display: flex;
-    flex-flow: column;
+    
     flex: 1 0 auto;
 }
 
 /* Login Form */
 .login-form {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
+
 
 .login-flex {
     list-style-type: none;
@@ -175,7 +177,6 @@ main{
 }
 .login-flex li {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -183,7 +184,7 @@ main{
     flex: 1 0 auto;
 }
 
-.login-flex li .login-label {
+.login-label {
     padding: 10px;
     color: #fff;
 }
