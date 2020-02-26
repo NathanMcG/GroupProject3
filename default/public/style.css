@@ -1,0 +1,519 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #385866;
+    border: 1px solid #f2b662;
+}
+
+#header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 5px 0;
+    line-height: 100%;
+}
+
+
+.searching{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#header .searching {
+    align-self: flex-end;
+    padding: 0 65px;
+}
+
+.searchText{
+    align-self: flex-end;
+    width: 70vw;
+    height: 50px;
+    border-radius: 40px;
+    padding-left: 5px;
+    padding-right: 50px;
+    border: 2px solid #000;
+    background-color: #c93d67;
+    font-size: 15px;
+    color: #fff;
+}
+
+.searchBtn{
+    align-self: flex-end;
+    border: 2px solid #000;
+    margin-left: -50px;
+    border-radius: 25px;
+}
+
+
+#header .topNav {
+    align-self: flex-end;
+}
+
+.topNav a, .topNav .pipe {
+    color: #f2b662;
+    font-size: 14px;
+}
+
+/*MAIN NAVIGATION */
+
+#nav{
+    width: 100%;
+    background-color: #c93d67;
+    border:1px solid #f2b662;
+    border-right: none;
+    box-sizing: border-box;
+}
+
+#nav  ul{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#nav ul .main-nav {
+    list-style: none;
+    float: left;
+    text-align: center;
+    border-left: 1px solid #f2b662;
+    border-right: 1px solid #f2b662;
+    width: 20%;
+    width: calc(100% / 5);
+    
+}
+
+
+nav ul .main-nav:first-child {
+    border-left: none;
+  }
+  
+nav ul .main-nav a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 0;
+    height: 40px;
+    transition: background 0.5s;
+}
+
+.main-nav:hover {
+    background-color: rgba(125, 94, 103, 0.5);
+    transition: ease-in;
+}
+
+#nav .main-nav:hover .sub-nav > li {
+    display: flex;
+    top: 0px;
+}
+
+#nav .main-nav:hover .sub-nav {
+    background-color: #c93d67;
+    border:1px solid #f2b662;
+}
+
+/* sub navigation not shown */
+.sub-nav li{
+    display: none;
+    position: absolute;
+    top: 0px;
+}
+
+/* sub navigation is shown */
+.sub-nav {
+    position: absolute;
+    column-count: 3;
+    width: 45%;
+    text-align: left;
+    column-rule: 1px solid #000;
+}
+
+.sub-nav li {
+    position: relative;
+    font-size: 15px;
+    color: #fff;
+}
+
+.sub-nav .sub-head {
+    font-weight: bold;
+}
+
+.sub-nav li a {
+    font-size: 15px;
+    line-height: 5px;
+
+}
+
+.sub-nav li a:hover {
+    color: #000;
+}
+
+main{
+    display: flex;
+    flex-flow: column;
+    flex: 1 0 auto;
+}
+
+.alchol-prod-section{
+      display: flex;
+      flex-flow: row wrap;
+      padding: 15px 30px;
+}
+
+/* Home Page*/
+.image-slider {
+    width: 100%;
+    height: 200px;
+}
+
+/* Product Page */
+.alcohol-card{
+    display: flex;
+    flex-direction: column;
+}
+
+.alcohol-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width:230px;
+    height:290px;
+    border: 2px solid #000;
+    background-color: #fff;
+}
+
+.alcohol-reviews{
+    width:230px;
+    height:120px; 
+    border: 2px solid #000;
+    background-color: #c93d67;
+}
+
+.alcohol-reviews h3{
+    color: #fff;
+    margin: 20px 0 0 10px;
+}
+
+.alcohol-reviews img{
+    margin-top: 10px;
+}
+
+.alcohol-info{
+    display: inline-block;
+    align-self: center;
+    margin: 0 3em;
+    width:650px;
+    height:260px;  
+    border: 2px solid #000;
+    background-color: #fff;
+}
+.alcohol-info h3 u{
+    display: block;
+    font-size: 20px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-align: center;
+}
+
+.alcohol-info > ul{
+    padding-left: 7.5em;
+}
+.alcohol-info > ul li {
+    font-size: 13px;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+}
+
+.table {
+    width: 100%;
+}
+.table tr th td {
+    display: block;
+}
+
+.table tr {
+    padding-top: 0.2em;
+    float: left;
+    width: 50%;
+    border: 1px solid black;
+    font-size: 12px;
+}
+
+.add-to-order {
+    align-self: center;
+    width:300px;
+    height:330px;
+    border: 2px solid #000;
+    background-color: #c93d67;
+}
+
+.add-to-order h2{
+    color: #fff;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+
+.add-inner {
+    display: block;
+    width: 260px;
+    height: 100px;
+    margin: 10px;
+    border: 2px solid #000000;
+    background-color: #fff;
+}
+
+.add-inner li {
+    list-style: none;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+
+.add-form {
+    display: block;
+    padding-top: 15px;
+    width: 100%;
+}
+
+.add-form label {
+    color: #fff;
+    float: right;
+    width: 200px;
+}
+
+
+.basket-no {
+    margin-bottom: 10px;
+    width: 40px;
+    text-align: center;
+
+}
+.check-box {
+    outline: 1px solid #000;
+    transform: scale(1.5);
+    margin-left: 5px;
+}
+
+.btn-add {
+    width: 250px;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    font-size: 18px;
+    background-color: #385866;
+    border: 2px solid #000;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.btn-add:hover {
+    background-color: #3e4c52;
+}
+
+
+
+.footer{
+    border: 1px solid #f2b662;
+    padding: 10px;
+    width: 100%;
+    
+}
+@media (min-width: 768px) {
+    #nav .main-nav:hover .sub-nav > li {
+            display: block;
+            top: 0px;
+    } 
+    #nav { 
+        display: block !important; 
+    }
+}
+#nav-icon {
+    display: none;
+}
+@media  (max-width: 767px){
+    #nav {
+        display: none;
+    }
+   #nav ul .main-nav{
+        float: none;
+    }
+
+
+    #nav .main-nav:hover .sub-nav {
+        border: none;
+    }
+
+    .sub-nav  {
+        position: static;
+        column-count: 1;
+        column-rule: none;
+        width: 100%;
+    }
+    .sub-nav a{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .sub-block > li {
+        display: block !important;
+    }
+    .sub-nav li {
+        display: none;
+    }
+    #nav-icon {
+        display: block;
+        height: 35px;
+        background-color: rgba(125, 94, 103, 0.5);
+        color: #fff;
+        cursor: pointer;
+        text-align: right;
+        margin-right: 5px;
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width : 768px)   
+and (max-width : 1024px) {
+
+    html{
+        width: fit-content;
+    }
+    #header .searching {
+        align-self: flex-end;
+        padding: 0 20px;
+    }
+
+    .searchText{
+        width: 60vw;
+    }
+    #nav {
+        width: auto;
+    }
+
+    #nav > ul {
+        width: auto;
+    }
+    #nav ul .main-nav {
+        width: auto;
+        padding: 0em 3.19em;  
+    }
+    
+    #nav > ul > .main-nav > a {
+        font-size: 15px;
+    }
+    #nav ul li:hover ul.sub-nav {
+        top: 11px;
+    }
+/*    #nav > ul > .main-nav > a {
+        padding: 5px 4em 5px 5px;
+        font-size: 20px;
+    }
+
+    #nav ul li:hover ul.sub-nav {
+        top: 126px;
+    } */
+    .alchol-prod-section{
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+    }
+
+    .img-product{
+        width: 100px;
+        height: 150px;
+    }
+    
+    .alcohol-image {
+        width:150px;
+        height:200px;
+    }
+
+    .alcohol-reviews{
+        width:150px;
+        height:100px; 
+    }
+    .alcohol-reviews h3{ 
+        font-size: 15px;;
+    }
+    .review-star{
+        width: 25px;
+        height: 25px;
+    }
+
+    .alcohol-reviews h3{
+        margin-top: 15px;
+    }
+
+    .alcohol-info{
+        align-self: flex-start;
+        margin: 0 1em;
+        width:auto;
+        height:auto;  
+    }
+   .add-to-order h2{
+        margin-top: 5px;
+        font-size: 20px;
+    }
+    
+    .add-to-order {
+        align-self: flex-start;
+        width:250px;
+        height:auto;
+    }
+
+    .add-inner {
+        width: 160px;
+        height: 100px;
+    }
+
+    .add-inner li {
+        font-size: 12px;
+        height: auto;
+        margin-bottom: 1px;
+        margin-left: 2px;
+    }
+    .add-form {
+        display: flex;
+        flex-direction: column;
+        padding-left: 6px;
+        padding-top: 5px;
+    }
+    .add-form  label {
+        width: auto;
+    }
+    
+    
+    .basket-no {
+        margin-bottom: 5px;
+        width: 40px;
+        text-align: center;
+    
+    }
+    .check-box {
+        transform: scale(1);
+    }
+    
+    .btn-add {
+        width: 150px;
+        margin-left: 10px;
+    }
+
+}
+
+@media screen and (min-width : 1536px) {
+
+    #nav > ul > .main-nav > a {
+        padding: 5px 11.3em 5px 5px;
+        font-size: 20px;
+    }
+
+}
