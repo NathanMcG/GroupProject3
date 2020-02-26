@@ -41,11 +41,11 @@
                         <tr><th>Volume</th></tr>
                         <tr><td><?=$product['volume']?></td></tr>
                         <tr><th>Alcohol Content</th></tr>
-                        <tr><td><?=$product['alcohol_content']?>37.5 % Vol</td></tr>
+                        <tr><td><?=$product['alcohol_content']?>% Vol</td></tr>
                         <tr><th>Brand</th></tr>
                         <tr><td><?=$product['brand']?></td></tr>
                         <tr><th>Offer</th></tr>
-                        <tr><td><?=$product['product_discount'].'% OFF'?></td></tr>
+                        <tr><td><?=$product['product_discount']?>% OFF</td></tr>
                     </table>
                 </section>
 
@@ -53,12 +53,12 @@
                     <div class="add-outer">
                         <h2><u>Add to Order</u></h2>
                         <div class="add-inner">
-                            <li>Price: £16.00</li>
+                            <li>Price: £<?=$product['product_price']?></li>
                             <li>Get it in 5 - 10 days free delivery.</li>
                             <li>Or next day delivery</li>
                         </div>
                             <div class="add-form">
-                                <form>
+                                <form action="productPage.php" method="POST">
                                     <input type="text" name="quantity" class="basket-no"  placeholder="1">
                                     <label>Quantity</label>
                                     <input type="checkbox"  name="gift" value="Gift"  class="check-box">
