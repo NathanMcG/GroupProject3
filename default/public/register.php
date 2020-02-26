@@ -2,8 +2,7 @@
 session_start();
 
 // connect to the database
-require '..functions.php'
-function pdo
+require '../templates/functions.php';
 
 
 // Title
@@ -37,7 +36,7 @@ if (isset($_POST['submit'])) {
  
 } else {
   $title = 'Register';
-  $output = '
+  $content = '
    <form action="" method="POST">
      <div>
        <label for="firstname">First Name: </label>
@@ -92,7 +91,7 @@ if (isset($_POST['submit'])) {
  ';
 }
  
-include '../layout.php';
+include '../templates/layout.html.php';
 
 
 
