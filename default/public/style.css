@@ -161,6 +161,33 @@ main{
     flex: 1 0 auto;
 }
 
+/* Login Form */
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-flex {
+    list-style-type: none;
+    align-self: center;
+
+}
+.login-flex li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.login-flex > li > .login-label {
+    flex: 1 0 auto;
+}
+
+.login-flex li .login-label {
+    padding: 10px;
+    color: #fff;
+}
+
 .alchol-prod-section{
       display: flex;
       flex-flow: row wrap;
