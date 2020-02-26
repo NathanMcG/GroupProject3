@@ -59,13 +59,21 @@
                         </div>
                             <div class="add-form">
                                 <form>
-                                    <input type="text" name="quantity" class="basket-no"  placeholder="1">
-                                    <label>Quantity</label>
-                                    <input type="checkbox"  name="gift" value="Gift"  class="check-box">
-                                    <label>Add Gift Options</label>
-                                    <input type="submit" name="add_to_basket" value="Add to Basket" class="btn-add" />
-                                    <br>
-                                    <input type="submit" name="buy_now" value="Buy Now" class="btn-add" />
+                                    <ul>
+                                        <li>
+                                            <label>Quantity</label>
+                                            <input type="text" name="quantity" class="basket-no"  placeholder="1">
+                                        </li>
+                                        <li>
+                                            <label>Add Gift Options</label>
+                                            <input type="checkbox"  name="gift" value="Gift"  class="check-box">
+                                        </li>
+                                        <li>
+                                            <input type="submit" name="add_to_basket" value="Add to Basket" class="btn-add" />
+                                        <li>
+                                            <input type="submit" name="buy_now" value="Buy Now" class="btn-add" />
+                                        </li>
+                                    </ul>
                                 </form>
                             </div>
                 

@@ -47,15 +47,22 @@
 
 
     //Formatting
-    
-    // Include layout function
-    function IncludeLayout(){
-        include '../layout.php';
-    }
 
  
 
-    //searches
+    //Database
+    function findAll($pdo,$table){
+        $stmt=$pdo->prepare('SELECT * FROM' . $table);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
+    function find($pdo,$table,$field,$value){
+        $stmt=$pdo->prepare('SELECT * FROM ' . $table . ' WHERE ' . $field . '=:value');
+        $criteria = ['value' => $value];
+        $stmt->execute($criteria);
+        return $stmt->fetchAll();
+    }
 
     
 

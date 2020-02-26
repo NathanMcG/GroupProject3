@@ -11,7 +11,7 @@
       </li>
  
       <li>
-        <input type="submit" name="login" value="Login" />
+        <input type="submit" name="login" value="Login" class="login-btn" />
       </li>
     </ul>
   </form>
