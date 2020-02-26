@@ -2,12 +2,8 @@
 	require '../templates/loadTemplate.php';
 	require '../templates/functions.php';
 	$title = 'Log In';
-	
-	$stmt = pdo()->prepare('SELECT * FROM products WHERE product_id=3');
-	$stmt->execute();
-	$product=$stmt->fetch();
 
-	$variables = array('product'=>$product);
-	$content = loadTemplate('../templates/product.html.php',$variables);
+	$variables = array();
+	$content = loadTemplate('../templates/login.html.php',$variables);
 
 	require '../templates/layout.html.php';
