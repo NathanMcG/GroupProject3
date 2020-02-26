@@ -17,7 +17,7 @@ if (drop.matches){
 
     });
 
-    for (let x = 0; x < dropDown.length; x++) {
+    for ( let x = 0; x < dropDown.length; x++ ) {
         dropDown[x].addEventListener("click", function() {
             subNav[x].classList.toggle('sub-block');
         });

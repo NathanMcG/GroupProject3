@@ -335,13 +335,32 @@ main{
     #nav { 
         display: block !important; 
     }
+
 }
 #nav-icon {
     display: none;
 }
-@media  (max-width: 767px){
+@media (max-width: 767px){
+    html{
+        width: fit-content;
+    }
+    #header .searching {
+        align-self: flex-end;
+        padding: 0 5px;
+    }
+
+    .searchText{
+        width: 60vw;
+    }
     #nav {
         display: none;
+    }
+    #nav > ul {
+        width: auto;
+    }
+    #nav ul .main-nav {
+        width: auto;
+
     }
    #nav ul .main-nav{
         float: none;
@@ -363,7 +382,7 @@ main{
         margin: 0 auto;
     }
 
-    .sub-block > li {
+    .sub-block .sub-nav {
         display: block !important;
     }
     .sub-nav li {
@@ -381,8 +400,8 @@ main{
     }
 }
 
-@media screen and (max-width : 768px)   
-and (max-width : 1024px) {
+@media screen and (max-width: 770px)   
+and (max-width: 1024px) {
 
     html{
         width: fit-content;
@@ -395,7 +414,7 @@ and (max-width : 1024px) {
     .searchText{
         width: 60vw;
     }
-    #nav {
+   #nav {
         width: auto;
     }
 
@@ -404,23 +423,9 @@ and (max-width : 1024px) {
     }
     #nav ul .main-nav {
         width: auto;
-        padding: 0em 3.19em;  
+
     }
     
-    #nav > ul > .main-nav > a {
-        font-size: 15px;
-    }
-    #nav ul li:hover ul.sub-nav {
-        top: 11px;
-    }
-/*    #nav > ul > .main-nav > a {
-        padding: 5px 4em 5px 5px;
-        font-size: 20px;
-    }
-
-    #nav ul li:hover ul.sub-nav {
-        top: 126px;
-    } */
     .alchol-prod-section{
         display: flex;
         flex-flow: row;
@@ -509,11 +514,11 @@ and (max-width : 1024px) {
 
 }
 
-@media screen and (min-width : 1536px) {
+/*@media screen and (min-width : 1536px) {
 
     #nav > ul > .main-nav > a {
         padding: 5px 11.3em 5px 5px;
         font-size: 20px;
     }
 
-}
+} */
