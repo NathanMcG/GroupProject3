@@ -6,7 +6,7 @@
      </div>
      <div class="inner-form">
        <label for="product-descrip">Product Description </label>
-       <textarea id="product-descrip" rows="4" cols="20"></textarea>
+       <textarea id="product-descrip" rows="4" cols="17"></textarea>
      </div>
      <div class="inner-form">
       <label for="product-dim">Product Dimensions </label>
