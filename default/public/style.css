@@ -195,8 +195,8 @@ main{
 .inner-form > #volume{
     padding: 5px 2px;
     border: 1px solid #f2b662;
-    background-color: #c93d67;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
 }
 
 #product-vol{

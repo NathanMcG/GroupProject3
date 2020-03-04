@@ -32,6 +32,10 @@
       <label for="product-offer">Offer </label>
       <input type="text" name="product-offer" id="product-offer" />
      </div>
+     <div class="inner-form">
+      <label for="product-price">Price </label>
+      <input type="text" name="product-price" id="product-price" />
+     </div>
      <div class="inner-formBtn">
      <input type="submit" name="submit" value="Add" />
      </div>
