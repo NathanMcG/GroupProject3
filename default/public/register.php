@@ -37,57 +37,61 @@ if (isset($_POST['submit'])) {
 } else {
   $title = 'Register';
   $content = '
+  <div class="lastOrder-form">
    <form action="" method="POST">
-     <div>
+     <div class="inner-form">
        <label for="firstname">First Name: </label>
        <input type="text" required name="firstname" id="firstname" />
      </div>
-     <div>
+     <div class="inner-form">
        <label for="surname">Last Name: </label>
        <input type="text" required name="surname" id="surname" />
      </div>
-     <div>
+     <div class="inner-form">
       <label for="email">Email: </label>
       <input type="text" required name="email" id="email" />
      </div>
-     <div>
+     <div class="inner-form">
       <label for="password"> Password: </label>
       <input type="password" required name="password" id="password" />
      </div>
-     <div>
+     <div class="inner-form">
        <label for="user_address_line_1">Address Line 1: </label>
        <input type="text" required name="user_address_line_1" id="user_address_line_1" />
      </div>
-     <div>
+     <div class="inner-form">
        <label for="user_address_line_2">Address Line 2: </label>
        <input type="text" required name="user_address_line_2" id="user_address_line_2" />
      </div>
-     <div>
+     <div class="inner-form">
        <label for="user_address_line_country">Country: </label>
        <input type="text" required name="user_address_line_country" id="user_address_line_country" />
      </div>
-     <div>
+     <div class="inner-form">
       <label for="user_address_line_postcode">Postcode: </label>
       <input type="text" required name="user_address_line_postcode" id="user_address_line_postcode" />
      </div>
-     <div>
+     <div class="inner-form">
       <label for="user_address_line_phone_no">Phone Number: </label>
       <input type="text" required name="user_address_line_phone_no" id="user_address_line_phone_no" />
      </div>
-     <div>
+     <div class="inner-form">
       <label for="user_gender">Gender: </label>
       <input type="text" required name="user_gender" id="user_gender" />
     </div>
-    <div>
+    <div class="inner-form">
       <label for="user_date_of_birth">Date of Birth: </label>
       <input type="text" required name="user_date_of_birth" id="user_date_of_birth" />
     </div>
-    <div>
+    <div class="inner-form">
        <label for="AcceptTerm">Do you agree to the terms and conditions? </label>
        <input type="checkbox" required name="AcceptTerm" id="AcceptTerm" />
      </div>
-     <input type="submit" name="submit" value="Submit" />
+     <div class="inner-formBtn">
+     <input type="submit" name="submit" value="Register" />
+     </div>
    </form>
+   </div>
  ';
 }
  

@@ -161,32 +161,73 @@ main{
     flex: 1 0 auto;
 }
 
-/* Login Form */
-.login-form {
+/* REGISTER AND LOGIN PAGE*/
+.lastOrder-form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex: 2 0 auto;
 }
 
-
-.login-flex {
-    list-style-type: none;
-    align-self: center;
-
-}
-.login-flex li {
+.inner-form, .login-form {
     display: flex;
-    align-items: center;
-}
-
-.login-flex > li > .login-label {
-    flex: 1 0 auto;
-}
-
-.login-label {
-    padding: 10px;
+    justify-content: flex-end;
     color: #fff;
+}
+
+.inner-form{
+    margin-bottom: 5px;
+}
+.login-form{
+    margin-bottom: 20px;
+}
+
+.login-form > label, .inner-form > label {
+    margin-right: 10px;
+    align-self: center;
+}
+.login-form > input[type="text"],
+.inner-form > input[type="text"],
+.login-form > input[type="password"],
+.inner-form > input[type="password"],
+.inner-form > textarea,
+.inner-form > #volume{
+    padding: 5px 2px;
+    border: 1px solid #f2b662;
+    background-color: #c93d67;
+    color: #fff;
+}
+
+#product-vol{
+    width: 50px;
+    margin-left: 6em;
+}
+
+#volume {
+    margin-left: 10px;
+}
+
+/*
+.login-form > input[type="password"],
+.reg-form > input[type="password"] {
+    padding: 5px 2px;
+    border: 1px solid #f2b662;
+    background-color: #c93d67;
+    color: #fff;
+} */
+
+.inner-formBtn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.inner-formBtn > input[type="submit"] {
+    padding: 5px;
+    color: #fff;
+    border: 1px solid #f2b662;
+    background-color: #c93d67;
+    cursor: pointer;
 }
 
 .alchol-prod-section{
