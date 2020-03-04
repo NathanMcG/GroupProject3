@@ -9,15 +9,15 @@
     </head>
     <body>
         <header id="header">
-            <a href="v.je"><img src="images/lastOrderLogo.jpg" alt="last orders" class="logo" width="105px" height="85px"></a>
+            <a href="?"><img src="images/lastOrderLogo.jpg" alt="last orders" class="logo" width="105px" height="85px"></a>
             <form action="searchListings.php" method="GET" class="searching">
                 <input type="text" name="search" placeholder="Search..." class="searchText" />
                 <input type="image" name="submit" src="images/searchbar.png" class="searchBtn" width="50px" height="50px"/>
             </form>
             <ul class="topNav">
-                <a href="login.php">LOG IN</a>
+                <a href="?page=login">LOG IN</a>
                 <span class="pipe">|</span>
-                <a href="#">REGISTER</a>
+                <a href="?page=register">REGISTER</a>
             </ul>
         </header>
         <div id="nav-icon"><i class="fas fa-bars"></i></div>

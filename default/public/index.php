@@ -1,9 +1,14 @@
 <?php
+	require '../loadTemplate.php';
+	require '../classes/DatabaseTable.php';
 
-	ob_start();
-	$title = 'HOME';
-	$content = '';
+	if (isset($_GET['page'])) {
+		require '../pages/' . $_GET['page'] . '.php';
+	}
+	else {
+		require '../pages/home.php';
+	}
 
-	require '../templates/layout.html.php';
+	require  '../templates/layout.html.php';
 
 ?>
