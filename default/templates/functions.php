@@ -52,7 +52,7 @@
 
     //Database
     function findAll($pdo,$table){
-        $stmt=$pdo->prepare('SELECT * FROM' . $table);
+        $stmt=$pdo->prepare('SELECT * FROM ' . $table);
         $stmt->execute();
         return $stmt->fetchAll();
     }

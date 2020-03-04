@@ -10,7 +10,7 @@
     <body>
         <header id="header">
             <a href="v.je"><img src="images/lastOrderLogo.jpg" alt="last orders" class="logo" width="105px" height="85px"></a>
-            <form action="#" method="#" class="searching">
+            <form action="searchListings.php" method="GET" class="searching">
                 <input type="text" name="search" placeholder="Search..." class="searchText" />
                 <input type="image" name="submit" src="images/searchbar.png" class="searchBtn" width="50px" height="50px"/>
             </form>
