@@ -236,6 +236,46 @@ main{
       padding: 15px 30px;
 }
 
+/*User Section Page*/
+
+.user-home {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 2 0 auto;
+    margin-top: 40px;
+    font-size: 25px;
+}
+
+.user-row {
+    display: flex;
+    flex-flow: row wrap;
+    width: 300px;
+}
+
+.user-col{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+}
+
+.user-box{
+    height: 60px; 
+}
+.user-box, .user-options{
+    color: #fff;
+}
+
+.user-box  .fas{
+    padding: 1em 0.5em 1em 2em;
+}
+
+
+.user-row:first-child .user-box {
+    border-right: 1px solid #000;
+}
+
+
 /* Home Page*/
 .image-slider {
     width: 100%;
@@ -593,6 +633,19 @@ and (max-width: 1024px) {
 
 }
 
+@media screen and (max-width: 500px) {
+    .user-home {
+        margin-top: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .user-box  .fas{
+        padding: none;
+    }
+    .user-row:first-child .user-box {
+        border-right: none;
+    }
+}
 /*@media screen and (min-width : 1536px) {
 
     #nav > ul > .main-nav > a {
