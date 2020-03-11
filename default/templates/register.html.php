@@ -1,4 +1,10 @@
 <div class="lastOrder-form">
+  <?php
+    if(isset($notice)){
+      echo '<p>' . $notice . '</p>';
+    }
+      
+    ?>
    <form action="" method="POST">
      <div class="inner-form">
        <label for="firstname">First Name: </label>

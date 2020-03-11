@@ -1,27 +1,56 @@
 <?php
 $title = 'Register';
-
-if(isset($_POST['submit'])){
-  $content = loadTemplate('../templates/register.html.php',$_POST);
-
-
-  $users = new DatabaseTable('users',null);
-  $users->insert($_POST['details']);
+$content = '';
+//var_dump($details);
+if(isset($_POST['details'])){
+  
+  if(validate())
+  {
+    $_POST['details']['user_password'] = hash($_POST['details']['user_password']);
+    $users = new DatabaseTable('users',null);
+    $users->insert($_POST['details']);
+    $variables = array('details' => $_POST['details'],'notice' => 'Account Created');
+  }
+  else{
+    $variables = array('details' => $_POST['details'],'notice' => 'Validation Error');
+  }
+  $content.= loadTemplate('../templates/register.html.php',$variables);
 
 }
 else{
-  $details['firstname'] = '';
-  $details['surname'] = '';
-  $details['email'] = '';
-  $details['user_address_line_1'] = '';
-  $details['user_address_line_2'] = '';
-  $details['user_address_line_country'] = '';
-  $details['user_address_line_postcode'] = '';
-  $details['user_address_line_phone_no'] = '';
-  $details['user_gender'] = '';
-  $details['user_date_of_birth'] = '';
+  $content = emptyDisplay();
+}
+
+function emptyDisplay(){
+  $details = array('user_firstname' => '',
+  'user_lastname' => '',
+  'user_email' => '',
+  'user_address_line_1' => '',
+  'user_address_line_2' => '',
+  'user_address_country' => '',
+  'user_address_postcode' => '',
+  'user_address_phone_no' => '',
+  'user_gender' => '',
+  'user_date_of_birth' => '');  
 
   $variables = array('details' => $details);
   $content = loadTemplate('../templates/register.html.php',$variables);
+  return $content;
+}
+
+function validate(){
+  require '../classes/Validate.php';
+  $validate = new Validate;
+  $valid=true;
+  if(!$validate->databaseDate($_POST['details']['user_date_of_birth']))
+  {
+    $valid=false;
+  }
+  $names = array('user_firstname','user_lastname','user_email','user_address_line_1','user_address_line_2','user_address_country','user_address_postcode','user_address_phone_no','user_gender','user_date_of_birth');
+  if(!$validate->allSet($_POST['details'],$names)){
+    $valid=false;
+  }
+  if(!$validate->confirmPassword($_POST['details']['user_password'],$_POST['confpassword']))
+  return $valid;
 }
 ?>

@@ -176,6 +176,13 @@ main{
     color: #fff;
 }
 
+.lastOrder-form p{
+    text-shadow: 2px 2px #fff;
+    color: #ff704d;
+    padding: 8px;
+    font-style: italic;
+}
+
 .inner-form{
     margin-bottom: 5px;
 }
