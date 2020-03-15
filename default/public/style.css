@@ -197,8 +197,8 @@ main{
 .inner-form > input[type="text"],
 .login-form > input[type="password"],
 .inner-form > input[type="password"],
-/*.login-form > input[type="date"],
-.inner-form > input[type="date"],*/
+.login-form > input[type="date"],
+.inner-form > input[type="date"],
 .inner-form > textarea,
 .inner-form > #volume{
     padding: 5px 2px;
