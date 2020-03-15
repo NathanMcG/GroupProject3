@@ -6,7 +6,7 @@
       </div>
       <div class="login-form">
         <label for="password" class="login-label">Password</label>
-        <input type="password" required name="password" class="login-textbox" placeholder="Enter your password" name="details[user_password]" />
+        <input type="password" class="login-textbox" placeholder="Enter your password" name="details[user_password]" />
       </div>
       <div class="inner-formBtn">
         <input type="submit" name="login" value="LOGIN" class="login-btn" />

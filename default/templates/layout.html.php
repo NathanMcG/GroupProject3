@@ -15,7 +15,18 @@
                 <input type="image" name="submit" src="images/searchbar.png" class="searchBtn" width="50px" height="50px"/>
             </form>
             <ul class="topNav">
-                <a href="?page=login">LOG IN</a>
+                <?php
+                    if(isset($_SESSION['id'])){
+                        $users = new DatabaseTable('users',null);
+                        $currentUser = $users->find('user_id',$_SESSION['id'])[0];
+                        echo '<a href="#">' . $currentUser['user_firstname'] . ' ' . $currentUser['user_lastname'] . '</a>
+                        <span class="pipe">|</span>
+                        <a href="?page=logout">LOG OUT</a>';
+                    }
+                    else{
+                        echo '<a href="?page=login">LOG IN</a>';
+                    }
+                ?>
                 <span class="pipe">|</span>
                 <a href="?page=register">REGISTER</a>
             </ul>

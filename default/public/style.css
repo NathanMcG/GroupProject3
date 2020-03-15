@@ -197,15 +197,14 @@ main{
 .inner-form > input[type="text"],
 .login-form > input[type="password"],
 .inner-form > input[type="password"],
-.login-form > input[type="date"],
-.inner-form > input[type="date"],
+/*.login-form > input[type="date"],
+.inner-form > input[type="date"],*/
 .inner-form > textarea,
 .inner-form > #volume{
     padding: 5px 2px;
     border: 1px solid #f2b662;
     background-color: #fff;
     color: #000;
-    width: 15em;
 }
 
 #product-vol{

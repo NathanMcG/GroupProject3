@@ -86,4 +86,5 @@
     foreach($productList as $product){
         $content.= $product['product_name'];
     }
+    
 	require '../templates/layout.html.php';

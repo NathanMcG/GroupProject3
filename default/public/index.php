@@ -1,4 +1,7 @@
 <?php
+
+	session_start();
+
 	require '../loadTemplate.php';
 	require '../classes/DatabaseTable.php';
 

@@ -1,5 +1,5 @@
 <?php
-	require '../templates/loadTemplate.php';
+	require '../loadTemplate.php';
 	require '../templates/functions.php';
 	$title = 'Add Products';
 
