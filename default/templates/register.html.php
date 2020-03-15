@@ -39,12 +39,12 @@
        <input type="text" name="details[user_address_country]" id="user_address_line_country" value="<?=$details['user_address_country']?>" />
      </div>
      <div class="inner-form">
-      <label for="user_address_line_postcode">Postcode: </label>
-      <input type="text" name="details[user_address_postcode]" id="user_address_line_postcode" value="<?=$details['user_address_postcode']?>" />
+      <label for="user_postcode">Postcode: </label>
+      <input type="text" name="details[user_postcode]" id="user_address_line_postcode" value="<?=$details['user_postcode']?>" />
      </div>
      <div class="inner-form">
-      <label for="user_address_line_phone_no">Phone Number: </label>
-      <input type="text" name="details[user_address_phone_no]" id="user_address_line_phone_no" value="<?=$details['user_address_phone_no']?>" />
+      <label for="user_phone_no">Phone Number: </label>
+      <input type="text" name="details[user_phone_no]" id="user_phone_no" value="<?=$details['user_phone_no']?>" />
      </div>
      <div class="inner-form">
       <label for="user_gender">Gender: </label>
@@ -52,11 +52,11 @@
     </div>
     <div class="inner-form">
       <label for="user_date_of_birth">Date of Birth: </label>
-      <input type="text" name="details[user_date_of_birth]" id="user_date_of_birth" value="<?=$details['user_date_of_birth']?>" />
+      <input type="date" name="details[user_date_of_birth]" id="user_date_of_birth" value="<?=$details['user_date_of_birth']?>" />
     </div>
     <div class="inner-form">
        <label for="AcceptTerm">Do you agree to the terms and conditions? </label>
-       <input type="checkbox" require name="AcceptTerm" id="AcceptTerm" />
+       <input type="checkbox" name="AcceptTerm" id="AcceptTerm" required />
      </div>
      <div class="inner-formBtn">
      <input type="submit" name="submit" value="Register" />

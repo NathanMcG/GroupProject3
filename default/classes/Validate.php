@@ -4,27 +4,29 @@ class Validate {
     public function databaseDate($date){
         $valid = true;
         if(strlen($date) == 10){
-        for($i=0;$i<4;$i++){
-            if(!is_int()){
-                $valid = false;
+            for($i=0;$i<4;$i++){
+                if(!is_int($date[$i])){
+                    $valid = false;
+                }
+            }
+            if($date[4] != '-')
+            $valid=false;
+            for($i=5;$i<7;$i++){
+                if(!is_int($date[$i])){
+                    $valid = false;
+                }
+            }
+            if($date[4] != '-')
+            $valid=false;
+            for($i=7;$i<9;$i++){
+                if(!is_int($date[$i])){
+                    $valid = false;
+                }
             }
         }
-        if($date[4] != '-')
-        $valid=false;
-        for($i=5;$i<7;$i++){
-            if(!is_int()){
-                $valid = false;
-            }
+        else{
+            $valid=false;
         }
-        if($date[4] != '-')
-        $valid=false;
-        for($i=7;$i<9;$i++){
-            if(!is_int()){
-                $valid = false;
-            }
-        }}
-        else
-        $valid=false;
         return $valid;
     }
 
@@ -42,6 +44,7 @@ class Validate {
         if(!$pass1 == $pass2){
             $valid = false;
         }
+        return $valid;
     }
 
 }

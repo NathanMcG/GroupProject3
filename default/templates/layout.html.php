@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Home</title>
+        <title><?=$title?></title>
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width-device-width, initial-scale-1">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
