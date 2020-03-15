@@ -1,5 +1,5 @@
 <div class="lastOrder-form">
-   <form action="?page=newProduct" method="POST">
+   <form action="?page=newProduct" method="POST" enctype="multipart/form-data">
      <div class="inner-form">
        <label for="product-name">Product Name </label>
        <input type="text" name="product['product-name']" id="product-name" />
@@ -15,7 +15,7 @@
      <div class="inner-form">
         <label for="product-vol">Volume </label>
         <input type="text" name="product['product-vol']" id="product-vol" />
-        <select id="volume" name="volume">
+        <select id="volume" name="product['volume']">
             <option value="">L</option>
             <option value="">ML</option>
         </select> 
@@ -38,7 +38,7 @@
      </div>
      <div class="inner-form">
       <label for="productImage">Image </label>
-      <input type="file" name="product['productImage']" id="productImage">
+      <input type="file" name="productImage" id="productImage">
      </div>
      <div class="inner-formBtn">
      <input type="submit" name="submit" value="Add" />
