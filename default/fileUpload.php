@@ -17,7 +17,7 @@
     $fileExtension_explode = explode('.',$fileName);
     $fileExtension = strtolower(end($fileExtension_explode));
 
-    $uploadPath = '..' . $uploadDirectory . basename($endName.'.png'/*.$fileExtension*/); 
+    $uploadPath = '..' . $uploadDirectory . basename($endName.'.png'); 
 
     if (isset($_POST['submit'])) {
 

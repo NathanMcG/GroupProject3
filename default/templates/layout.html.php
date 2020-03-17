@@ -34,32 +34,44 @@
         <div id="nav-icon"><i class="fas fa-bars"></i></div>
         <nav id="nav">
             <ul>
-                <li class="main-nav">
-                    <a href="#" class="drop-down" >Alcohol
-                        <span><i class="fas fa-angle-down"></i></span>
-                    </a>
-                        <ul class="sub-nav">
-                            <li class="sub-head">Wine</li>
-                            <li><a href="#">- Red</a></li>
-                            <li><a href="#">- White</a></li>
-                            <li><a href="#">- Ros&eacute;</a></li>
-                            <li class="sub-head">Beer</li>
-                            <li><a href="#">- Ale</a></li>
-                            <li><a href="#">Larger</a></li>
-                            <li><a href="#">Cider</a></li> 
-                            <li><a href="#">Liquors</a></li>                            
-                            <li class="sub-head">Sprits</li>
-                            <li><a href="#">- Vodka</a></li>
-                            <li><a href="#">- Gin</a></li>
-                            <li><a href="#">- Rum</a></li>
-                            <li><a href="#">- Brandy</a></li>
-                            <li><a href="#">Champagne</a></li>
-                        </ul> 
+                <li class="main-nav"><a href="#" class="drop-down" >Alcohol<span><i class="fas fa-angle-down"></i></span></a>
+                    <ul class="sub-nav">
+                        <?php
+                            $classTable = new DatabaseTable('classifications',null);
+                            $classes = $classTable->find('class_type','Alcohol');
+                            $typesTable = new DatabaseTable('types',null);
+
+                            foreach($classes as $class){
+                                echo '<li class="sub-head">' . $class['classification_name'] . '</li>';
+                                $types = $typesTable->find('classification_name',$class['classification_name']);
+                                foreach($types as $type){
+                                    echo '<li><a href="#">- ' . $type['type_name'] . '</a></li>';
+                                }
+                            }?>
+                    </ul> 
                 </li>
-                <li class="main-nav"><a href="#">Mixers</a></li>
-                <li class="main-nav"><a href="#">Gift Ideas</a></li>
-                <li class="main-nav"><a href="#">Favourites</a></li>
-                <li class="main-nav"><a href="#">Offers</a></li>
+                <li class="main-nav"><a href="#">Mixers<span><i class="fas fa-angle-down"></i></span></a>
+                    <ul class="sub-nav">
+                        <?php
+                            $classTable = new DatabaseTable('classifications',null);
+                            $classes = $classTable->find('class_type','Mixer');
+                            $typesTable = new DatabaseTable('types',null);
+
+                            foreach($classes as $class){
+                                echo '<li class="sub-head">' . $class['classification_name'] . '</li>';
+                                $types = $typesTable->find('classification_name',$class['classification_name']);
+                                foreach($types as $type){
+                                    echo '<li><a href="#">- ' . $type['type_name'] . '</a></li>';
+                                }
+                            }?>
+                    </ul> 
+                </li>
+                <li class="main-nav"><a href="#">Gift Ideas</a>
+                </li>
+                <li class="main-nav"><a href="#">Favourites</a>
+                </li>
+                <li class="main-nav"><a href="#">Offers</a>
+                </li>
             </ul>
         </nav>
         <main><?=$content?></main>

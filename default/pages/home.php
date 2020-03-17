@@ -1,3 +1,4 @@
 <?php
     $title = 'Home';
-    $content = '';
+    $variables = array();
+    $content = loadTemplate('../templates/imageSlider.html.php',$variables);
