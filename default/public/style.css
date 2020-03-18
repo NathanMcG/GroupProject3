@@ -284,6 +284,72 @@ main{
     border-right: 1px solid #000;
 }
 
+/*Searching and Orders*/
+.search-container, 
+.user-order-details {
+    display: flex;
+    align-items: flex-start; 
+    color: #fff;   
+}
+
+.search-container {
+    justify-content: center;
+    flex: 2 0 auto;
+}
+
+.user-order-details {
+    flex: 2 0 9em;
+}
+
+.search-results, 
+.orders-list {
+    list-style-type: none;
+}
+
+.orders-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.search-results li, 
+.orders-list li {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5em;
+    border: 1px solid #ddd;
+    margin: 4px 5px;
+}
+.search-results img, 
+.search-results a, 
+.search-results p, 
+.search-results label,
+.orders-list label{
+    display: block;
+    width: auto;
+    margin: 3px 0;
+}
+.search-results img {
+    max-width: 20vw;
+}
+.orders-list h2,
+.orders-list label {
+    margin-right: 10px;
+}
+.search-results p, 
+.orders-list label {
+    max-width: 50vw;
+}
+
+.search-results a {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+.search-results a:hover {
+    color: #fafafa;
+}
 
 /* Home Page*/
 .image-slider {
