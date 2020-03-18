@@ -286,7 +286,8 @@ main{
 
 /*Searching and Orders*/
 .search-container, 
-.user-order-details {
+.user-order-details,
+.list-products {
     display: flex;
     align-items: flex-start; 
     color: #fff;   
@@ -297,16 +298,23 @@ main{
     flex: 2 0 auto;
 }
 
+
 .user-order-details {
-    flex: 2 0 9em;
+    flex: 2 0 50%;
+}
+
+.list-products {
+    flex: 2 0 80%;
 }
 
 .search-results, 
-.orders-list {
+.orders-list,
+.all-products {
     list-style-type: none;
 }
 
-.orders-list {
+.orders-list,
+.all-products {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -320,14 +328,31 @@ main{
     border: 1px solid #ddd;
     margin: 4px 5px;
 }
-.search-results img, 
+
+.all-products li {
+    display: flex;
+    flex-direction: column;
+    width: calc(100%/4);
+    border: 1px solid #f2b662;
+}
+.search-results img,
 .search-results a, 
 .search-results p, 
 .search-results label,
-.orders-list label{
+.orders-list label,
+.all-products label{
     display: block;
     width: auto;
     margin: 3px 0;
+}
+.all-products label {
+    margin-left: 10px !important;
+    font-size: 15px;
+    margin-bottom: 10px !important;
+}
+.all-products img {
+    margin-top: 5px !important;
+    align-self: center;
 }
 .search-results img {
     max-width: 20vw;
@@ -349,6 +374,73 @@ main{
 
 .search-results a:hover {
     color: #fafafa;
+}
+
+.accordian {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #f2b662;
+    width: calc(100% / 5);
+    background-color: #c93d67;
+}
+
+.filter-name {
+    border-bottom: 2px solid #f2b662;
+    padding: 5px 0;
+}
+.filter-name h2 {
+    color: #fff;
+    text-align: center;
+    text-decoration: underline;
+
+}
+ /* REFERENCE:  https://www.youtube.com/watch?v=VTdSW57--yM */
+button.filter-acc {
+    width: 100%;
+    background-color: #c93d67;
+    outline: none;
+    border-top: 1px solid #f2b662;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #f2b662;
+    text-align: left;
+    padding: 5px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+}
+
+button.filter-acc::after {
+    content: '\f0dd';
+    font-family: "fontawesome";
+    font-size: 16px;
+    float: right;
+}
+
+button.filter-acc.open-current:after {
+    content: '\f0de';
+}
+
+button.filter-acc:hover, button.filter-acc.open-current {
+    background-color: rgba(125, 94, 103, 0.5);
+}
+
+.filter-content {
+    padding: 0 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+
+.filter-content a {
+    display: block;
+    color: #000;
+}
+
+.filter-content a:hover,
+.filter-content a:visited {
+    color: #2b2e1e;
 }
 
 /* Home Page*/
