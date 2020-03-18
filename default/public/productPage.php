@@ -1,6 +1,7 @@
 <?php
-	require '../templates/loadTemplate.php';
+	require '../loadTemplate.php';
 	require '../templates/functions.php';
+	require '../classes/DatabaseTable.php';
 	$title = 'Product';
 	$product=find(pdo(),'products','product_id','3')[0];
 
