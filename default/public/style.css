@@ -147,7 +147,8 @@ nav ul .main-nav a {
 
 .sub-nav li a {
     font-size: 15px;
-    line-height: 5px;
+    padding: 0 !important;
+    height: 25px !important;
 
 }
 
