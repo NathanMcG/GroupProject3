@@ -332,10 +332,10 @@ main{
 .all-products li {
     display: flex;
     flex-direction: column;
-    width: calc(100%/4);
+    padding: 0 45px;
     border: 1px solid #f2b662;
 }
-.search-results img,
+.search-results a img,
 .search-results a, 
 .search-results p, 
 .search-results label,
@@ -346,12 +346,16 @@ main{
     margin: 3px 0;
 }
 .all-products label {
-    margin-left: 10px !important;
+    margin-left: 10px;
     font-size: 15px;
-    margin-bottom: 10px !important;
+    margin-bottom: 10px;
 }
-.all-products img {
-    margin-top: 5px !important;
+
+.all-products label a {
+    color: #ddd;
+}
+.all-products a {
+    margin-top: 5px;
     align-self: center;
 }
 .search-results img {
