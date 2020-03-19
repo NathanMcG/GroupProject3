@@ -36,7 +36,7 @@
         <?php
             $productTable = new DatabaseTable('products',null);
             $products = $productTable->findAll();
-            for($i=0;$i<6;$i++){
+            for($i=0;$i<1;$i++){
                 echo loadTemplate('../templates/miniProduct.html.php',$products[0] );
             }
         ?>
