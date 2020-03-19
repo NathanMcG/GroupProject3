@@ -335,7 +335,7 @@ main{
     padding: 0 45px;
     border: 1px solid #f2b662;
 }
-.search-results img,
+.search-results a img,
 .search-results a, 
 .search-results p, 
 .search-results label,
@@ -354,7 +354,7 @@ main{
 .all-products label a {
     color: #ddd;
 }
-.all-products a img{
+.all-products a {
     margin-top: 5px;
     align-self: center;
 }
