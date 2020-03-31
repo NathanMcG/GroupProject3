@@ -4,7 +4,7 @@
 
     function uploadImage($folder,$endName){
     $currentDir = getcwd();
-    $uploadDirectory = '/images/' . $folder . '/';
+    $uploadDirectory = '/srv/http/default/public/images/' . $folder . '/';
 
     $errors = []; // Store all foreseen and unforseen errors here
 
@@ -17,7 +17,7 @@
     $fileExtension_explode = explode('.',$fileName);
     $fileExtension = strtolower(end($fileExtension_explode));
 
-    $uploadPath = '..' . $uploadDirectory . basename($endName.'.png'); 
+    $uploadPath = $uploadDirectory . basename($endName.'.png'); 
 
     if (isset($_POST['submit'])) {
 

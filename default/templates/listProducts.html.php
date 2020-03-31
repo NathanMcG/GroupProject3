@@ -34,10 +34,8 @@
 <div class="list-products">
     <ul class="all-products">
         <?php
-            $productTable = new DatabaseTable('products',null);
-            $products = $productTable->findAll();
-            for($i=0;$i<100;$i++){
-                echo loadTemplate('../templates/miniProduct.html.php',$products[0] );
+            foreach($products as $product){
+                echo loadTemplate('../templates/miniProduct.html.php',$product);
             }
         ?>
     </ul>
