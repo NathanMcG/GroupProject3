@@ -999,4 +999,8 @@ CREATE TABLE IF NOT EXISTS `slow_log` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+<<<<<<< HEAD
 -- Dump completed on 2020-02-26 13:45:24
+=======
+-- Dump completed on 2020-03-18 23:58:32
+>>>>>>> parent of e9c66fe... Commit
