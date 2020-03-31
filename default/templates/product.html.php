@@ -1,7 +1,12 @@
 <div class="alchol-prod-section">
     <section class="alcohol-card">
                     <div class="alcohol-image">
-                        <img src="images/bottle.png" alt="product image" class="img-product" width="172px" height="240px">
+                        <img src="images/products/<?php
+                            if(!file_exists('images/products/' . $product['product_id'] . '.png'))
+                                echo 'bottle';
+                            else
+                                echo $product['product_id'];
+                        ?>.png" alt="product image" class="img-product" width="172px" height="240px">
                     </div>
                     <div class="alcohol-reviews">
                         <h3>Reviewed:</h3>
