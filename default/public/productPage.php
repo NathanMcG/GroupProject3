@@ -1,10 +1,8 @@
 <?php
-	require '../templates/loadTemplate.php';
+	require '../loadTemplate.php';
 	require '../templates/functions.php';
+	require '../classes/DatabaseTable.php';
 	$title = 'Product';
-	
-	/*$stmt = pdo()->prepare('SELECT * FROM products WHERE product_id=3');
-	$stmt->execute();*/
 	$product=find(pdo(),'products','product_id','3')[0];
 
 	$variables = array('product'=>$product);

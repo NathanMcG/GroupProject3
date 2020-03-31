@@ -2,53 +2,77 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Home</title>
+        <title><?=$title?></title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width-device-width, initial-scale-1">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
     </head>
     <body>
         <header id="header">
-            <a href="v.je"><img src="images/lastOrderLogo.jpg" alt="last orders" class="logo" width="105px" height="85px"></a>
-            <form action="#" method="#" class="searching">
+            <a href="?"><img src="images/lastOrderLogo.jpg" alt="last orders" class="logo" width="105px" height="85px"></a>
+            <form action="searchListings.php" method="GET" class="searching">
                 <input type="text" name="search" placeholder="Search..." class="searchText" />
                 <input type="image" name="submit" src="images/searchbar.png" class="searchBtn" width="50px" height="50px"/>
             </form>
             <ul class="topNav">
-                <a href="login.php">LOG IN</a>
+                <?php
+                    if(isset($_SESSION['id'])){
+                        $users = new DatabaseTable('users',null);
+                        $currentUser = $users->find('user_id',$_SESSION['id'])[0];
+                        echo '<a href="#">' . $currentUser['user_firstname'] . ' ' . $currentUser['user_lastname'] . '</a>
+                        <span class="pipe">|</span>
+                        <a href="?page=logout">LOG OUT</a>';
+                    }
+                    else{
+                        echo '<a href="?page=login">LOG IN</a>';
+                    }
+                ?>
                 <span class="pipe">|</span>
-                <a href="#">REGISTER</a>
+                <a href="?page=register">REGISTER</a>
             </ul>
         </header>
         <div id="nav-icon"><i class="fas fa-bars"></i></div>
         <nav id="nav">
             <ul>
-                <li class="main-nav">
-                    <a href="#" class="drop-down" >Alcohol
-                        <span><i class="fas fa-angle-down"></i></span>
-                    </a>
-                        <ul class="sub-nav">
-                            <li class="sub-head">Wine</li>
-                            <li><a href="#">- Red</a></li>
-                            <li><a href="#">- White</a></li>
-                            <li><a href="#">- Ros&eacute;</a></li>
-                            <li class="sub-head">Beer</li>
-                            <li><a href="#">- Ale</a></li>
-                            <li><a href="#">Larger</a></li>
-                            <li><a href="#">Cider</a></li> 
-                            <li><a href="#">Liquors</a></li>                            
-                            <li class="sub-head">Sprits</li>
-                            <li><a href="#">- Vodka</a></li>
-                            <li><a href="#">- Gin</a></li>
-                            <li><a href="#">- Rum</a></li>
-                            <li><a href="#">- Brandy</a></li>
-                            <li><a href="#">Champagne</a></li>
-                        </ul> 
+                <li class="main-nav"><a href="#" class="drop-down" >Alcohol<span><i class="fas fa-angle-down"></i></span></a>
+                    <ul class="sub-nav">
+                        <?php
+                            $classTable = new DatabaseTable('classifications',null);
+                            $classes = $classTable->find('class_type','Alcohol');
+                            $typesTable = new DatabaseTable('types',null);
+
+                            foreach($classes as $class){
+                                echo '<li class="sub-head">' . $class['classification_name'] . '</li>';
+                                $types = $typesTable->find('classification_name',$class['classification_name']);
+                                foreach($types as $type){
+                                    echo '<li><a href="#">- ' . $type['type_name'] . '</a></li>';
+                                }
+                            }?>
+                    </ul> 
                 </li>
-                <li class="main-nav"><a href="#">Mixers</a></li>
-                <li class="main-nav"><a href="#">Gift Ideas</a></li>
-                <li class="main-nav"><a href="#">Favourites</a></li>
-                <li class="main-nav"><a href="#">Offers</a></li>
+                <li class="main-nav"><a href="#">Mixers<span><i class="fas fa-angle-down"></i></span></a>
+                    <ul class="sub-nav">
+                        <?php
+                            $classTable = new DatabaseTable('classifications',null);
+                            $classes = $classTable->find('class_type','Mixer');
+                            $typesTable = new DatabaseTable('types',null);
+
+                            foreach($classes as $class){
+                                echo '<li class="sub-head">' . $class['classification_name'] . '</li>';
+                                $types = $typesTable->find('classification_name',$class['classification_name']);
+                                foreach($types as $type){
+                                    echo '<li><a href="#">- ' . $type['type_name'] . '</a></li>';
+                                }
+                            }?>
+                    </ul> 
+                </li>
+                <li class="main-nav"><a href="#">Gift Ideas</a>
+                </li>
+                <li class="main-nav"><a href="#">Favourites</a>
+                </li>
+                <li class="main-nav"><a href="#">Offers</a>
+                </li>
             </ul>
         </nav>
         <main><?=$content?></main>

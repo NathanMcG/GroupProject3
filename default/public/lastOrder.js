@@ -23,3 +23,35 @@ if (drop.matches){
         });
     }
 }
+
+//https://www.w3schools.com/w3css/w3css_slideshow.asp
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+// https://www.youtube.com/watch?v=VTdSW57--yM
+//Listing all products
+var filterAccordian = document.getElementsByClassName("filter-acc");
+for (var i = 0; i < filterAccordian.length; i++) {
+    filterAccordian[i].onclick = function() {
+      this.classList.toggle('open-current');
+  
+      var filterContent = this.nextElementSibling;
+      if (filterContent.style.maxHeight) {
+        filterContent.style.maxHeight = null;
+      } else {
+        filterContent.style.maxHeight = filterContent.scrollHeight + "px";
+      }
+    }
+  }

@@ -147,7 +147,8 @@ nav ul .main-nav a {
 
 .sub-nav li a {
     font-size: 15px;
-    line-height: 5px;
+    padding: 0 !important;
+    height: 25px !important;
 
 }
 
@@ -157,35 +158,85 @@ nav ul .main-nav a {
 
 main{
     display: flex;
-    flex-flow: column;
+    
     flex: 1 0 auto;
 }
 
-/* Login Form */
-.login-form {
+/* REGISTER AND LOGIN PAGE*/
+.lastOrder-form {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex: 2 0 auto;
 }
 
-.login-flex {
-    list-style-type: none;
-    align-self: center;
-
-}
-.login-flex li {
+.inner-form, .login-form {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.login-flex > li > .login-label {
-    flex: 1 0 auto;
-}
-
-.login-flex li .login-label {
-    padding: 10px;
+    justify-content: flex-end;
     color: #fff;
+}
+
+.lastOrder-form p{
+    color: #fff;
+    padding: 8px;
+    font-style: italic;
+}
+
+.inner-form{
+    margin-bottom: 5px;
+}
+.login-form{
+    margin-bottom: 20px;
+}
+
+.login-form > label, .inner-form > label {
+    margin-right: 10px;
+    align-self: center;
+}
+.login-form > input[type="text"],
+.inner-form > input[type="text"],
+.login-form > input[type="password"],
+.inner-form > input[type="password"],
+.login-form > input[type="date"],
+.inner-form > input[type="date"],
+.inner-form > textarea,
+.inner-form > #volume{
+    padding: 5px 2px;
+    border: 1px solid #f2b662;
+    background-color: #fff;
+    color: #000;
+}
+
+#product-vol{
+    width: 50px;
+    margin-left: 6em;
+}
+
+#volume {
+    margin-left: 10px;
+}
+
+/*
+.login-form > input[type="password"],
+.reg-form > input[type="password"] {
+    padding: 5px 2px;
+    border: 1px solid #f2b662;
+    background-color: #c93d67;
+    color: #fff;
+} */
+
+.inner-formBtn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.inner-formBtn > input[type="submit"] {
+    padding: 5px;
+    color: #fff;
+    border: 1px solid #f2b662;
+    background-color: #c93d67;
+    cursor: pointer;
 }
 
 .alchol-prod-section{
@@ -194,10 +245,210 @@ main{
       padding: 15px 30px;
 }
 
+/*User Section Page*/
+
+.user-home {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 2 0 auto;
+    margin-top: 40px;
+    font-size: 25px;
+}
+
+.user-row {
+    display: flex;
+    flex-flow: row wrap;
+    width: 300px;
+}
+
+.user-col{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+}
+
+.user-box{
+    height: 60px; 
+}
+.user-box, .user-options{
+    color: #fff;
+}
+
+.user-box  .fas{
+    padding: 1em 0.5em 1em 2em;
+}
+
+
+.user-row:first-child .user-box {
+    border-right: 1px solid #000;
+}
+
+/*Searching and Orders*/
+.search-container, 
+.user-order-details,
+.list-products {
+    display: flex;
+    align-items: flex-start; 
+    color: #fff;   
+}
+
+.search-container {
+    justify-content: center;
+    flex: 2 0 auto;
+}
+
+
+.user-order-details {
+    flex: 2 0 50%;
+}
+
+.list-products {
+    flex: 2 0 80%;
+}
+
+.search-results, 
+.orders-list,
+.all-products {
+    list-style-type: none;
+}
+
+.orders-list,
+.all-products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.search-results li, 
+.orders-list li {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5em;
+    border: 1px solid #ddd;
+    margin: 4px 5px;
+}
+
+.all-products li {
+    display: flex;
+    flex-direction: column;
+    padding: 0 45px;
+    border: 1px solid #f2b662;
+}
+.search-results a img,
+.search-results a, 
+.search-results p, 
+.search-results label,
+.orders-list label,
+.all-products label{
+    display: block;
+    width: auto;
+    margin: 3px 0;
+}
+.all-products label {
+    margin-left: 8px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.all-products label a {
+    color: #ddd;
+}
+.all-products a {
+    margin-top: 5px;
+    align-self: center;
+}
+.search-results img {
+    max-width: 20vw;
+}
+.orders-list h2,
+.orders-list label {
+    margin-right: 10px;
+}
+.search-results p, 
+.orders-list label {
+    max-width: 50vw;
+}
+
+.search-results a {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+.search-results a:hover {
+    color: #fafafa;
+}
+
+.accordian {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #f2b662;
+    width: calc(100% / 5);
+    background-color: #c93d67;
+}
+
+.filter-name {
+    border-bottom: 2px solid #f2b662;
+    padding: 5px 0;
+}
+.filter-name h2 {
+    color: #fff;
+    text-align: center;
+    text-decoration: underline;
+
+}
+ /* REFERENCE:  https://www.youtube.com/watch?v=VTdSW57--yM */
+button.filter-acc {
+    width: 100%;
+    background-color: #c93d67;
+    outline: none;
+    border-top: 1px solid #f2b662;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #f2b662;
+    text-align: left;
+    padding: 5px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+}
+
+button.filter-acc::after {
+    content: '\f0dd';
+    font-family: "fontawesome";
+    font-size: 16px;
+    float: right;
+}
+
+button.filter-acc.open-current:after {
+    content: '\f0de';
+}
+
+button.filter-acc:hover, button.filter-acc.open-current {
+    background-color: rgba(125, 94, 103, 0.5);
+}
+
+.filter-content {
+    padding: 0 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+
+.filter-content a {
+    display: block;
+    color: #000;
+}
+
+.filter-content a:hover,
+.filter-content a:visited {
+    color: #2b2e1e;
+}
+
 /* Home Page*/
 .image-slider {
-    width: 100%;
-    height: 200px;
 }
 
 /* Product Page */
@@ -308,15 +559,25 @@ main{
 .add-form {
     display: block;
     padding-top: 15px;
+    margin-left: 20px;
     width: 100%;
+}
+
+.add-form ul {
+    list-style-type: none;
+}
+
+.add-form > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .add-form label {
     color: #fff;
-    float: right;
+    float: left;
     width: 200px;
 }
-
 
 .basket-no {
     margin-bottom: 10px;
@@ -346,6 +607,9 @@ main{
     background-color: #3e4c52;
 }
 
+.img-product{
+    background-color: #ffffff;
+}
 
 
 .footer{
@@ -541,6 +805,19 @@ and (max-width: 1024px) {
 
 }
 
+@media screen and (max-width: 500px) {
+    .user-home {
+        margin-top: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .user-box  .fas{
+        padding: none;
+    }
+    .user-row:first-child .user-box {
+        border-right: none;
+    }
+}
 /*@media screen and (min-width : 1536px) {
 
     #nav > ul > .main-nav > a {
