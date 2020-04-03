@@ -6,6 +6,10 @@
 
     if(isset($_POST['product'])){
 
+        $_POST['product']['alcohol_content'] = str_replace('%','',$_POST['product']['alcohol_content']);
+        $_POST['product']['product_discount'] = str_replace('%','',$_POST['product']['product_discount']);
+        $_POST['product']['product_price'] = str_replace('%','',$_POST['product']['product_price']);
+
         //var_dump($_POST);
 
         $_POST['product']['volume'] = $_POST['volume'] . $_POST['unit'];
