@@ -14,7 +14,7 @@ if(isset($_POST['details'])){
   else{
     $variables = array('details' => $_POST['details'],'notice' => 'Validation Error');
   }
-  $content.= loadTemplate('../templates/register.html.php',$variables);
+  $content.= loadTemplate('../templates/formRegister.html.php',$variables);
 
 }
 else{
@@ -34,7 +34,7 @@ function emptyDisplay(){
   'user_date_of_birth' => '');  
 
   $variables = array('details' => $details);
-  $content = loadTemplate('../templates/register.html.php',$variables);
+  $content = loadTemplate('../templates/formRegister.html.php',$variables);
   return $content;
 }
 
