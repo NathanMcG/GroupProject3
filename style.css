@@ -606,15 +606,15 @@ and (max-width: 1024px) {
 
 
 /*/ Results Page /*/
-
 #results{
-    border:0px solid #f2b662;
-    padding: 1px 10em 0px 0px; 
-    margin: -5px 0 0 -0.5px;
+    border:0.5px solid #f2b662;
+    padding: 1.5px 10em 0px 0px; 
+    margin: 0px 0 0 0px;
     width: 100%;
     font-size: 20px;
     text-decoration: none;
     position: relative;
+    margin-left: 0.1px;
 
 
 }
@@ -622,18 +622,18 @@ and (max-width: 1024px) {
 
 #filter{
 
-    font-size: 17px;
+    font-size: 16px;
     text-decoration: underline;
     color: white;
     background-color: #c93d67;
-    border: 1px solid #f2b662;
-    padding: 1px 0em 16px 1px; 
-    margin:  0px 2.2px 0.5px 2px; 
+    border: 1.15px solid #f2b662;
+    padding: 2px 0em 17px 1px; 
+    margin:  0px 3px 0.5px 5px; 
     text-align: center;
     box-sizing: border-box; 
     position: relative;
-    margin-left: 8px;
-    width:97.2%;
+    width:304.5px;
+    left: 5.2px;
 
 
 }
@@ -641,54 +641,131 @@ and (max-width: 1024px) {
 
 #types{
 
-    font-size: 17px;
+    font-size: 16px;
     color: white;
     background-color: #c93d67;
-    border: 1px solid #f2b662;
-    padding: 1.8px 13.64em 15px 1px; 
+    border: 1.15px solid #f2b662;
+    padding: 4px 13.64em 15px 1px; 
     box-sizing: border-box; 
     margin-left: 6px;
     position: relative;
+    width:305px;
+    left: 4px;
+
+
 }
 
+#typesMethod{
 
+    font-size: 16px;
+    color: white;
+    background-color: #c93d67;
+    border: 1.15px solid #f2b662;
+    padding: 4px 13.64em 15px 1px; 
+    box-sizing: border-box; 
+    margin-left: 6px;
+    position: relative;
+    width:305px;
+    left: 4px;
+    /* display: none; */
+
+}
 
 #price{
     
-    font-size: 17px;
+    font-size: 16px;
     color: white;
     background-color: #c93d67;
-    border: 1px solid #f2b662;
-    padding: 1.5px 13.64em 15px 1px; 
+    border: 1.15px solid #f2b662;
+    padding: 2px 13.64em 15px 1px; 
     box-sizing: border-box; 
     margin-left: 6px;
     position: relative;
+    width:305px;
+    left: 4px;
+
     
+}
+
+#priceMethod{
+
+    font-size: 16px;
+    color: white;
+    background-color: #c93d67;
+    border: 1.15px solid #f2b662;
+    padding: 4px 13.64em 15px 1px; 
+    box-sizing: border-box; 
+    margin-left: 6px;
+    position: relative;
+    width:305px;
+    left: 4px;
+    display: none;
+
 }
 
 
 #brands{
     
-    font-size: 17px;
+    font-size: 16px;
     color: white;
     background-color: #c93d67;
     border: 1px solid #f2b662;
-    padding: 1px 13.45em 15px 1px; 
+    padding: 2px 13.45em 15px 1px; 
     box-sizing: border-box; 
     margin-left: 6px;
     position: relative;
+    width:305px;
+    left: 4px;
+
+
+}
+
+#brandsMethod{
+
+    font-size: 16px;
+    color: white;
+    background-color: #c93d67;
+    border: 1.15px solid #f2b662;
+    padding: 4px 13.64em 15px 1px; 
+    box-sizing: border-box; 
+    margin-left: 6px;
+    position: relative;
+    width:305px;
+    left: 4px;
+    display: none;
+
 }
 
 #volume{
     
-    font-size: 17px;
+    font-size: 16px;
     color: white;
     background-color: #c93d67;
     border: 1px solid #f2b662;
-    padding: 1px 13.3em 15px 1px; 
+    padding: 2px 13.3em 15px 1px; 
     box-sizing: border-box; 
     position: relative;
     margin-left: 6px;
+    width:305px;
+    left: 4px;
+
+
+
+}
+
+#volumeMethod{
+
+    font-size: 16px;
+    color: white;
+    background-color: #c93d67;
+    border: 1.15px solid #f2b662;
+    padding: 4px 13.64em 15px 1px; 
+    box-sizing: border-box; 
+    margin-left: 6px;
+    position: relative;
+    width:305px;
+    left: 4px;
+    display: none;
 
 }
 
@@ -697,33 +774,47 @@ and (max-width: 1024px) {
 
     background-color: #c93d67;
     border: 1px solid #f2b662;
-    padding: 1px 15.3em 800px 1px; 
+    padding: 1px 0em 799px 0px;
+    margin: 0 0 -20px 0; 
     box-sizing: border-box; 
     position: relative;
-    margin-left: 5px;
+    margin-left: 6px;
+    width:305px;
+    left: 4px;
+    z-index: -1;
+
 
 }
 
 
 td{
     border: 0.5px solid #f2b662;
-    padding:120px 11.95em 0px 0px;
-    margin-bottom: auto;
+    padding:120px 11.942em 0px 0px;
     box-sizing: border-box; 
     position: relative;
+    
 
-  
 }
+
+
 
 #results .row{
     border: 0.5px solid #f2b662;
-    padding: 0px 0px 0em 0px; 
+    padding: 0px 0px 1em 0px; 
     box-sizing: border-box; 
     position: relative;
     right:0.5em;
     
 
 }
+
+#results {
+    border-spacing: 0px;
+    
+
+}
+
+
 
 .img{
     margin: -140px 0em 0px -20px; 
@@ -735,4 +826,48 @@ td{
     margin: 13px 0 0 0;
     padding: 0px 0px 15px 0px; 
     text-align: center;
+}
+
+#pull-out{
+
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    top: 17em;
+    height: 50%;
+    width: 300px;
+    max-width: 350px;
+    background-color:  #c93d67;
+    box-sizing: border-box;
+    padding:10px;
+    color: #fff;
+    border-style: solid;
+    border-color:black;
+    transition: .6s;
+    margin-right: -300px;
+    
+}
+
+
+#pull-out.hidden {
+    margin-right: 0px;
+}
+
+
+#pull-out a.nav-toggle {
+    position: absolute;
+    content:url(Basket.png);
+    left: -65px;
+    top:9.8em;
+    width: 65px;
+    height: 65px;
+    background-color:  #c93d67;
+    border-radius: 30px 30px 30px 30px;
+    border-style: solid;
+    border-color:black;
+
+}
+
+#pull-out .pressed{
+    margin-right:0;
 }

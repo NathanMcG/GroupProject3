@@ -1,14 +1,27 @@
-<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <title></title>
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width-device-width, initial-scale-1">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-        <script scr="lastOrder.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="results.js"></script>
     </head>
+
+<!--                 Basket                    -->
+    <div id="pull-out">
+      <div style="margin-right: 14em; margin-top: 0em; padding: 0 16.2em 6px 15px;border-width: 2.5px; border-color: black; border-style:solid; background-color: white;"></style>
+      <h4 style="margin-top: 12px; margin-right: 30px; color: black; text-decoration: underline;">BASKET</h4>
+      <h4 style="margin-top: 18.5em; margin-right: 30px; color: black;">TOTAL:</h4>
+      <button style="margin-right: -10.5em; margin-top: -2.3em; float:top; float: right; padding: 9px 2.1em 0.7em 0px; border-radius: 8em 8em 8em 8em;  text-indent: 25%; border-color: black; border-style:solid; background-color:#c93d67; font-size:x-large; color: #f2b662;">Checkout</button>
+      </div>
+      
+      <a href="#" class="nav-toggle"></a>
+      
+    </div>
     <body>
+
+<!--                 Header                    -->
         <header id="header">
             <img src="images/lastOrderLogo.jpg" alt="last orders" class="logo" width="105px" height="85px">
             <form action="#" method="#" class="searching">
@@ -34,6 +47,8 @@
         </nav>
         <main>
 
+<!--                 Table                    -->
+
 <table  style= "position: static; right:0.1em; top: 6.70em; overflow: hidden;" id="results" BORDER=1>
   <tr>
     <tbody>
@@ -42,199 +57,352 @@
           <div>
           <div id = "filter">Filter</div>
           </div>
-        
 
 
+<!--                 Types                    -->
 
+
+ <form>
+ <div class="drop_down_menu">
+   <div class="typesMethod" onclick="typesMethod()">
+  <select id="types">
+    <option value="" style='display: none' overflow: default; selected disabled>Types</option>
+  </select>
+  <div class="select"></div>
+</div>
+<div id="typesMethod">
+  <label for="1"><input type="checkbox" id="1" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 1</b></small></label>
+  <label for="2"><input type="checkbox" id="2" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 2</b></small></label>
+  <label for="3"><input type="checkbox" id="3" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 3</b></small></label>
+  <label for="4"><input type="checkbox" id="4" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 4</b></small></label>
+</div>
+
+</div>
+ </div> 
+</form>
+
+
+<!-- <script>
+  var expanded = false;
+  function typesMethod(){
+    var checkbox = document.getElementById("typesMethod");
+    if(!expanded){
+      checkbox.style.display = "block";
+      expanded = true;
+    } else {
+      checkbox.style.display = "none";
+      expanded = false;
+    }
+  }
+</script> -->
+
+<!--                 Price                    -->
+
+<form>
+  <div class="drop_down_menu">
+    <div class="priceMethod" onclick="priceMethod()">
+   <select id="price">
+     <option value="" style='display: none' overflow: default; selected disabled>Price</option>
+   </select>
+   <div class="select"></div>
+ </div>
+ <div id="priceMethod">
+  <label for="5"><input type="checkbox" id="1" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 5</b></small></label>
+  <label for="6"><input type="checkbox" id="2" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 6</b></small></label>
+  <label for="7"><input type="checkbox" id="3" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 7</b></small></label>
+  <label for="8"><input type="checkbox" id="4" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 8</b></small></label>
+ </div>
+ 
+ </div>
+  </div> 
+ </form>
+
+ <!-- <script>
+  var expanded = false;
+  function priceMethod(){
+    var checkbox = document.getElementById("priceMethod");
+    if(!expanded){
+      checkbox.style.display = "block";
+      expanded = true;
+    } else {
+      checkbox.style.display = "none";
+      expanded = false;
+    }
+  }
+</script> -->
+
+<!--                 Brands                    -->
+
+ <form>
+  <div class="drop_down_menu">
+    <div class="brandsMethod" onclick="brandsMethod()">
+   <select id="brands">
+     <option value="" style='display: none' overflow: default; selected disabled>Brands</option>
+   </select>
+   <div class="select"></div>
+ </div>
+ <div id="brandsMethod">
+  <label for="9"><input type="checkbox" id="1" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 9</b></small></label>
+  <label for="10"><input type="checkbox" id="2" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 10</b></small></label>
+  <label for="11"><input type="checkbox" id="3" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 11</b></small></label>
+  <label for="12"><input type="checkbox" id="4" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 12</b></small></label>
+ </div>
+ 
+ </div>
+  </div> 
+ </form>
+
+ <!-- <script>
+  var expanded = false;
+  function brandsMethod(){
+    var checkbox = document.getElementById("brandsMethod");
+    if(!expanded){
+      checkbox.style.display = "block";
+      expanded = true;
+    } else {
+      checkbox.style.display = "none";
+      expanded = false;
+    }
+  }
+</script> -->
+
+<!--                 Volume                    -->
+
+ <form>
+  <div class="drop_down_menu">
+    <div class="volumeMethod" onclick="volumeMethod()">
+   <select id="volume">
+     <option value="" style='display: none' overflow: default; selected disabled>Volume</option>
+   </select>
+   <div class="select"></div>
+ </div>
+ <div id="volumeMethod">
+  <label for="13"><input type="checkbox" id="1" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 13</b></small></label>
+  <label for="14"><input type="checkbox" id="2" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 14</b></small></label>
+  <label for="15"><input type="checkbox" id="3" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 15</b></small></label>
+  <label for="16"><input type="checkbox" id="4" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 16</b></small></label>
+ </div>
+ 
+ </div>
+  </div> 
+ </form>
+
+ <!-- <script>
+  var expanded = false;
+  function volumeMethod(){
+    var checkbox = document.getElementById("volumeMethod");
+    if(!expanded){
+      checkbox.style.display = "block";
+      expanded = true;
+    } else {
+      checkbox.style.display = "none";
+      expanded = false;
+    }
+  }
+</script> -->
+
+<!--                 OLD METHOD                    -->
+
+<!--TYPES-->
+
+<!-- 
           <select class name="drop_down_menu" id="types" >
           <option value="" style='display: none' selected disabled>Types</option>
            <option value="1">Type 1</option>
           <option value="2">Type 2</option>
           <option value="3">Type 3</option>
+          
            </div>
           </div>
           </select>
-          </div>
+        
+          </div> -->
 
-          <div>
+<!--PRICE-->
+
+<!--
+            <div>
         <select class name="drop_down_menu" id="price" >
           <option value="" style='display: none' selected disabled>Price</option>
           <option value="1" >Type 1</option>
           <option value="2">Type 2</option>
           <option value="3">Type 3</option>
         </select>
-          </div>
+          </div> -->
 
-          <div>
+<!--BRANDS-->
+
+<!-- 
+           <div>
           <select class name="drop_down_menu" id="brands" >
            <option value="" style='display: none' selected disabled>Brands</option>
            <option value="1" >Type 1</option>
            <option value="2">Type 2</option>
            <option value="3">Type 3</option>
           </select>
-           </div>
+           </div> -->
 
-           <div>
+<!--VOLUME-->
+
+           <!-- <div>
            <select class name="drop_down_menu" id="volume" >
             <option value="" style='display: none' selected disabled>Volume</option>
             <option value="1" >Type 1</option>
             <option value="2">Type 2</option>
             <option value="3">Type 3</option>
           </select>
-           </div>
+           </div> -->
 
-           <div class name="drop_down_menu" id="blank"></div>
+           <div class name="blank" id="blank"></div>
 
-    
-
-            <td style="right:0.62em; height: 30%; text-align: center;" >
+<div>
+            <td style="right:0.5em; height: 30%; text-align: center;" >
            
               <div> 
-                <img src="blank.png" alt="image" class="img" width="280px" height="140px"> 
+                <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
               </div>
 
-              <div id="text">Name:</div>
-              <div id="text">Price:</div>
-              <div id="text">Rating:</div>
+              <div id="text" style="text-align: right">Name:</div>
+              <div id="text" style="text-align: right">Price:</div>
+              <div id="text" style="text-align: right">Rating:</div>
 
             </td>
         
         
-            <td style="right:0.7em; height: 30%; text-align: center;">
+            <td style="right:0.5em; height: 30%; text-align: center;">
              
               <div> 
-                <img src="blank.png" alt="image" class="img" width="280px" height="140px"> 
+                <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
               </div>
 
-              <div id="text">Name:</div>
-              <div id="text">Price:</div>
-              <div id="text">Rating:</div>
+              <div id="text" style="text-align: right">Name:</div>
+              <div id="text" style="text-align: right">Price:</div>
+              <div id="text" style="text-align: right">Rating:</div>
 
             </td>
         
 
-            <td style="right:0.89em; height: 30%; text-align: center;">
+            <td style="right:0.5em; height: 30%; text-align: center;">
              
               <div> 
-                <img src="blank.png" alt="image" class="img" width="280px" height="140px"> 
+                <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
               </div>
 
-              <div id="text">Name:</div>
-              <div id="text">Price:</div>
-              <div id="text">Rating:</div>
+              <div id="text" style="text-align: right">Name:</div>
+              <div id="text" style="text-align: right">Price:</div>
+              <div id="text" style="text-align: right">Rating:</div>
 
             </td>
     
-            <td style="right:0.97em; height: 30%; text-align: center;">
+            <td style="right:0.5em; height: 30%; text-align: center;">
              
               <div> 
-                <img src="blank.png" alt="image" class="img" width="280px" height="140px"> 
+                <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
               </div>
 
-              <div id="text">Name:</div>
-              <div id="text">Price:</div>
-              <div id="text">Rating:</div>
+              <div id="text" style="text-align: right">Name:</div>
+              <div id="text" style="text-align: right">Price:</div>
+              <div id="text" style="text-align: right">Rating:</div>
 
             </td>
           
            <tr>
-             <td style="right:0.62em; height: 30%; text-align: center;">
+             <td style="right:0.5em; height: 30%; text-align: center;">
             
               <div> 
-                <img src="blank.png" alt="image" class="img" width="280px" height="140px"> 
+                <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
               </div>
 
-              <div id="text">Name:</div>
-              <div id="text">Price:</div>
-              <div id="text">Rating:</div>
+              <div id="text" style="text-align: right">Name:</div>
+              <div id="text" style="text-align: right">Price:</div>
+              <div id="text" style="text-align: right">Rating:</div>
 
             </td>
              
             </td>
-             <td style="right:0.7em; height: 30%; text-align: center; ">
+             <td style="right:0.5em; height: 30%; text-align: center; ">
             
               <div> 
-                <img src="blank.png" alt="image" class="img" width="280px" height="140px"> 
+                <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
               </div>
 
-              <div id="text">Name:</div>
-              <div id="text">Price:</div>
-              <div id="text">Rating:</div>
+              <div id="text" style="text-align: right">Name:</div>
+              <div id="text" style="text-align: right">Price:</div>
+              <div id="text" style="text-align: right">Rating:</div>
             
             </td>
-             <td style="right:0.89em; height: 30%; text-align: center; ">
+             <td style="right:0.5em; height: 30%; text-align: center; ">
             
               <div> 
-                <img src="blank.png" alt="image" class="img" width="280px" height="140px"> 
+                <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
               </div>
 
-              <div id="text">Name:</div>
-              <div id="text">Price:</div>
-              <div id="text">Rating:</div>
+              <div id="text" style="text-align: right">Name:</div>
+              <div id="text" style="text-align: right">Price:</div>
+              <div id="text" style="text-align: right">Rating:</div>
 
             </td>
-             <td style="right:0.97em; height: 30%; text-align: center; ">
+             <td style="right:0.5em; height: 30%; text-align: center; ">
             
               <div> 
-                <img src="blank.png" alt="image" class="img" width="280px" height="140px"> 
+                <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
               </div>
 
-              <div id="text">Name:</div>
-              <div id="text">Price:</div>
-              <div id="text">Rating:</div>
+              <div id="text" style="text-align: right">Name:</div>
+              <div id="text" style="text-align: right">Price:</div>
+              <div id="text" style="text-align: right">Rating:</div>
               
             </td>
 
           </tr>
  
-          <td style="right:0.62em; height: 30%; text-align: center;" >
+          <td style="right:0.5em; height: 30%; text-align: center;" >
            
             <div> 
-              <img src="blank.png" alt="image" class="img" width="280px" height="140px"> 
+              <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
             </div>
 
-            <div id="text">Name:</div>
-            <div id="text">Price:</div>
-            <div id="text">Rating:</div>
+            <div id="text" style="text-align: right">Name:</div>
+            <div id="text" style="text-align: right">Price:</div>
+            <div id="text" style="text-align: right">Rating:</div>
 
           </td>
       
       
-          <td style="right:0.7em; height: 30%; text-align: center;">
+          <td style="right:0.5em; height: 30%; text-align: center;">
            
             <div> 
-              <img src="blank.png" alt="image" class="img" width="280px" height="140px"> 
+              <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
             </div>
 
-            <div id="text">Name:</div>
-            <div id="text">Price:</div>
-            <div id="text">Rating:</div>
+            <div id="text" style="text-align: right">Name:</div>
+            <div id="text" style="text-align: right">Price:</div>
+            <div id="text" style="text-align: right">Rating:</div>
 
           </td>
       
 
-          <td style="right:0.89em; height: 30%; text-align: center;">
+          <td style="right:0.5em; height: 30%; text-align: center;">
            
             <div> 
-              <img src="blank.png" alt="image" class="img" width="280px" height="140px"> 
+              <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
             </div>
 
-            <div id="text">Name:</div>
-            <div id="text">Price:</div>
-            <div id="text">Rating:</div>
+            <div id="text" style="text-align: right">Name:</div>
+            <div id="text" style="text-align: right">Price:</div>
+            <div id="text" style="text-align: right">Rating:</div>
 
           </td>
   
-          <td style="right:0.97em; height: 30%; text-align: center;">
+          <td style="right:0.5em; height: 30%; text-align: center;">
            
             <div> 
-              <img src="blank.png" alt="image" class="img" width="280px" height="140px"> 
+              <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
             </div>
 
-            <div id="text">Name:</div>
-            <div id="text">Price:</div>
-            <div id="text">Rating:</div>
-
+            <div id="text" style="text-align: right">Name:</div>
+            <div id="text" style="text-align: right">Price:</div>
+            <div id="text" style="text-align: right">Rating:</div>
           </td>
 
      </td>
@@ -251,3 +419,4 @@
         <footer id="footer" position= "fixed"; style="padding:0px 10.5em 0px 0px; ">&#169; LastOrders</footer>
 </body>
 </html>  
+
