@@ -20,7 +20,7 @@
                     if(isset($_SESSION['id'])){
                         $users = new DatabaseTable('users',null);
                         $currentUser = $users->find('user_id',$_SESSION['id'])[0];
-                        echo '<a href="#">' . $currentUser['user_firstname'] . ' ' . $currentUser['user_lastname'] . '</a>
+                        echo '<a href="?page=user">' . $currentUser['user_firstname'] . ' ' . $currentUser['user_lastname'] . '</a>
                         <span class="pipe">|</span>
                         <a href="?page=logout">LOG OUT</a>';
                     }
