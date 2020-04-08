@@ -826,3 +826,47 @@ and (max-width: 1024px) {
     }
 
 } */
+
+#pull-out{
+
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    top: 17em;
+    height: 50%;
+    width: 300px;
+    max-width: 350px;
+    background-color:  #c93d67;
+    box-sizing: border-box;
+    padding:10px;
+    color: #fff;
+    border-style: solid;
+    border-color:black;
+    transition: .6s;
+    margin-right: -300px;
+    
+}
+
+
+#pull-out.hidden {
+    margin-right: 0px;
+}
+
+
+#pull-out a.nav-toggle {
+    position: absolute;
+    content:url(../public/images/basket.png);
+    left: -65px;
+    top:9.8em;
+    width: 65px;
+    height: 65px;
+    background-color:  #c93d67;
+    border-radius: 30px 30px 30px 30px;
+    border-style: solid;
+    border-color:black;
+
+}
+
+#pull-out .pressed{
+    margin-right:0;
+}

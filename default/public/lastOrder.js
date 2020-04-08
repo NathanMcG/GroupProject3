@@ -55,3 +55,12 @@ for (var i = 0; i < filterAccordian.length; i++) {
       }
     }
   }
+
+
+ // Basket
+$(function() {
+  $('.nav-toggle').click(function(e) {
+      e.preventDefault();
+    $('#pull-out').toggleClass("hidden");
+  });
+});

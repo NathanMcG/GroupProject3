@@ -1,7 +1,11 @@
 <?php
     require '../classes/SearchProducts.php';
     $title='Results';
+    
     $variables = array();
+
+    $content = loadTemplate('../templates/basket.html.php',$variables);
+
 
     $productsTable = new DatabaseTable('products',null);
 
@@ -13,4 +17,4 @@
         $variables['products'] = $productsTable->findAll();
     }
 
-    $content = loadTemplate('../templates/listProducts.html.php',$variables);
+    $content .= loadTemplate('../templates/listProducts.html.php',$variables);
