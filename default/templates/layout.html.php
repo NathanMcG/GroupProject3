@@ -9,6 +9,13 @@
         <meta name="viewport" content="width-device-width, initial-scale-1">
     </head>
 
+    <?php
+        if(isset($_SESSION['basket'])){
+            $variables = array();
+            echo loadTemplate('../templates/basket.html.php',$variables);
+        }
+    ?>
+
     <body>
         <header id="header">
             <a href="?"><img src="images/lastOrderLogo.jpg" alt="last orders" class="logo" width="105px" height="85px"></a>
