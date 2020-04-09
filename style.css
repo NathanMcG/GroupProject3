@@ -606,6 +606,17 @@ and (max-width: 1024px) {
 
 
 /*/ Results Page /*/
+#sidebar{
+    border:0.5px solid #f2b662;
+    padding: 1.5px 0em 0px 0px; 
+    margin: 0px 0 0 0px;
+    width: 21%;
+    font-size: 20px;
+    text-decoration: none;
+
+}
+
+
 #results{
     border:0.5px solid #f2b662;
     padding: 1.5px 10em 0px 0px; 
@@ -613,8 +624,8 @@ and (max-width: 1024px) {
     width: 100%;
     font-size: 20px;
     text-decoration: none;
-    position: relative;
-    margin-left: 0.1px;
+    position: fixed;
+    margin-left: 15.25em;
 
 
 }
@@ -627,13 +638,14 @@ and (max-width: 1024px) {
     color: white;
     background-color: #c93d67;
     border: 1.15px solid #f2b662;
-    padding: 2px 0em 17px 1px; 
-    margin:  0px 3px 0.5px 5px; 
+    padding: 3px 0em 17px 1px; 
+    margin:  -1px 4px 0.6px 5px; 
     text-align: center;
     box-sizing: border-box; 
     position: relative;
-    width:304.5px;
-    left: 5.2px;
+    width:304px;
+    left: -5px;
+    
 
 
 }
@@ -647,11 +659,9 @@ and (max-width: 1024px) {
     border: 1.15px solid #f2b662;
     padding: 4px 13.64em 15px 1px; 
     box-sizing: border-box; 
-    margin-left: 6px;
     position: relative;
-    width:305px;
-    left: 4px;
-
+    width:304px;
+    max-width: 100%;
 
 }
 
@@ -665,11 +675,13 @@ and (max-width: 1024px) {
     box-sizing: border-box; 
     margin-left: 6px;
     position: relative;
-    width:305px;
-    left: 4px;
-    /* display: none; */
+    width:304px;
+    left: -6px;
+    display: none;
+
 
 }
+
 
 #price{
     
@@ -679,12 +691,9 @@ and (max-width: 1024px) {
     border: 1.15px solid #f2b662;
     padding: 2px 13.64em 15px 1px; 
     box-sizing: border-box; 
-    margin-left: 6px;
     position: relative;
-    width:305px;
-    left: 4px;
+    width:304px;
 
-    
 }
 
 #priceMethod{
@@ -697,8 +706,8 @@ and (max-width: 1024px) {
     box-sizing: border-box; 
     margin-left: 6px;
     position: relative;
-    width:305px;
-    left: 4px;
+    width:304px;
+    left: -6px;
     display: none;
 
 }
@@ -709,14 +718,11 @@ and (max-width: 1024px) {
     font-size: 16px;
     color: white;
     background-color: #c93d67;
-    border: 1px solid #f2b662;
+    border: 1.1px solid #f2b662;
     padding: 2px 13.45em 15px 1px; 
     box-sizing: border-box; 
-    margin-left: 6px;
     position: relative;
-    width:305px;
-    left: 4px;
-
+    width:304px;
 
 }
 
@@ -725,13 +731,13 @@ and (max-width: 1024px) {
     font-size: 16px;
     color: white;
     background-color: #c93d67;
-    border: 1.15px solid #f2b662;
+    border: 1.2px solid #f2b662;
     padding: 4px 13.64em 15px 1px; 
     box-sizing: border-box; 
     margin-left: 6px;
     position: relative;
     width:305px;
-    left: 4px;
+    left: -6px;
     display: none;
 
 }
@@ -741,15 +747,12 @@ and (max-width: 1024px) {
     font-size: 16px;
     color: white;
     background-color: #c93d67;
-    border: 1px solid #f2b662;
-    padding: 2px 13.3em 15px 1px; 
+    border: 1.1px solid #f2b662;
+    padding: 3px 13.3em 15px 1px; 
     box-sizing: border-box; 
     position: relative;
-    margin-left: 6px;
-    width:305px;
-    left: 4px;
-
-
+    width:304px;
+    left: -10px;
 
 }
 
@@ -764,7 +767,7 @@ and (max-width: 1024px) {
     margin-left: 6px;
     position: relative;
     width:305px;
-    left: 4px;
+    left: -6px;
     display: none;
 
 }
@@ -773,37 +776,38 @@ and (max-width: 1024px) {
     
 
     background-color: #c93d67;
-    border: 1px solid #f2b662;
-    padding: 1px 0em 799px 0px;
+    border: 1.15px solid #f2b662;
+    padding: 1.15px 0em 300px 0px;
     margin: 0 0 -20px 0; 
     box-sizing: border-box; 
     position: relative;
-    margin-left: 6px;
-    width:305px;
-    left: 4px;
-    z-index: -1;
+    width:304px;
 
-
+    
 }
 
 
 td{
     border: 0.5px solid #f2b662;
-    padding:120px 11.942em 0px 0px;
+    padding:160px 11.44em 0px 0px;
     box-sizing: border-box; 
     position: relative;
     
 
 }
 
+div#text{
+        margin-left: 10px;
+        margin-top: auto;
+    }
 
 
 #results .row{
     border: 0.5px solid #f2b662;
-    padding: 0px 0px 1em 0px; 
+    padding: 0px 0px 1em 10px; 
     box-sizing: border-box; 
     position: relative;
-    right:0.5em;
+    right:0.6em;
     
 
 }
@@ -811,7 +815,6 @@ td{
 #results {
     border-spacing: 0px;
     
-
 }
 
 
@@ -858,7 +861,7 @@ td{
     position: absolute;
     content:url(Basket.png);
     left: -65px;
-    top:9.8em;
+    top:7.8em;
     width: 65px;
     height: 65px;
     background-color:  #c93d67;

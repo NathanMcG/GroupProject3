@@ -8,415 +8,394 @@
         <script src="results.js"></script>
     </head>
 
-<!--                 Basket                    -->
+                    <!--              Basket                 -->
+
     <div id="pull-out">
       <div style="margin-right: 14em; margin-top: 0em; padding: 0 16.2em 6px 15px;border-width: 2.5px; border-color: black; border-style:solid; background-color: white;"></style>
       <h4 style="margin-top: 12px; margin-right: 30px; color: black; text-decoration: underline;">BASKET</h4>
       <h4 style="margin-top: 18.5em; margin-right: 30px; color: black;">TOTAL:</h4>
       <button style="margin-right: -10.5em; margin-top: -2.3em; float:top; float: right; padding: 9px 2.1em 0.7em 0px; border-radius: 8em 8em 8em 8em;  text-indent: 25%; border-color: black; border-style:solid; background-color:#c93d67; font-size:x-large; color: #f2b662;">Checkout</button>
-      </div>
+    </div>
       
-      <a href="#" class="nav-toggle"></a>
+    <a href="#" class="nav-toggle"></a>
       
     </div>
-    <body>
+  <body>
 
-<!--                 Header                    -->
-        <header id="header">
-            <img src="images/lastOrderLogo.jpg" alt="last orders" class="logo" width="105px" height="85px">
-            <form action="#" method="#" class="searching">
-                <input type="text" name="search" placeholder="Search..." class="searchText" />
-                <input type="image" name="submit" src="images/searchbar.png" class="searchBtn" width="50px" height="50px"/>
-            </form>
-            <ul class="topNav">
-                <a href="#">LOG IN</a>
-                <span class="pipe">|</span>
-                <a href="#">REGISTER</a>
-            </ul>
+                    <!--                 Header                    -->
+
+    <header id="header">
+      <img src="images/lastOrderLogo.jpg" alt="last orders" class="logo" width="105px" height="85px">
+         <form action="#" method="#" class="searching">
+           <input type="text" name="search" placeholder="Search..." class="searchText" />
+           <input type="image" name="submit" src="images/searchbar.png" class="searchBtn" width="50px" height="50px"/>
+         </form>
+        <ul class="topNav">
+            <a href="#">LOG IN</a>
+            <span class="pipe">|</span>
+            <a href="#">REGISTER</a>
+        </ul>
             <div class="space"></div>
-        </header>
+    </header>
         
         <nav id="nav">
-            <ul>
-                <li class="main-nav nav-drop"><a href="#">Alcohol</i></a>
-                <li class="main-nav"><a href="#">Mixers</i></a>
-                <li class="main-nav"><a href="#">Gift Ideas</i></a>
-                <li class="main-nav"><a href="#">Favourites</i></a>
-                <li class="main-nav"><a href="#">Offers</i></a>
-            </ul>
+          <ul>
+            <li class="main-nav nav-drop"><a href="#">Alcohol</i></a>
+            <li class="main-nav"><a href="#">Mixers</i></a>
+            <li class="main-nav"><a href="#">Gift Ideas</i></a>
+            <li class="main-nav"><a href="#">Favourites</i></a>
+            <li class="main-nav"><a href="#">Offers</i></a>
+          </ul>
         </nav>
-        <main>
+      <main>
 
-<!--                 Table                    -->
+                  <!--                Sidebar                     -->
 
-<table  style= "position: static; right:0.1em; top: 6.70em; overflow: hidden;" id="results" BORDER=1>
-  <tr>
-    <tbody>
-      <td rowspan=5 class="row"> 
+         <div id="sidebar" BORDER=1 style="  position: absolute; width: 20.1%; margin-top:0px; float: left; min-height: 899px;">
           <div>
-          <div>
-          <div id = "filter">Filter</div>
-          </div>
-
-
-<!--                 Types                    -->
-
-
- <form>
- <div class="drop_down_menu">
-   <div class="typesMethod" onclick="typesMethod()">
-  <select id="types">
-    <option value="" style='display: none' overflow: default; selected disabled>Types</option>
-  </select>
-  <div class="select"></div>
-</div>
-<div id="typesMethod">
-  <label for="1"><input type="checkbox" id="1" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 1</b></small></label>
-  <label for="2"><input type="checkbox" id="2" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 2</b></small></label>
-  <label for="3"><input type="checkbox" id="3" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 3</b></small></label>
-  <label for="4"><input type="checkbox" id="4" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 4</b></small></label>
-</div>
-
-</div>
- </div> 
-</form>
-
-
-<!-- <script>
-  var expanded = false;
-  function typesMethod(){
-    var checkbox = document.getElementById("typesMethod");
-    if(!expanded){
-      checkbox.style.display = "block";
-      expanded = true;
-    } else {
-      checkbox.style.display = "none";
-      expanded = false;
-    }
-  }
-</script> -->
-
-<!--                 Price                    -->
-
-<form>
-  <div class="drop_down_menu">
-    <div class="priceMethod" onclick="priceMethod()">
-   <select id="price">
-     <option value="" style='display: none' overflow: default; selected disabled>Price</option>
-   </select>
-   <div class="select"></div>
- </div>
- <div id="priceMethod">
-  <label for="5"><input type="checkbox" id="1" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 5</b></small></label>
-  <label for="6"><input type="checkbox" id="2" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 6</b></small></label>
-  <label for="7"><input type="checkbox" id="3" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 7</b></small></label>
-  <label for="8"><input type="checkbox" id="4" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 8</b></small></label>
- </div>
- 
- </div>
-  </div> 
- </form>
-
- <!-- <script>
-  var expanded = false;
-  function priceMethod(){
-    var checkbox = document.getElementById("priceMethod");
-    if(!expanded){
-      checkbox.style.display = "block";
-      expanded = true;
-    } else {
-      checkbox.style.display = "none";
-      expanded = false;
-    }
-  }
-</script> -->
-
-<!--                 Brands                    -->
-
- <form>
-  <div class="drop_down_menu">
-    <div class="brandsMethod" onclick="brandsMethod()">
-   <select id="brands">
-     <option value="" style='display: none' overflow: default; selected disabled>Brands</option>
-   </select>
-   <div class="select"></div>
- </div>
- <div id="brandsMethod">
-  <label for="9"><input type="checkbox" id="1" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 9</b></small></label>
-  <label for="10"><input type="checkbox" id="2" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 10</b></small></label>
-  <label for="11"><input type="checkbox" id="3" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 11</b></small></label>
-  <label for="12"><input type="checkbox" id="4" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 12</b></small></label>
- </div>
- 
- </div>
-  </div> 
- </form>
-
- <!-- <script>
-  var expanded = false;
-  function brandsMethod(){
-    var checkbox = document.getElementById("brandsMethod");
-    if(!expanded){
-      checkbox.style.display = "block";
-      expanded = true;
-    } else {
-      checkbox.style.display = "none";
-      expanded = false;
-    }
-  }
-</script> -->
-
-<!--                 Volume                    -->
-
- <form>
-  <div class="drop_down_menu">
-    <div class="volumeMethod" onclick="volumeMethod()">
-   <select id="volume">
-     <option value="" style='display: none' overflow: default; selected disabled>Volume</option>
-   </select>
-   <div class="select"></div>
- </div>
- <div id="volumeMethod">
-  <label for="13"><input type="checkbox" id="1" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 13</b></small></label>
-  <label for="14"><input type="checkbox" id="2" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 14</b></small></label>
-  <label for="15"><input type="checkbox" id="3" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 15</b></small></label>
-  <label for="16"><input type="checkbox" id="4" style="outline: 2px solid black; margin: 0px 5px 0px 5px;" /><small style="color:black;"><b>Option 16</b></small></label>
- </div>
- 
- </div>
-  </div> 
- </form>
-
- <!-- <script>
-  var expanded = false;
-  function volumeMethod(){
-    var checkbox = document.getElementById("volumeMethod");
-    if(!expanded){
-      checkbox.style.display = "block";
-      expanded = true;
-    } else {
-      checkbox.style.display = "none";
-      expanded = false;
-    }
-  }
-</script> -->
-
-<!--                 OLD METHOD                    -->
-
-<!--TYPES-->
-
-<!-- 
-          <select class name="drop_down_menu" id="types" >
-          <option value="" style='display: none' selected disabled>Types</option>
-           <option value="1">Type 1</option>
-          <option value="2">Type 2</option>
-          <option value="3">Type 3</option>
-          
-           </div>
-          </div>
-          </select>
-        
-          </div> -->
-
-<!--PRICE-->
-
-<!--
             <div>
-        <select class name="drop_down_menu" id="price" >
-          <option value="" style='display: none' selected disabled>Price</option>
-          <option value="1" >Type 1</option>
-          <option value="2">Type 2</option>
-          <option value="3">Type 3</option>
-        </select>
-          </div> -->
+              <div id = "filter">Filter</div>
+           </div>
 
-<!--BRANDS-->
+
+                   <!--                 Types                    -->
+
+            <form>
+              <div class="drop_down_menu">
+                <div class="typesMethod" onclick="typesMethod()">
+                  <select id="types">
+                     <option value="" style='display: none' overflow: default; selected disabled>Types</option>
+                  </select>
+                 <div class="select"></div>
+               </div>
+              
+               <div id="typesMethod">
+                 <label for="1"><input type="checkbox" id="1" style="outline: 2px solid black; margin: 5px 15px -11.5px 30px;" /><small style="color:black;"><b style="white-space: nowrap; margin: 0 0 0 50px;">Option 1</b></small></label>
+                 <label for="2"><input type="checkbox" id="2" style="outline: 2px solid black; margin: 5px 15px -11.5px 30px;" /><small style="color:black;"><b style="white-space: nowrap; margin: 0 0 0 50px;">Option 2</b></small></label>
+                 <label for="3"><input type="checkbox" id="3" style="outline: 2px solid black; margin: 5px 15px -11.5px 30px;" /><small style="color:black;"><b style="white-space: nowrap; margin: 0 0 0 50px;">Option 3</b></small></label>
+                 <label for="4"><input type="checkbox" id="4" style="outline: 2px solid black; margin: 5px 15px -11.5px 30px;" /><small style="color:black;"><b style="white-space: nowrap; margin: 0 0 0 50px;">Option 4</b></small></label>
+               </div>
+
+              </div>
+ 
+            </form>
+
+            <!-- If the dropdown bar is clicked, display the tickboxes, and close it when the user clicks it again. Otherwise, remain closed. [1] -->
+             <script>
+                 var clicked = true;
+                 function typesMethod(){
+                   var tickbox = document.getElementById("typesMethod");
+
+                     if(clicked){
+                       tickbox.style.display = "block";
+                       clicked = false;
+  
+                    } else {
+                       tickbox.style.display = "none";
+                       clicked = true;
+                           }
+                  }
+               </script>
+
+                  <!--                 Price                    -->
+
+            <form>
+              <div class="drop_down_menu">
+                <div class="priceMethod" onclick="priceMethod()">
+                  <select id="price">
+                    <option value="" style='display: none' overflow: default; selected disabled>Price</option>
+                  </select>
+                  <div class="select"></div>
+               </div>
+                  <div id="priceMethod">
+                    <label for="5"><input type="checkbox" id="1" style="outline: 2px solid black; margin: 5px 15px -11.5px 30px;" /><small style="color:black;"><b style="white-space: nowrap; margin: 0 0 0 50px;">Option 5</b></small></label>
+                    <label for="6"><input type="checkbox" id="2" style="outline: 2px solid black; margin: 5px 15px -11.5px 30px;" /><small style="color:black;"><b style="white-space: nowrap; margin: 0 0 0 50px;">Option 6</b></small></label>
+                    <label for="7"><input type="checkbox" id="3" style="outline: 2px solid black; margin: 5px 15px -11.5px 30px;" /><small style="color:black;"><b style="white-space: nowrap; margin: 0 0 0 50px;">Option 7</b></small></label>
+                    <label for="8"><input type="checkbox" id="4" style="outline: 2px solid black; margin: 5px 15px -11.5px 30px;" /><small style="color:black;"><b style="white-space: nowrap; margin: 0 0 0 50px;">Option 8</b></small></label>
+                 </div>
+ 
+              </div>
+
+            </form>
+
+            <!-- If the dropdown bar is clicked, display the tickboxes, and close it when the user clicks it again. Otherwise, remain closed. [1] -->
+            <script>
+              
+                var clicked = true;
+                function priceMethod(){
+                   var tickbox = document.getElementById("priceMethod");
+
+                   if(clicked){
+                     tickbox.style.display = "block";
+                     clicked = false;
+          
+                    } else {
+                      tickbox.style.display = "none";
+                      clicked = true;
+                    }
+                 } 
+             </script>
+
+                   <!--                 Brands                    -->
+
+            <form>
+              <div class="drop_down_menu" >
+                <div class="brandsMethod" onclick="brandsMethod()">
+                     <select id="brands">
+                       <option value="" style='display: none' overflow: default; selected disabled>Brands</option>
+                     </select>
+                       <div class="select"></div>
+                   </div>
+                   <div id="brandsMethod">
+                      <label for="Smirnoff"><input type="checkbox" id="Smirnoff" style="outline: 2px solid black; margin: 5px 15px -11.5px 30px;" /><small style="color:black;"><b style="white-space: nowrap; margin: 0 0 0 50px;">Smirnoff</b></small></label>
+                      <label for="Absolut"><input type="checkbox" id="Absolut" style="outline: 2px solid black; margin: 5px 15px -11.5px 30px;" /><small style="color:black;"><b style="white-space: nowrap; margin: 0 0 0 50px;">Absolut</b></small></label>
+                      <label for="Ciroc"><input type="checkbox" id="Ciroc" style="outline: 2px solid black; margin: 5px 15px -11.5px 30px;" /><small style="color:black;"><b style="white-space: nowrap; margin: 0 0 0 50px;">Ciroc</b></small></label>
+                      <label for="Russian Standard"><input type="checkbox" id="Russian Standard" style="outline: 2px solid black; margin: 5px 15px -11.5px 30px;" /><small style="color:black;"><b style="white-space: nowrap; margin: 0 0 0 50px;">Russian Standard</b></small></label>
+                   </div>
+                </div>
+             </div> 
+           </form>
+
+            <!-- If the dropdown bar is clicked, display the tickboxes, and close it when the user clicks it again. Otherwise, remain closed. [1] -->
+            <script>
+                var clicked = true;
+                function brandsMethod(){
+                  var tickbox = document.getElementById("brandsMethod");
+                 
+                     if(clicked){
+                       tickbox.style.display = "block";
+                       clicked = false;
+                     } else {
+                       tickbox.style.display = "none";
+                       clicked = true;
+                     }
+                }
+              </script>
+
+                    <!--                 Volume                    -->
+
+           <form>
+               <div class="drop_down_menu">
+                 <div class="volumeMethod" onclick="volumeMethod()">
+                     <select id="volume">
+                       <option value="" style='display: none' overflow: default; selected disabled>Volume</option>
+                     </select>
+                     <div class="select"></div>
+                 </div>
+                     <div id="volumeMethod">
+                       <label for="9"><input type="checkbox" id="9" style="outline: 2px solid black; margin: 5px 15px -11.5px 30px;" /><small style="color:black;"><b style="white-space: nowrap; margin: 0 0 0 50px;">Option 9</b></small></label>
+                       <label for="10"><input type="checkbox" id="10" style="outline: 2px solid black; margin: 5px 15px -11.5px 30px;" /><small style="color:black;"><b style="white-space: nowrap; margin: 0 0 0 50px;">Option 10</b></small></label>
+                       <label for="11"><input type="checkbox" id="11" style="outline: 2px solid black; margin: 5px 15px -11.5px 30px;" /><small style="color:black;"><b style="white-space: nowrap; margin: 0 0 0 50px;">Option 11</b></small></label>
+                       <label for="12"><input type="checkbox" id="12" style="outline: 2px solid black; margin: 5px 15px -11.5px 30px;" /><small style="color:black;"><b style="white-space: nowrap; margin: 0 0 0 50px;">Option 12</b></small></label>
+                     </div>
+                </div>
+          </form>
+
+            <!-- If the dropdown bar is clicked, display the tickboxes, and close it when the user clicks it again. Otherwise, remain closed. [1] -->
+            <script>
+                 var clicked = true;
+                 function volumeMethod(){
+                 var tickbox = document.getElementById("volumeMethod");
+                 
+                  if(clicked){
+                    tickbox.style.display = "block";
+                     clicked = false;
+                   } else {
+                    tickbox.style.display = "none";
+                     clicked = true;
+                   }
+                 }
+            </script>
+
+                   <!--                   Blank                    -->
+
+            <div id = "blank" style="position:absolute; width:100%; height:100%; top:0; z-index:-1;"></div>         
+
+                   <!--                 Main table                 -->
+
+        </div> 
+            <table  style= "position: static; right:0.5em; top: 6.70em; overflow: hidden;" id="results" BORDER=1>
+                <tr>
+                  <tbody>
+                     <div>
+                        <td style="right:0.04em; height: 30%; text-align: center;" >  
+                          <div> 
+                              <img src="blank.png" alt="image" class="img" width="270px" height="140px" style="outline: 2px solid black;"> 
+                          </div>
+                          
+                          <br>
+                          
+                          <div id="text" >Name:</div>
+                          <div id="text" >Price:</div>
+                          <div id="text" >Rating:</div>
+                        </td>
+                        
+                        <td style="right:0.04em; height: 30%; text-align: center;">
+            
+                          <div> 
+                            <img src="blank.png" alt="image" class="img" width="270px" height="140px" style="outline: 2px solid black;"> 
+                          </div>
+                       
+                          <br>
+                       
+                          <div id="text" style="text-align: right">Name:</div>
+                          <div id="text" style="text-align: right">Price:</div>
+                          <div id="text" style="text-align: right">Rating:</div>
+           
+                        </td>
+
+                        <td style="right:0.04em; height: 30%; text-align: center;">
+             
+                           <div> 
+                             <img src="blank.png" alt="image" class="img" width="270px" height="140px" style="outline: 2px solid black;"> 
+                           </div>
+                           
+                           <br>
+              
+                           <div id="text" style="text-align: right">Name:</div>
+                           <div id="text" style="text-align: right">Price:</div>
+                           <div id="text" style="text-align: right">Rating:</div>
+
+                        </td>
+    
+                        <td style="right:0.04em; height: 30%; text-align: center;">
+
+                             <div> 
+                                <img src="blank.png" alt="image" class="img" width="270px" height="140px" style="outline: 2px solid black;"> 
+                             </div>
+             
+                             <br>
+             
+                             <div id="text" style="text-align: right">Name:</div>
+                             <div id="text" style="text-align: right">Price:</div>
+                             <div id="text" style="text-align: right">Rating:</div>
+                        </td>
+                            
+                             <br>
+                            
+                        <tr>
+                              <td style="right:0.04em; height: 30%; text-align: center;">
+      
+                                      <div> 
+                                          <img src="blank.png" alt="image" class="img" width="270px" height="140px" style="outline: 2px solid black;"> 
+                                       </div>
+                               <br>
+                         
+                               <div id="text" style="text-align: right">Name:</div>
+                               <div id="text" style="text-align: right">Price:</div>
+                               <div id="text" style="text-align: right">Rating:</div>
+                              </td>
+             
+                              <td style="right:0.04em; height: 30%; text-align: center; ">
+            
+                                      <div> 
+                                          <img src="blank.png" alt="image" class="img" width="270px" height="140px" style="outline: 2px solid black;"> 
+                                      </div>
+                               <br>
+                                
+                               <div id="text" style="text-align: right">Name:</div>
+                               <div id="text" style="text-align: right">Price:</div>
+                               <div id="text" style="text-align: right">Rating:</div>
+            
+                              </td>
+                                  
+                              <td style="right:0.04em; height: 30%; text-align: center; ">
+            
+                                      <div> 
+                                         <img src="blank.png" alt="image" class="img" width="270px" height="140px" style="outline: 2px solid black;"> 
+                                      </div>
+                                       
+                               <br>
+
+                                <div id="text" style="text-align: right">Name:</div>
+                                <div id="text" style="text-align: right">Price:</div>
+                                <div id="text" style="text-align: right">Rating:</div>
+
+                              </td>
+                                   
+                              <td style="right:0.04em; height: 30%; text-align: center; ">
+            
+                                      <div> 
+                                         <img src="blank.png" alt="image" class="img" width="270px" height="140px" style="outline: 2px solid black;"> 
+                                      </div>
+
+                               <br>
+
+                                <div id="text" style="text-align: right">Name:</div>
+                                <div id="text" style="text-align: right">Price:</div>
+                                <div id="text" style="text-align: right">Rating:</div>
+              
+                              </td>
+
+                              </tr>
+ 
+                              <td style="right:0.04em; height: 30%; text-align: center;" >
+           
+                                <div> 
+                                   <img src="blank.png" alt="image" class="img" width="270px" height="140px" style="outline: 2px solid black;"> 
+                                </div>
+                                       
+                                <br>
+                                         
+                                <div id="text" style="text-align: right">Name:</div>        
+                                <div id="text" style="text-align: right">Price:</div>
+                                <div id="text" style="text-align: right">Rating:</div>
+
+                              </td>
+      
+      
+                              <td style="right:0.04em; height: 30%; text-align: center;">
+           
+                                  <div> 
+                                     <img src="blank.png" alt="image" class="img" width="270px" height="140px" style="outline: 2px solid black;"> 
+                                  </div>
+
+                                <br>
+                                
+                                <div id="text" style="text-align: right">Name:</div>
+                                <div id="text" style="text-align: right">Price:</div>
+                                <div id="text" style="text-align: right">Rating:</div>
+                              </td>
+
+                              <td style="right:0.04em; height: 30%; text-align: center;">
+           
+                                  <div> 
+                                     <img src="blank.png" alt="image" class="img" width="270px" height="140px" style="outline: 2px solid black;"> 
+                                   </div>
+                                   
+                                <br>
+
+                                <div id="text" style="text-align: right">Name:</div>
+                                <div id="text" style="text-align: right">Price:</div>
+                                <div id="text" style="text-align: right">Rating:</div>
+
+                              </td>
+  
+                              <td style="right:0.04em; height: 30%; text-align: center;">
+           
+                                  <div> 
+                                     <img src="blank.png" alt="image" class="img" width="270px" height="140px" style="outline: 2px solid black;"> 
+                                   </div>
+                                   
+                                  <br>
+
+                                <div id="text" style="text-align: right">Name:</div>
+                                <div id="text" style="text-align: right">Price:</div>
+                                <div id="text" style="text-align: right">Rating:</div>
+                              
+                              </td>
+                  </tbody>
+                </tr>
+              </table>
+       </main>
+               <footer id="footer" position= "fixed"; style="padding:0px 10.5em 0px 0px; ">&#169; LastOrders</footer>
+     </body>
+ </html>  
+
+
+<!--                                      REFERENCE                                -->  
 
 <!-- 
-           <div>
-          <select class name="drop_down_menu" id="brands" >
-           <option value="" style='display: none' selected disabled>Brands</option>
-           <option value="1" >Type 1</option>
-           <option value="2">Type 2</option>
-           <option value="3">Type 3</option>
-          </select>
-           </div> -->
 
-<!--VOLUME-->
-
-           <!-- <div>
-           <select class name="drop_down_menu" id="volume" >
-            <option value="" style='display: none' selected disabled>Volume</option>
-            <option value="1" >Type 1</option>
-            <option value="2">Type 2</option>
-            <option value="3">Type 3</option>
-          </select>
-           </div> -->
-
-           <div class name="blank" id="blank"></div>
-
-<div>
-            <td style="right:0.5em; height: 30%; text-align: center;" >
-           
-              <div> 
-                <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
-              </div>
-
-              <div id="text" style="text-align: right">Name:</div>
-              <div id="text" style="text-align: right">Price:</div>
-              <div id="text" style="text-align: right">Rating:</div>
-
-            </td>
-        
-        
-            <td style="right:0.5em; height: 30%; text-align: center;">
-             
-              <div> 
-                <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
-              </div>
-
-              <div id="text" style="text-align: right">Name:</div>
-              <div id="text" style="text-align: right">Price:</div>
-              <div id="text" style="text-align: right">Rating:</div>
-
-            </td>
-        
-
-            <td style="right:0.5em; height: 30%; text-align: center;">
-             
-              <div> 
-                <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
-              </div>
-
-              <div id="text" style="text-align: right">Name:</div>
-              <div id="text" style="text-align: right">Price:</div>
-              <div id="text" style="text-align: right">Rating:</div>
-
-            </td>
-    
-            <td style="right:0.5em; height: 30%; text-align: center;">
-             
-              <div> 
-                <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
-              </div>
-
-              <div id="text" style="text-align: right">Name:</div>
-              <div id="text" style="text-align: right">Price:</div>
-              <div id="text" style="text-align: right">Rating:</div>
-
-            </td>
-          
-           <tr>
-             <td style="right:0.5em; height: 30%; text-align: center;">
-            
-              <div> 
-                <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
-              </div>
-
-              <div id="text" style="text-align: right">Name:</div>
-              <div id="text" style="text-align: right">Price:</div>
-              <div id="text" style="text-align: right">Rating:</div>
-
-            </td>
-             
-            </td>
-             <td style="right:0.5em; height: 30%; text-align: center; ">
-            
-              <div> 
-                <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
-              </div>
-
-              <div id="text" style="text-align: right">Name:</div>
-              <div id="text" style="text-align: right">Price:</div>
-              <div id="text" style="text-align: right">Rating:</div>
-            
-            </td>
-             <td style="right:0.5em; height: 30%; text-align: center; ">
-            
-              <div> 
-                <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
-              </div>
-
-              <div id="text" style="text-align: right">Name:</div>
-              <div id="text" style="text-align: right">Price:</div>
-              <div id="text" style="text-align: right">Rating:</div>
-
-            </td>
-             <td style="right:0.5em; height: 30%; text-align: center; ">
-            
-              <div> 
-                <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
-              </div>
-
-              <div id="text" style="text-align: right">Name:</div>
-              <div id="text" style="text-align: right">Price:</div>
-              <div id="text" style="text-align: right">Rating:</div>
-              
-            </td>
-
-          </tr>
- 
-          <td style="right:0.5em; height: 30%; text-align: center;" >
-           
-            <div> 
-              <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
-            </div>
-
-            <div id="text" style="text-align: right">Name:</div>
-            <div id="text" style="text-align: right">Price:</div>
-            <div id="text" style="text-align: right">Rating:</div>
-
-          </td>
-      
-      
-          <td style="right:0.5em; height: 30%; text-align: center;">
-           
-            <div> 
-              <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
-            </div>
-
-            <div id="text" style="text-align: right">Name:</div>
-            <div id="text" style="text-align: right">Price:</div>
-            <div id="text" style="text-align: right">Rating:</div>
-
-          </td>
-      
-
-          <td style="right:0.5em; height: 30%; text-align: center;">
-           
-            <div> 
-              <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
-            </div>
-
-            <div id="text" style="text-align: right">Name:</div>
-            <div id="text" style="text-align: right">Price:</div>
-            <div id="text" style="text-align: right">Rating:</div>
-
-          </td>
-  
-          <td style="right:0.5em; height: 30%; text-align: center;">
-           
-            <div> 
-              <img src="blank.png" alt="image" class="img" width="280px" height="140px" style="outline: 2px solid black;"> 
-            </div>
-
-            <div id="text" style="text-align: right">Name:</div>
-            <div id="text" style="text-align: right">Price:</div>
-            <div id="text" style="text-align: right">Rating:</div>
-          </td>
-
-     </td>
-   </tbody>
-  </tr>
-  
- 
-</table>
-
-</section>
-
-
- </main>
-        <footer id="footer" position= "fixed"; style="padding:0px 10.5em 0px 0px; ">&#169; LastOrders</footer>
-</body>
-</html>  
-
+[1] = Junaid arshad. 2020. How to select all checkbox when i checked all check boxes. [Online]. [8 April 2020]. Available from: https://stackoverflow.com/questions/60448493/how-to-select-all-checkbox-when-i-checked-all-check-boxes 
+ - A similar format was used for creating the JavaScript that will allow the user to click on a dropdown bar and view the tickboxes-->
