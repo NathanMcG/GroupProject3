@@ -8,11 +8,20 @@
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width-device-width, initial-scale-1">
     </head>
+
+    <?php
+        if(isset($_SESSION['basket'])){
+            $variables = array();
+            echo loadTemplate('../templates/basket.html.php',$variables);
+        }
+    ?>
+
     <body>
         <header id="header">
             <a href="?"><img src="images/lastOrderLogo.jpg" alt="last orders" class="logo" width="105px" height="85px"></a>
-            <form action="searchListings.php" method="GET" class="searching">
-                <input type="text" name="search" placeholder="Search..." class="searchText" />
+            <form action="?page=results" method="GET" class="searching">
+                <input type="hidden" name="page" value="results">
+                <input type="text" name="SRC" placeholder="Search..." class="searchText" />
                 <input type="image" name="submit" src="images/searchbar.png" class="searchBtn" width="50px" height="50px"/>
             </form>
             <ul class="topNav">
