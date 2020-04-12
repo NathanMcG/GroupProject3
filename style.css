@@ -604,235 +604,197 @@ and (max-width: 1024px) {
 
 } */
 
+/*/         Results Page         /*/
 
-/*/ Results Page /*/
+/*/ Page wrapper /*/
+#mainPageWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/*/ Main sidebar /*/
 #sidebar{
     border:0.5px solid #f2b662;
-    padding: 1.5px 0em 0px 0px; 
-    margin: 0px 0 0 0px;
-    width: 21%;
+    margin: 0;
+    min-width: 304.5px;
     font-size: 20px;
     text-decoration: none;
+    background-color: #c93d67;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/*/ Media query for making the basket disappear /*/
+@media screen and (max-width: 720px)   {
+
+    #pull-out {
+        display: none;
+    }
+}
+
+/*/ Media query for making the sidebar disappear /*/
+@media screen and (max-width: 600px)   {
+    #sidebar{
+    display: none;
+    }
+
+/*/ Media query for making the results display in a centre column /*/
+  #results {
+    margin-left: 7em;
+    }
 
 }
 
-
-#results{
-    border:0.5px solid #f2b662;
-    padding: 1.5px 10em 0px 0px; 
-    margin: 0px 0 0 0px;
+/*/ The results table /*/
+#results {
+    display: grid;
+    grid-row-gap: 0px;
+    grid-column-gap: 0px;
+    grid-template-columns: 2.035fr 2.035fr 2.035fr 2.03fr;
+    grid-template-rows: auto;
     width: 100%;
-    font-size: 20px;
-    text-decoration: none;
-    position: fixed;
-    margin-left: 15.25em;
-
+    flex: 1;
 
 }
 
+/*/ Each element inside the results table /*/
+#results > .element {
+    border: 0.5px solid #f2b662;
+        column-width: 13em;
 
+}
+
+/*/ Media query for making the results table shrink when the window is minimized. /*/
+@media screen and (max-width: 780px)   
+and (max-width: 1024px){
+    #results {
+        grid-template-columns: auto;
+    }
+
+}
+
+/*/ Filter /*/
 #filter{
-
     font-size: 16px;
     text-decoration: underline;
     color: white;
     background-color: #c93d67;
-    border: 1.15px solid #f2b662;
-    padding: 3px 0em 17px 1px; 
-    margin:  -1px 4px 0.6px 5px; 
+    padding: 5px;
     text-align: center;
-    box-sizing: border-box; 
-    position: relative;
-    width:304px;
-    left: -5px;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 5.5px;
+    margin-bottom: 5.5px;
+   
+}
+
+/*/ Types dropdown bar /*/
+#types {
+    margin-left: -1px;
+    margin-top: 0px;
+    font-size: 15px;
     
-
-
 }
 
+/*/ Price dropdown bar /*/
+#price {
+    margin-left: -1px;
+    margin-top: -1.5px;
+    font-size: 15px;
+}
 
-#types{
+/*/ Brands dropdown bar /*/
+#brands {
+    margin-left: -1px;
+    margin-top: -1.5px;
+    font-size: 15px;
+}
 
+/*/ Volume dropdown bar /*/
+#volume {
+    margin-left: -1px;
+    margin-top: -2px;
+    font-size: 15px;
+}
+
+/*/ sidebarSectionMethod /*/
+.sidebarSectionMethod {
     font-size: 16px;
     color: white;
     background-color: #c93d67;
-    border: 1.15px solid #f2b662;
-    padding: 4px 13.64em 15px 1px; 
-    box-sizing: border-box; 
-    position: relative;
-    width:304px;
-    max-width: 100%;
-
-}
-
-#typesMethod{
-
-    font-size: 16px;
-    color: white;
-    background-color: #c93d67;
-    border: 1.15px solid #f2b662;
-    padding: 4px 13.64em 15px 1px; 
-    box-sizing: border-box; 
-    margin-left: 6px;
-    position: relative;
-    width:304px;
-    left: -6px;
+    border: 1px solid #f2b662;
+    white-space: nowrap;
+    padding: 10px; 
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
     display: none;
-
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 }
 
+/*/ Store the label inside the sidebarSectionMethod /*/
+.sidebarSectionMethod > label {
+    width: 100%;
+}
 
-#price{
-    
-    font-size: 16px;
+/*/ Toggle /*/
+.toggle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     color: white;
-    background-color: #c93d67;
-    border: 1.15px solid #f2b662;
-    padding: 2px 13.64em 15px 1px; 
-    box-sizing: border-box; 
-    position: relative;
-    width:304px;
-
+    border: 1.5px solid #f2b662;
+    padding: 5px;
 }
 
-#priceMethod{
-
-    font-size: 16px;
-    color: white;
-    background-color: #c93d67;
-    border: 1.15px solid #f2b662;
-    padding: 4px 13.64em 15px 1px; 
-    box-sizing: border-box; 
-    margin-left: 6px;
-    position: relative;
-    width:304px;
-    left: -6px;
-    display: none;
-
+/*/ Toggle on hover /*/
+.toggle:hover {
+    color: #f2b662;
 }
 
-
-#brands{
-    
-    font-size: 16px;
-    color: white;
-    background-color: #c93d67;
-    border: 1.1px solid #f2b662;
-    padding: 2px 13.45em 15px 1px; 
-    box-sizing: border-box; 
-    position: relative;
-    width:304px;
-
+/*/ Sidebar form /*/
+#sidebar form {
+  width: 101%;
+  padding: 0 0px;
+  
 }
 
-#brandsMethod{
-
-    font-size: 16px;
-    color: white;
-    background-color: #c93d67;
-    border: 1.2px solid #f2b662;
-    padding: 4px 13.64em 15px 1px; 
-    box-sizing: border-box; 
-    margin-left: 6px;
-    position: relative;
-    width:305px;
-    left: -6px;
-    display: none;
-
+/*/ Toggle class "shown" /*/
+.shown {
+    display: flex;
 }
 
-#volume{
-    
-    font-size: 16px;
-    color: white;
-    background-color: #c93d67;
-    border: 1.1px solid #f2b662;
-    padding: 3px 13.3em 15px 1px; 
-    box-sizing: border-box; 
-    position: relative;
-    width:304px;
-    left: -10px;
-
-}
-
-#volumeMethod{
-
-    font-size: 16px;
-    color: white;
-    background-color: #c93d67;
-    border: 1.15px solid #f2b662;
-    padding: 4px 13.64em 15px 1px; 
-    box-sizing: border-box; 
-    margin-left: 6px;
-    position: relative;
-    width:305px;
-    left: -6px;
-    display: none;
-
-}
-
-#blank{
-    
-
-    background-color: #c93d67;
-    border: 1.15px solid #f2b662;
-    padding: 1.15px 0em 300px 0px;
-    margin: 0 0 -20px 0; 
-    box-sizing: border-box; 
-    position: relative;
-    width:304px;
-
-    
-}
-
-
-td{
-    border: 0.5px solid #f2b662;
-    padding:160px 11.44em 0px 0px;
-    box-sizing: border-box; 
-    position: relative;
-    
-
-}
-
-div#text{
-        margin-left: 10px;
-        margin-top: auto;
-    }
-
-
-#results .row{
-    border: 0.5px solid #f2b662;
-    padding: 0px 0px 1em 10px; 
-    box-sizing: border-box; 
-    position: relative;
-    right:0.6em;
-    
-
-}
-
-#results {
-    border-spacing: 0px;
-    
-}
-
-
-
+/*/ Images /*/
 .img{
-    margin: -140px 0em 0px -20px; 
-    position: absolute;
+    width: 90%;
+    height: auto;
+    outline: 2px solid black;
+    margin: 15px 10px 10px 16px;
+    
 }
 
+/*/ Text area /*/
 #text{
     color:white;
     margin: 13px 0 0 0;
-    padding: 0px 0px 15px 0px; 
-    text-align: center;
+    padding: 0px 0px 0px 0px; 
+    text-align: left;
+    margin-left: 18px;
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
 
+/*/ Basket /*/
 #pull-out{
-
     position: fixed;
     z-index: 1;
     right: 0;
@@ -851,12 +813,12 @@ div#text{
     
 }
 
-
+/*/ Basket hidden /*/
 #pull-out.hidden {
     margin-right: 0px;
 }
 
-
+/*/ Basket nav-toggle /*/
 #pull-out a.nav-toggle {
     position: absolute;
     content:url(Basket.png);
@@ -871,6 +833,7 @@ div#text{
 
 }
 
+/*/ Basket pressed /*/
 #pull-out .pressed{
     margin-right:0;
 }
