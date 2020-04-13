@@ -1,4 +1,6 @@
 <?php
+    require '../formReview.html.php';
+
     $title = 'Reviews';
     $content = '
     
@@ -16,5 +18,5 @@
     </html>
   ';
 
-  ?>
+  
 
