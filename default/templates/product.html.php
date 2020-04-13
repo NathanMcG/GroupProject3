@@ -1,11 +1,4 @@
 
-<?php
-    if(count($_SESSION['basket'])>0){
-        $variables = array();
-        echo loadTemplate('../templates/basket.html.php',$variables);
-    }
-?>
-
 <div class="alchol-prod-section">
     <section class="alcohol-card">
                     <div class="alcohol-image">
@@ -93,3 +86,10 @@
                     </div>
                 </section>
  </div>
+
+ <?php
+    if(count($_SESSION['basket'])>0){
+        $variables = array();
+        echo loadTemplate('../templates/basket.html.php',$variables);
+    }
+?>

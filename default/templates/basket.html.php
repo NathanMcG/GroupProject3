@@ -48,9 +48,21 @@
         <div>
     <?php
         $productTable = new DatabaseTable('products',null);
-        foreach($_SESSION['basket'] as $item){
-            $product = $productTable->find('product_id',$item['product_id'])[0];
-            echo '<tr><td>' . $product['product_name'] . '</td><td>' . $item['quantity'] . '</td><td> <form> <input type="hidden" name="product_id" value="' . $item['product_id'] . '"> <input type="submit" name="+" value="+" > <input type="submit" name="-" value="-" > </form> </td></tr>';
+        foreach($_SESSION['basket'] as $name => $item){
+            $product = $productTable->find('product_id',$item['product_id'])[0];?>
+            <tr>
+                <td><?=$product['product_name']?></td>
+                <td></td>
+                <td> 
+                    <form action=""http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']" method="POST"> 
+                        <input type="hidden" name="basket_id" value="<?=$name?>">
+                        <input type="submit" name="+" value="+" >
+                        <?=$item['quantity']?>
+                        <input type="submit" name="-" value="-" > 
+                    </form> 
+                </td>
+            </tr>
+        <?php
         }
     ?>
         </div>

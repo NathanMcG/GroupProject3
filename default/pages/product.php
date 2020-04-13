@@ -4,7 +4,6 @@
 
     $title = $product[0]['product_name'];
     $variables = array('product'=>$product[0]);
-    $content = loadTemplate('../templates/product.html.php',$variables);
 
     if(isset($_POST['add_to_basket'])){
         $newBasketItem = array('product_id' => $_GET['PID'],
@@ -12,3 +11,6 @@
 
         $_SESSION['basket'][] = $newBasketItem;
     }
+
+    
+    $content = loadTemplate('../templates/product.html.php',$variables);
