@@ -606,6 +606,7 @@ and (max-width: 1024px) {
 
 /*/         Results Page         /*/
 
+
 /*/ Page wrapper /*/
 #mainPageWrapper {
     display: flex;
@@ -675,8 +676,8 @@ and (max-width: 1024px){
     #results {
         grid-template-columns: auto;
     }
-
 }
+
 
 /*/ Filter /*/
 #filter{
@@ -799,7 +800,7 @@ and (max-width: 1024px){
     z-index: 1;
     right: 0;
     top: 17em;
-    height: 50%;
+    height: 51.2%;
     width: 300px;
     max-width: 350px;
     background-color:  #c93d67;
@@ -811,6 +812,27 @@ and (max-width: 1024px){
     transition: .6s;
     margin-right: -300px;
     
+}
+
+
+div.block{
+    right: 0;
+    height: 100%;
+    max-width: 40px;
+    box-sizing: border-box;
+   
+}
+
+/*/ Media query for making the Total and the Checkout button disappear when the window is minimized/*/
+@media screen and (max-width: 1535px) and (max-height: 730px){
+    h4.total{
+        display: none;
+        
+    }
+
+    button.button{
+        display: none;
+    }
 }
 
 /*/ Basket hidden /*/
