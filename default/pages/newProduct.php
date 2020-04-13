@@ -6,12 +6,10 @@
 
         $_POST['product']['alcohol_content'] = str_replace('%','',$_POST['product']['alcohol_content']);
         $_POST['product']['product_discount'] = str_replace('%','',$_POST['product']['product_discount']);
-        $_POST['product']['product_price'] = str_replace('%','',$_POST['product']['product_price']);
+        $_POST['product']['product_price'] = str_replace('£','',$_POST['product']['product_price']);
+        $_POST['product']['volume'] = $_POST['volume'] . $_POST['unit'];
 
-        //var_dump($_POST);
-
-        if(is_double($_POST['product']['product_price']) && is_double($_POST['product']['product_discount']) && is_int($_POST['product']['alcohol_content'])){
-            $_POST['product']['volume'] = $_POST['volume'] . $_POST['unit'];
+        if(is_numeric($_POST['product']['alcohol_content']) && is_numeric($_POST['product']['product_discount']) && is_numeric($_POST['product']['product_price'])){
 
             if(isset($_GET['PID'])){
                 $productsTable = new DatabaseTable('products',$_GET['PID']);
@@ -20,11 +18,9 @@
                 $productsTable = new DatabaseTable('products',null);
             }
 
-            echo 1;
-            var_dump($_POST['product']);
+            //Uploads new product
             $productsTable->save($_POST['product']);
 
-            echo 2;
             if(isset($_FILES['productImage'])){
                 if(isset($_GET['PID'])){
                     uploadImage('products',$_GET['PID']);
@@ -46,14 +42,8 @@
         }
     }
     else{
-        $product = array('product_name' => '',
-                        'product_description' => '',
-                        'dimensions' => '',
-                        'alcohol_content' => '',
-                        'brand' => '',
-                        'product_discount' => '',
-                        'product_price' => '');
-        $variables = array('product' => $product,
+        
+        $variables = array('message' => 'Input Details',
                         'volume' => '');
     }
 

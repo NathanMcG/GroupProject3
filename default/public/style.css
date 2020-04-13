@@ -724,8 +724,10 @@ and (max-width: 1024px) {
     }
 
     .img-product{
-        width: 100px;
-        height: 150px;
+        max-width: 100px;
+        max-height: 150px;
+        width: auto;
+        height: auto;
     }
     
     .alcohol-image {
@@ -812,7 +814,7 @@ and (max-width: 1024px) {
         justify-content: flex-start;
     }
     .user-box  .fas{
-        padding: none;
+        padding: 0;
     }
     .user-row:first-child .user-box {
         border-right: none;
