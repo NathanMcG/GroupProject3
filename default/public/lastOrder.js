@@ -26,21 +26,7 @@ if (drop.matches){
 
 
 
-// https://www.youtube.com/watch?v=VTdSW57--yM
-//Listing all products
-var filterAccordian = document.getElementsByClassName("filter-acc");
-for (var i = 0; i < filterAccordian.length; i++) {
-    filterAccordian[i].onclick = function() {
-      this.classList.toggle('open-current');
-  
-      var filterContent = this.nextElementSibling;
-      if (filterContent.style.maxHeight) {
-        filterContent.style.maxHeight = null;
-      } else {
-        filterContent.style.maxHeight = filterContent.scrollHeight + "px";
-      }
-    }
-  }
+
 
 
  // Basket
