@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width-device-width, initial-scale-1">
+        <script src="lastOrder.js"></script>
     </head>
 
     <body>
@@ -79,6 +80,6 @@
         </nav>
         <main><?=$content?></main>
         <footer class="footer">&#169; Last Orders</footer>
-        <script src="lastOrder.js"></script>
+        
     </body>
 </html>

@@ -872,3 +872,8 @@ and (max-width: 1024px) {
 #pull-out .pressed{
     margin-right:0;
 }
+
+h1{
+    padding-bottom: 100pt;
+    color: #fff;
+}
