@@ -48,10 +48,12 @@ div.table {
 form.tr, div.tr
 {
     display: table-row;
+
 }
 span.td
 {
     display: table-cell;
+    padding: 0 5px;
 }
 </style>
 
