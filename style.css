@@ -824,7 +824,7 @@ div.block{
 }
 
 /*/ Media query for making the Total and the Checkout button disappear when the window is minimized/*/
-@media screen and (max-width: 1535px) and (max-height: 730px){
+@media screen and (max-height: 730px){
     h4.total{
         display: none;
         
