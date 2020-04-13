@@ -6,7 +6,7 @@
 ?>
 </div>
 <div>
-    <h1> Recent: </h1>
+    <h1> Recently added products: </h1>
     <p></p>
     <div class="list-products"><ul class="all-products">
         <?php
