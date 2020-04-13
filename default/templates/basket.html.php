@@ -40,6 +40,7 @@
 #pull-out .pressed{
     margin-right:0;
 }
+
 </style>
 
 <div id="pull-out">
@@ -50,6 +51,7 @@
         $productTable = new DatabaseTable('products',null);
         foreach($_SESSION['basket'] as $name => $item){
             $product = $productTable->find('product_id',$item['product_id'])[0];?>
+             <table>
             <tr>
                 <td><?=$product['product_name']?></td>
                 <td></td>
@@ -62,6 +64,7 @@
                     </form> 
                 </td>
             </tr>
+            </table>
         <?php
         }
     ?>
