@@ -1,0 +1,255 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width-device-width, initial-scale-1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="results.js"></script>
+    </head>
+
+                    <!--              Basket                 -->
+
+    <div id="pull-out">
+      <div class="block" style="margin-right: 14em; margin-top: 0em; padding: 0 16.2em 6px 15px;border-width: 2.5px; border-color: black; border-style:solid; background-color: white;"></style>
+      <h4 style="margin-top: 12px; margin-right: 30px; color: black; text-decoration: underline;">BASKET</h4>
+      <h4 class="total" style="margin-top: 18.5em; margin-right: 30px; color: black;">TOTAL:</h4>
+      <button class="button" style="margin-right: -10.5em; margin-top: -2.3em; float:top; float: right; padding: 9px 2.1em 0.7em 0px; border-radius: 8em 8em 8em 8em;  text-indent: 25%; border-color: black; border-style:solid; background-color:#c93d67; font-size:x-large; color: #f2b662;">Checkout</button>
+    </div>
+      
+    <a href="#" class="nav-toggle"></a>
+      
+    </div>
+  <body>
+
+                    <!--                 Header                    -->
+
+    <header id="header">
+      <img src="images/lastOrderLogo.jpg" alt="last orders" class="logo" width="105px" height="85px">
+         <form action="#" method="#" class="searching">
+           <input type="text" name="search" placeholder="Search..." class="searchText" />
+           <input type="image" name="submit" src="images/searchbar.png" class="searchBtn" width="50px" height="50px"/>
+         </form>
+        <ul class="topNav">
+            <a href="#">LOG IN</a>
+            <span class="pipe">|</span>
+            <a href="#">REGISTER</a>
+        </ul>
+            <div class="space"></div>
+    </header>
+        
+        <nav id="nav">
+          <ul>
+            <li class="main-nav nav-drop"><a href="#">Alcohol</i></a>
+            <li class="main-nav"><a href="#">Mixers</i></a>
+            <li class="main-nav"><a href="#">Gift Ideas</i></a>
+            <li class="main-nav"><a href="#">Favourites</i></a>
+            <li class="main-nav"><a href="#">Offers</i></a>
+          </ul>
+        </nav>
+      <main>
+
+        <div id = "mainPageWrapper">
+
+          <!--                Sidebar                     -->
+
+     <div id="sidebar">
+     <div>
+       <div id = "filter">Filter</div>
+     </div>
+     
+     
+           <!--                 Types                    -->
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <form>
+         <div class="drop_down_menu" id="types">
+             <a class="toggle" style="text-decoration: none;" href="#">Types <i class="fa fa-angle-down"></i></a>
+       
+             <div class="sidebarSectionMethod">
+              <label for="1"><input type="checkbox" id="1" style="outline: 2px solid black; margin: 5px 10px -11.5px 30px;" /><small style="color:black;"><b>Option 1</b></small></label>
+              <label for="2"><input type="checkbox" id="2" style="outline: 2px solid black; margin: 5px 10px -11.5px 30px;" /><small style="color:black;"><b>Option 2</b></small></label>
+              <label for="3"><input type="checkbox" id="3" style="outline: 2px solid black; margin: 5px 10px -11.5px 30px;" /><small style="color:black;"><b>Option 3</b></small></label>
+              <label for="4"><input type="checkbox" id="4" style="outline: 2px solid black; margin: 5px 10px -11.5px 30px;" /><small style="color:black;"><b>Option 4</b></small></label>
+             </div>
+         </div>
+     </form>
+
+           <!--                 Price                    -->
+
+     <form>
+         <div class="drop_down_menu" id="price">
+             <a class="toggle" style="text-decoration: none;" href="#">Price <i class="fa fa-angle-down"></i></a>
+       
+             <div class="sidebarSectionMethod">
+              <label for="5"><input type="checkbox" id="5" style="outline: 2px solid black; margin: 5px 10px -11.5px 30px;" /><small style="color:black;"><b>Option 5</b></small></label>
+              <label for="6"><input type="checkbox" id="6" style="outline: 2px solid black; margin: 5px 10px -11.5px 30px;" /><small style="color:black;"><b>Option 6</b></small></label>
+              <label for="7"><input type="checkbox" id="7" style="outline: 2px solid black; margin: 5px 10px -11.5px 30px;" /><small style="color:black;"><b>Option 7</b></small></label>
+              <label for="8"><input type="checkbox" id="8" style="outline: 2px solid black; margin: 5px 10px -11.5px 30px;" /><small style="color:black;"><b>Option 8</b></small></label>
+              </div>
+         </div>
+     </form>
+
+           <!--                 Brands                    -->
+
+     <form>
+         <div class="drop_down_menu" id="brands">
+             <a class="toggle" style="text-decoration: none;" href="#">Brands <i class="fa fa-angle-down"></i></a>
+       
+             <div class="sidebarSectionMethod">
+              <label for="Smirnoff"><input type="checkbox" id="Smirnoff" style="outline: 2px solid black; margin: 5px 10px -11.5px 30px;" /><small style="color:black;"><b>Smirnoff</b></small></label>
+              <label for="Absolut"><input type="checkbox" id="Absolut" style="outline: 2px solid black; margin: 5px 10px -11.5px 30px;" /><small style="color:black;"><b>Absolut</b></small></label>
+              <label for="Ciroc"><input type="checkbox" id="Ciroc" style="outline: 2px solid black; margin: 5px 10px -11.5px 30px;" /><small style="color:black;"><b>Ciroc</b></small></label>
+              <label for="Russian Standard"><input type="checkbox" id="Russian Standard" style="outline: 2px solid black; margin: 5px 10px -11.5px 30px;" /><small style="color:black;"><b>Russian Standard</b></small></label>
+             </div>
+         </div>
+     </form>
+
+           <!--                 Volume                    -->
+
+     <form>
+         <div class="drop_down_menu" id="volume">
+             <a class="toggle" style="text-decoration: none;" href="#">Volume <i class="fa fa-angle-down"></i></a>
+       
+             <div class="sidebarSectionMethod">
+              <label for="9"><input type="checkbox" id="9" style="outline: 2px solid black; margin: 5px 10px -11.5px 30px;" /><small style="color:black;"><b>Option 9</b></small></label>
+              <label for="10"><input type="checkbox" id="10" style="outline: 2px solid black; margin: 5px 10px -11.5px 30px;" /><small style="color:black;"><b>Option 10</b></small></label>
+              <label for="11"><input type="checkbox" id="11" style="outline: 2px solid black; margin: 5px 10px -11.5px 30px;" /><small style="color:black;"><b>Option 11</b></small></label>
+              <label for="12"><input type="checkbox" id="12" style="outline: 2px solid black; margin: 5px 10px -11.5px 30px;" /><small style="color:black;"><b>Option 12 </b></small></label>
+              </div>
+         </div>
+     </form>
+     
+     <!-- If the dropdown bar is clicked, display the checkboxes, and close it when the user clicks it again. Otherwise, remain closed. -->
+     <!-- The arrows in the dropdown bars switch when the user clicks on them  -->
+
+     <script>
+         $(document).ready(function() {
+           $('.toggle').click(function(e) {
+             $(this).find('i').toggleClass("fa-angle-down");
+             $(this).find('i').toggleClass("fa-angle-up");
+           $(this).closest(".drop_down_menu").find(".sidebarSectionMethod").toggleClass("shown");
+          });
+         });
+     </script>
+     </div>
+
+     <!--                 Main table                 -->
+     
+     <div id="results">
+     <div class="element">  
+       <img src="blank.png" alt="image" class="img"> 
+       
+       <br>
+       
+       <div id="text" >Name:</div>
+       <div id="text" >Price:</div>
+       <div id="text" >Rating:</div>
+     </div>
+     <div class="element">  
+      <img src="blank.png" alt="image" class="img"> 
+       
+       <br>
+       
+       <div id="text" >Name:</div>
+       <div id="text" >Price:</div>
+       <div id="text" >Rating:</div>
+     </div>
+     <div class="element">  
+      <img src="blank.png" alt="image" class="img"> 
+       
+       <br>
+       
+       <div id="text" >Name:</div>
+       <div id="text" >Price:</div>
+       <div id="text" >Rating:</div>
+     </div>
+     <div class="element">  
+      <img src="blank.png" alt="image" class="img"> 
+       
+       <br>
+       
+       <div id="text" >Name:</div>
+       <div id="text" >Price:</div>
+       <div id="text" >Rating:</div>
+     </div>
+     <div class="element">  
+      <img src="blank.png" alt="image" class="img"> 
+       
+       <br>
+       
+       <div id="text" >Name:</div>
+       <div id="text" >Price:</div>
+       <div id="text" >Rating:</div>
+     </div>
+     <div class="element">  
+      <img src="blank.png" alt="image" class="img"> 
+       
+       <br>
+       
+       <div id="text" >Name:</div>
+       <div id="text" >Price:</div>
+       <div id="text" >Rating:</div>
+     </div>
+     <div class="element">  
+      <img src="blank.png" alt="image" class="img"> 
+       
+       <br>
+       
+       <div id="text" >Name:</div>
+       <div id="text" >Price:</div>
+       <div id="text" >Rating:</div>
+     </div>
+     <div class="element">  
+      <img src="blank.png" alt="image" class="img"> 
+       
+       <br>
+       
+       <div id="text" >Name:</div>
+       <div id="text" >Price:</div>
+       <div id="text" >Rating:</div>
+     </div>
+     <div class="element">  
+      <img src="blank.png" alt="image" class="img"> 
+       
+       <br>
+       
+       <div id="text" >Name:</div>
+       <div id="text" >Price:</div>
+       <div id="text" >Rating:</div>
+     </div>
+     <div class="element">  
+      <img src="blank.png" alt="image" class="img"> 
+       
+       <br>
+       
+       <div id="text" >Name:</div>
+       <div id="text" >Price:</div>
+       <div id="text" >Rating:</div>
+     </div>
+     <div class="element">  
+      <img src="blank.png" alt="image" class="img"> 
+       
+       <br>
+       
+       <div id="text" >Name:</div>
+       <div id="text" >Price:</div>
+       <div id="text" >Rating:</div>
+     </div>
+     <div class="element">  
+      <img src="blank.png" alt="image" class="img"> 
+       
+       <br>
+       
+       <div id="text" >Name:</div>
+       <div id="text" >Price:</div>
+       <div id="text" >Rating:</div>
+     </div>
+
+       </main>
+
+        <!--                 Footer                 -->
+
+               <footer id="footer" position= "fixed"; style="padding:0px 10.5em 0px 0px; ">&#169; LastOrders</footer>
+     </body>
+ </html>
