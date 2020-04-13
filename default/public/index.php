@@ -2,6 +2,10 @@
 
 	session_start();
 
+	if(!isset($_SESSION['basket'])){
+		$_SESSION['basket'] = array();
+	}
+
 	require '../loadTemplate.php';
 	require '../classes/DatabaseTable.php';
 

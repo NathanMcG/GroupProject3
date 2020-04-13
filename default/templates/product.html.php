@@ -1,3 +1,11 @@
+
+<?php
+    if(count($_SESSION['basket'])>0){
+        $variables = array();
+        echo loadTemplate('../templates/basket.html.php',$variables);
+    }
+?>
+
 <div class="alchol-prod-section">
     <section class="alcohol-card">
                     <div class="alcohol-image">
@@ -63,15 +71,15 @@
                             <li>Or next day delivery</li>
                         </div>
                             <div class="add-form">
-                                <form action="productPage.php" method="POST">
+                                <form action="?page=product&PID=<?=$_GET['PID']?>" method="POST">
                                     <ul>
                                         <li>
                                             <label>Quantity</label>
-                                            <input type="text" name="quantity" class="basket-no"  placeholder="1">
+                                            <input type="text" name="quantity" class="basket-no"  value="1">
                                         </li>
                                         <li>
                                             <label>Add Gift Options</label>
-                                            <input type="checkbox"  name="gift" value="Gift"  class="check-box">
+                                            <input type="checkbox"  name="gift" class="check-box">
                                         </li>
                                         <li>
                                             <input type="submit" name="add_to_basket" value="Add to Basket" class="btn-add" />
