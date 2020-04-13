@@ -41,6 +41,18 @@
     margin-right:0;
 }
 
+div.table {
+    display: table;
+    width: 100%;
+}
+form.tr, div.tr
+{
+    display: table-row;
+}
+span.td
+{
+    display: table-cell;
+}
 </style>
 
 <div id="pull-out">
@@ -51,20 +63,19 @@
         $productTable = new DatabaseTable('products',null);
         foreach($_SESSION['basket'] as $name => $item){
             $product = $productTable->find('product_id',$item['product_id'])[0];?>
-             <table>
-            <tr>
-                <td><?=$product['product_name']?></td>
-                <td></td>
-                <td> 
-                    <form action=""http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']" method="POST"> 
-                        <input type="hidden" name="basket_id" value="<?=$name?>">
-                        <input type="submit" name="+" value="+" >
-                        <?=$item['quantity']?>
-                        <input type="submit" name="-" value="-" > 
-                    </form> 
-                </td>
-            </tr>
-            </table>
+            <!--https://stackoverflow.com/questions/4035966/create-a-html-table-where-each-tr-is-a-form/15600151#15600151-->
+            <div class="table">
+                <div class="tr">
+                    <span class="td"><?=$product['product_name']?></span>
+                    <span class="td"></span>
+                        <form class="tr" action=""http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']" method="POST"> 
+                            <span class="td"><input type="hidden" name="basket_id" value="<?=$name?>"></span>
+                            <span class="td"><input type="submit" name="+" value="+" /></span>
+                            <span class="td"><?=$item['quantity']?></span>
+                            <span class="td"><input type="submit" name="-" value="-" /></span>
+                        </form> 
+                </div>
+            </div>
         <?php
         }
     ?>
