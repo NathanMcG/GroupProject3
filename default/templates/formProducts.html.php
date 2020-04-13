@@ -43,9 +43,13 @@
             echo '<option value="L" selected >L</option>';
             echo '<option value="ml">ml</option>';
           }
-          if($unit == 'ml'){
+          elseif($unit == 'ml'){
             echo '<option value="L" >L</option>';
             echo '<option value="ml" selected >ml</option>';
+          }
+          else{
+            echo '<option value="L" >L</option>';
+            echo '<option value="ml" >ml</option>';
           }
         ?>
         </select> 
