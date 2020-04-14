@@ -1,5 +1,5 @@
 <?php
-    require '../formReview.html.php';
+    require '../templates/formReview.html.php';
 
     $title = 'Reviews';
     $content = '
