@@ -12,8 +12,8 @@
         </li>
         <li>
             <img src="images/bottle.png" alt="product image" class="img-product" width="100px" height="100px">
-            <article>
             <h2>Alcohol Name</h2>
+            <article>
                 <label><strong>Price:</strong> £10.00</label>
                 <label><strong>Quantity:</strong> 1</label>
                 <label><strong>Order Date:</strong> 21/02/2020</label>
@@ -22,8 +22,8 @@
         </li>
         <li>
             <img src="images/bottle.png" alt="product image" class="img-product" width="100px" height="100px">
+            <h2>Alcohol Name</h2>
             <article>
-                <h2>Alcohol Name</h2>
                 <label><strong>Price:</strong> £10.00</label>
                 <label><strong>Quantity:</strong> 1</label>
                 <label><strong>Order Date:</strong> 21/02/2020</label>

@@ -329,6 +329,21 @@ main{
     margin: 4px 5px;
 }
 
+.checkout{
+    width: 50%;
+    padding: 5%;
+    padding-top: 2.5%;
+}
+
+.checkout h2{
+    max-width: 40%;
+}
+
+.checkout-area{
+    display: block;
+    float: left;
+}
+
 .all-products li {
     display: flex;
     flex-direction: column;
