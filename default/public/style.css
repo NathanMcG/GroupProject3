@@ -330,17 +330,9 @@ main{
 }
 
 .checkout{
-    width: 50%;
+    width: 45%;
     padding: 5%;
     padding-top: 2.5%;
-}
-
-.checkout h2{
-    max-width: 40%;
-}
-
-.checkout-area{
-    display: block;
     float: left;
 }
 

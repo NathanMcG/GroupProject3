@@ -1,115 +1,39 @@
-<div class="checkout-area">
-<div class="checkout">
-    <?php
 
-        $list = array();
-        $productTable = new DatabaseTable('products',null);
-        $total = 0;
+    <div class="checkout">
+        <?php
 
-        foreach($_SESSION['basket'] as $basketItem){
+            $list = array();
+            $productTable = new DatabaseTable('products',null);
+            $total = 0;
 
-            $product = $productTable->find('product_id',$basketItem['product_id'])[0];
-            $listItem = array('product_id' => $basketItem['product_id'],
-                'brand' => $product['brand'],
-                'product_name' => $product['product_name'],
-                'product_price' => $product['product_price'],
-                'quantity' => $basketItem['quantity'],
-                'gift' => $basketItem['gift'],);
-            $list[] = $listItem;
+            foreach($_SESSION['basket'] as $basketItem){
 
-            $total = $total + ($product['product_price']*$basketItem['quantity']);
+                $product = $productTable->find('product_id',$basketItem['product_id'])[0];
+                $listItem = array('product_id' => $basketItem['product_id'],
+                    'brand' => $product['brand'],
+                    'product_name' => $product['product_name'],
+                    'product_price' => $product['product_price'],
+                    'quantity' => $basketItem['quantity'],
+                    'gift' => $basketItem['gift'],);
+                $list[] = $listItem;
 
-        }
+                $total = $total + ($product['product_price']*$basketItem['quantity']);
 
-        $variables = array('list' => $list);
-        echo loadTemplate('../templates/listOrderItems.html.php',$variables);
-    ?>
-</div>
-<div class="checkout">
-    <h2> Total: <?=$total?></h2>
-    <div id="paypal-button"></div>
-        <script src="https://www.paypalobjects.com/api/checkout.js"></script>
-        <script>
-            paypal.Button.render({
-            // Configure environment
-                env: 'sandbox',
-                client: {
-                    sandbox: 'AcJ43Pmu32jG__IfqMrBm9c7WJ-xYleTo7oeZ8LlIwOYB43ZFX_kKhD09orxi2dF5QfKpOTHoV9DsvLc',
-                    production: 'EAbcRzbItJX5oRsAoag0M-svhucCSUQ_Y0rjiC55vGitojs09PZ2u44gSsxx1FSfThgsEXGj6XeY20V2'
-                },
-                // Customize button (optional)
-                locale: 'en_US',
-                style: {
-                    size: 'small',
-                    color: 'gold',
-                    shape: 'pill',
-                },
+            }
 
-                // Enable Pay Now checkout flow (optional)
-                commit: true,
+            $variables = array('list' => $list);
+            echo loadTemplate('../templates/listOrderItems.html.php',$variables);
+        ?>
+    </div>
+    <div class="checkout">
+    <h3 style="color: #ffff; padding: 10pt;"> Total: <?=$total?></h3>
+    <h3 style="color: #ffff; padding: 10pt; padding-top: 0;"> Order Date: </h3>
+    <h3 style="color: #ffff; padding: 10pt; padding-top: 0;"> Expected on or before:</h3>
+    <p style="color: #ffff; padding-bottom: 10pt; max-width: 60%;"> By continuing with payment you confirm that you agree to our <a href="terms.html" target="_blank" style="color: #f2b662;">Terms and Conditions</a>.
 
-                // Set up a payment
-                payment: function(data, actions) {
-                    return actions.payment.create({
-                        transactions: [{
-                            amount: {
-                            total: '<?=$total?>',
-                            currency: 'GBP'
-                            },
-                            payment_options: {
-                                item_list: {
-                                    items: [
-                                        <?php
-                                            foreach($_SESSION['basket'] as $basketItem){
-                                                $product = $productTable->find('product_id',$basketItem['product_id'])[0];?>
-                                            
-                                            {
-                                                name: '<?=$product['brand']?> <?=$product['product_name']?>',
-                                                quantity: '<?=$basketItem['quantity']?>',
-                                                price: '<?php echo ($product['product_price'] * $basketItem['quantity']) ?>',
-                                                currency: 'GBP'
-                                            },
-
-                                            <?php } ?>
-                                    ]
-                                }
-                            }
-                        }]
-                    });
-                },
-                // Execute the payment
-                onAuthorize: function(data, actions) {
-                    return actions.payment.execute().then(function() {
-                    // Show a confirmation message to the buyer
-                        window.alert('Thank you for your purchase!');
-                        confirm();
-                    });
-                }
-            }, '#paypal-button');
-
-
-
-            function confirm() {
-            // function below will run clear.php?h=michael
-            $.ajax({
-                type: "POST",
-                url: "?page=orders" ,
-                data: { authorized: "true" },
-                success : function() { 
-
-                    // here is the code that will run on client side after running clear.php on server
-
-                    // function below reloads current page
-                    //location.reload();
-
-                }
-            });
-        }
-
-
-
-
-        </script>
+        <?php
+            $variables = array('total' => $total);
+            echo loadTemplate('../templates/paypal.html.php',$variables);
+        ?>
 
     </div>
-</div>
