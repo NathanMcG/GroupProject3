@@ -13,14 +13,20 @@
                         value: '<?=$total?>'
                                 
                     }
-                }]
+                }],
+                application_context: {
+                    shipping_preference: 'NO_SHIPPING'
+                }
             });
         },
         onApprove: function(data, actions) {
         // This function captures the funds from the transaction.
+            console.log(data);
             return actions.order.capture().then(function(details) {
             // This function shows a transaction success message to your buyer.
                 console.log(details);
+                console.log(details.payer.address.toString());
+                console.log(details.payer.email_address);
                 alert('Transaction completed by ' + details.payer.name.given_name);
             });
         }
