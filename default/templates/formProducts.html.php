@@ -50,7 +50,7 @@
 
      <div class="inner-form">
         <label for="product-vol">Volume: </label>
-        <input type="text" name="volume" id="product-vol" value="<?=$volume?>"/>
+        <input type="text" name="volume" id="product-vol" value="<?php if(isset($volume)) echo $volume;?>"/>
         <select id="volume" name="unit" value="<?=$unit?>">
           <option value="L" <?php if(isset($unit)){if($unit == 'L') echo 'selected';}?> >L</option>
           <option value="ml" <?php if(isset($unit)){if($unit == 'ml') echo 'selected';}?>>ml</option>

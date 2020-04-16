@@ -31,6 +31,11 @@
         if(isset($_POST['detailsConf'])){
             $orderDetails = $_POST['order_details'];
         }
+        else{
+            $usersTable = new DatabaseTable('users',null);
+            $user = $usersTable->find('user_id',$_SESSION['id']);
+            $orderDetails = array('firstname');
+        }
     ?>
 
     <form action="?page=checkout" method="POST" style="max-width: 60%;">
