@@ -287,7 +287,7 @@ main{
 .reviews {
     width: 35%;
     float: right;
-    padding-top: 2.5%;
+    padding-top: 0.5%;
 }
 
 .inner-reviews {
@@ -297,7 +297,11 @@ main{
     display: flex;
     justify-content: flex-start;
     padding-left: 2%;
-    padding-bottom: 2%;
+    padding-bottom: 0.5%;
+}
+.reviews .inner-radioBtn{
+    display: flex;
+    justify-content: flex-start;
 }
 .reviews .inner-form label {
     align-self: flex-start;
