@@ -285,7 +285,6 @@ main{
 }
 /* REVIEW SECTION*/
 .reviews {
-    float: right;
     padding-left: 5%;
 }
 
@@ -308,7 +307,6 @@ main{
 }
 
 .reviews .inner-formBtn {
-    align-self: flex-end;
     padding: 1px 2%;
 }
 input[type="radio"] {
