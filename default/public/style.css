@@ -285,9 +285,7 @@ main{
 }
 /* REVIEW SECTION*/
 .reviews {
-    width: 35%;
-    float: right;
-    padding-top: 2.5%;
+    padding-left: 5%;
 }
 
 .inner-reviews {
@@ -311,6 +309,9 @@ main{
 input[type="radio"] {
     margin: 0 30px 0 0;
 }
+.reviews .inner-radioBtn {
+    display: inline;
+}
 
 /*Searching and Orders*/
 .search-container, 
@@ -328,6 +329,7 @@ input[type="radio"] {
 
 
 .user-order-details {
+    flex: 2 0 50%;
 }
 
 .list-products {
