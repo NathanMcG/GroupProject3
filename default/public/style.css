@@ -283,6 +283,32 @@ main{
 .user-row:first-child .user-box {
     border-right: 1px solid #000;
 }
+/* REVIEW SECTION*/
+.reviews {
+    width: 35%;
+    float: right;
+    padding-top: 2.5%;
+}
+
+.inner-reviews {
+    border: 1px solid #fff;
+}
+.reviews .inner-form {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 2%;
+    padding-bottom: 2%;
+}
+.reviews .inner-form label {
+    align-self: flex-start;
+}
+
+.reviews .inner-formBtn {
+    padding: 1px 2%;
+}
+input[type="radio"] {
+    margin: 0 30px 0 0;
+}
 
 /*Searching and Orders*/
 .search-container, 

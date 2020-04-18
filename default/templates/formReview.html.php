@@ -1,36 +1,34 @@
-<div class="lastOrder-form">
-  <?php
-    if(isset($notice)){
-      echo '<p>' . $notice . '</p>';
-    }
-      
-    ?>
-
-    <!-- User review form -->
-   <form action="" method="POST">
-     <div class="inner-form">
-       <label for="reviewtitle">Review Title: </label>
-       <input type="text" name="details[review_title]" id="reviewtitle" value="<?=$details['review_title']?>" />
-     </div>
-     <div class="inner-form">
-       <label for="reviewtext">Review Text: </label>
-       <input type="text" name="details[review_text]" id="reviewtext" value="<?=$details['review_text']?>" />
-     </div>
-     <div class="inner-form">
-       <label for="starRating">Star rating: </label>
-        <input type="radio" name="1star" value="1 star rating" />
-        <input type="radio" name="2star" value="2 star rating" />
-        <input type="radio" name="3star" value="3 star rating" />
-        <input type="radio" name="4star" value="4 star rating" />
-        <input type="radio" name="5star" value="5 star rating" />
-        <input type="submit" value="Submit" name="submit" />
-     </div>
-    <div class="inner-form">
-       <label for="AcceptTerm">Submit Review? </label>
-       <input type="checkbox" name="AcceptTerm" id="AcceptTerm" required />
-     </div>
-     <div class="inner-formBtn">
-     <input type="submit" name="submit" value="Register" />
-     </div>
-   </form>
-   </div>
+    <!--Review Section-->
+  <div class="reviews">
+    <div class="inner-reviews">
+            <form action="" method="POST">
+            <h3 style="color: #fff; font-weight: 700; padding-left: 2%;">Reviews</h3>
+            <div class="inner-form">
+                <label for="reviewtitle">Title</label>
+                <input type="text" name="review_title" id="reviewtitle" value="" />
+            </div>
+            <div class="inner-form">
+                <label>Stars</label>
+                <div class="inner-radioBtn">
+                    <label for="1">1</label>
+                    <input type="radio"  name="stars" value=""  />
+                    <label for="2">2</label>
+                    <input type="radio" name="stars" value="" />
+                    <label for="3">3</label>
+                    <input type="radio" name="stars" value=""  />
+                    <label for="4">4</label>
+                    <input type="radio" name="stars" value="" />
+                    <label for="5">5</label>
+                    <input type="radio" name="stars" value="" />
+                </div>
+            </div>
+            <div class="inner-form">
+                <label for="reviewtext">Text </label>
+                <textarea name="review_text"  rows="5" cols="40" id="reviewtext" value="review_text" ></textarea>
+            </div>
+            <div class="inner-formBtn">
+                <input type="submit" name="submit" value="Submit" />
+            </div>
+            </form>
+        </div>
+  </div>
