@@ -509,12 +509,14 @@ button.filter-acc:hover, button.filter-acc.open-current {
 }
 
 .alcohol-info > ul{
-    padding-left: 7.5em;
+    padding-left: 0;
+    
+    padding-right: 3.75em;
 }
 .alcohol-info > ul li {
     font-size: 13px;
     padding-bottom: 0.5em;
-    padding-left: 1em;
+    padding-left: 0.5em;
 }
 
 .table {

@@ -108,14 +108,31 @@ img {vertical-align: middle;}
 
 <?php
     //Load Adverts
-    $advertNames = scandir('../public/images/adverts');
+    $advertTable = new DatabaseTable('adverts','file_name');
+    $adverts = $advertTable->findAll();
 
-    for($i=2;$i<count($advertNames);$i++){
+    $validAdverts = array();
 
-        echo '<div class="mySlides fade">
-            <div class="numbertext">' . ($i-1) . ' / ' . (count($advertNames)-2) . '</div>
-            <img src="images/adverts/' . $advertNames[$i] . '" style="width:100%">
-        </div>';
+    foreach($adverts as $advert){
+      $currDate = new DateTime();
+      $currDate = $currDate->format('Y-m-d');
+      if($advert['start_date']<$currDate && $currDate<$advert['end_date']){
+        $validAdverts[] = $advert;
+      }
+    }
+
+    echo '<div class="mySlides fade"><a href="' . $advert['link'] . '">
+            <div class="numbertext">1 / ' . (count($validAdverts)+1) . '</div>
+            <img src="images/adverts/default.png" style="width:100%">
+        </a></div>';
+
+
+    for($i=0;$i<count($validAdverts);$i++){
+
+        echo '<div class="mySlides fade"><a href="' . $advert['link'] . '">
+            <div class="numbertext">' . ($i+2) . ' / ' . (count($validAdverts)+1) . '</div>
+            <img src="images/adverts/' . $validAdverts[$i]['file_name'] . '" style="width:100%">
+        </a></div>';
 
     }
 ?>
@@ -128,9 +145,9 @@ img {vertical-align: middle;}
 
 <div style="text-align:center">
 <?php
-    for($i=2;$i<count($advertNames);$i++){
+    for($i=0;$i<(count($validAdverts)+1);$i++){
 
-        echo '<span class="dot" onclick="currentSlide(' . ($i-1) . ')"></span> ';
+        echo '<span class="dot" onclick="currentSlide(' . ($i+1) . ')"></span> ';
 
     }
 ?>

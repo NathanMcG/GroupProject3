@@ -3,10 +3,6 @@
     $product = $productsTable->find('product_id',$_GET['PID']);
 
     $title = $product[0]['product_name'];
-    $variables = array('product'=>$product[0]);
-
-    var_dump($_POST);
-
 
     if(isset($_POST['add_to_basket'])){
         $newBasketItem = array('product_id' => $_GET['PID'],
@@ -23,4 +19,4 @@
     }
 
     
-    $content = loadTemplate('../templates/product.html.php',$variables);
+    $content = loadTemplate('../templates/productLarge.html.php',$product[0]);

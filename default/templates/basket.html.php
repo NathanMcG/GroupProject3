@@ -63,29 +63,31 @@ span.td
         <div>
             <div class="table">
                 <div class="tr">
-                    <span class="td">Product</span>
+                    <span class="td" style="color: black;">Product</span>
                     <span class="td"></span>
-                    <span class="td">Quantity</span>
+                    <span class="td" style="color: black;">Quantity</span>
                     <span class="td"></span>
-                    <span class="td">Gift</span>
+                    <span class="td" style="color: black;">Gift</span>
+                    <span class="td"></span>
+                    <span class="td" style="color: black;">Price</span>
                 </div>
             </div>
     <?php
+        $total = 0;
         $productTable = new DatabaseTable('products',null);
         foreach($_SESSION['basket'] as $name => $item){
             $product = $productTable->find('product_id',$item['product_id'])[0];?>
             <!--https://stackoverflow.com/questions/4035966/create-a-html-table-where-each-tr-is-a-form/15600151#15600151-->
             <div class="table">
                 <div class="tr">
-                    <span class="td"><?=$product['product_name']?></span>
+                    <span class="td" style="color: black;"><?=$product['product_name']?></span>
                     <span class="td"></span>
                         <form class="tr" action="<?=$_SERVER['REQUEST_URI']?>" method="POST"> 
                             <span class="td"><input type="hidden" name="basket_id" value="<?=$name?>"></span>
                             <span class="td"><input type="submit" name="-" value="-" /></span>
-                            <span class="td"><?=$item['quantity']?></span>
+                            <span class="td" style="color: black;"><?=$item['quantity']?></span>
                             <span class="td"><input type="submit" name="+" value="+" /></span>
-                    <span class="td"></span> 
-                    <span class="td"></span> 
+                        <span class="td"></span> 
                         <span class="td"><input type="submit" name="gift" value=" <?php
                         if($item['gift']){
                             echo '&#x2714';
@@ -95,20 +97,27 @@ span.td
                         }
                          ?> "/></span>
                         </form>
+                        <span class="td"></span> 
+                        <?php
+                            $price = $item['quantity'] * $product['product_price'];
+                            $total = $total + $price;
+                        ?>
+                        <span class="td" style="color: black;">£<?=$price?></span>
+
                 </div>
             </div>
         <?php
         }
     ?>
         </div>
-      <h4 style="margin-top: 18.5em; margin-right: 30px; color: black;">TOTAL: £192.43</h4>
+      <h4 style="margin-top: 18.5em; margin-right: 30px; color: black;">TOTAL: £<?=$total?></h4>
       <form action="?page=checkout" method="POST">
         <input type="submit" name="checkout" value="Checkout" style="margin-right: -10.5em; margin-top: -2.3em; float:top; float: right; padding: 9px 2.1em 0.7em 0px; border-radius: 8em 8em 8em 8em;  text-indent: 25%; border-color: black; border-style:solid; background-color:#c93d67; font-size:x-large; color: #ffff;">
       </form>
       
       </div>
       
-      <button onclick="myFunction()" class="nav-toggle">Click me</button>
+      <button onclick="myFunction()" class="nav-toggle"><img src="images/basket.png" style="max-width: 100%;border-radius: 50%;"></i></section></button>
       
 </div>
 

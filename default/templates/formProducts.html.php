@@ -1,29 +1,24 @@
 <div class="lastOrder-form">
   <?php
-    // Allows notifying the user
-    if(isset($notice)){
-      echo '<p>' . $notice . '</p>';
+    if(isset($message)){
+      echo '<p>' . $message . '</p>';
     }
   ?>
-   <form action="?page=newProduct" method="POST" enctype="multipart/form-data">
 
-    <?php
-      //Turns into edit form if set
-      if(isset($_GET['PID'])){
-        ?>
-        <input type="hidden" name="product[product_id]" value="<?=$_GET['PID']?>" />
-        <?php
-      }
-    ?>
+   <form action="" method="POST" enctype="multipart/form-data">
+
+    <?php if(isset($product_id)){?>
+        <input type="hidden" name="product[product_id]" value="<?=$product_id?>" />
+    <?php } ?>
 
      <div class="inner-form">
        <label for="product-name">Product Name: </label>
-       <input type="text" name="product[product_name]" id="product-name" required value="<?php if(isset($product['product_name'])) echo $product['product_name'];?>" />
+       <input type="text" name="product[product_name]" id="product-name" required value="<?php if(isset($product_name)) echo $product_name;?>" />
      </div>
 
      <div class="inner-form">
        <label for="product-descrip">Product Description: </label>
-       <textarea id="product-descrip" rows="4" cols="17" name="product[product_description]" required ><?php if(isset($product['product_description'])) echo $product['product_description'];?></textarea>
+       <textarea id="product-descrip" rows="4" cols="17" name="product[product_description]" required ><?php if(isset($product_description)) echo $product_description;?></textarea>
      </div>
 
      <div class="inner-form">
@@ -32,54 +27,60 @@
         <?php
           $typesTable = new DatabaseTable('types',null);
           $types = $typesTable->findAll();
-          $classTable = new DatabaseTable('classifications',null);
-          foreach($types as $type){
-            if($product['type_name'] == $type['type_name'])
-              echo '<option value="' . $type['type_name'] . '" selected >' . $type['classification_name'] . ': ' . $type['type_name'] . '</option>';
-              else
-              echo '<option value="' . $type['type_name'] . '" >' . $type['classification_name'] . ': ' . $type['type_name'] . '</option>';
-          }
-        ?>
+          foreach($types as $type){?>
+            <option value="<?=$type['type_name']?>" <?php if(isset($type_name)){if($type_name == $type['type_name']) echo 'selected';}?> ><?=$type['classification_name']?>: <?=$type['type_name']?></option>
+          <?php } ?>
         </select> 
      </div>
 
      <div class="inner-form">
       <label for="product-dim">Product Dimensions: </label>
-      <input type="text" name="product[dimensions]" id="product-dim" value="<?php if(isset($product['dimensions'])) echo $product['dimensions'];?>" />
+      <input type="text" name="product[product_dimensions]" id="product-dim" value="<?php if(isset($product_dimensions)) echo $product_dimensions;?>" />
      </div>
 
      <div class="inner-form">
         <label for="product-vol">Volume: </label>
-        <input type="text" name="volume" id="product-vol" value="<?php if(isset($volume)) echo $volume;?>"/>
-        <select id="volume" name="unit" value="<?=$unit?>">
-          <option value="L" <?php if(isset($unit)){if($unit == 'L') echo 'selected';}?> >L</option>
-          <option value="ml" <?php if(isset($unit)){if($unit == 'ml') echo 'selected';}?>>ml</option>
+        <input type="text" name="product[product_volume]" id="product-vol" value="<?php if(isset($product_volume)) echo (0+ $product_volume);?>"/>
+        <select id="volume" name="product[product_volume_unit]" >
+          <option value="L" <?php if(isset($product_volume_unit)){if($product_volume_unit == 'L') echo 'selected';}?> >L</option>
+          <option value="ml" <?php if(isset($product_volume_unit)){if($product_volume_unit == 'ml') echo 'selected';}?>>ml</option>
         </select> 
      </div>
 
      <div class="inner-form">
        <label for="product-alc">Alcohol Content (%):</label>
-       <input type="text" name="product[alcohol_content]" id="product-alc" value="<?php if(isset($product['alcohol_content'])) echo $product['alcohol_content'];?>"/>
+       <input type="text" name="product[product_alcohol_content]" id="product-alc" value="<?php if(isset($product_alcohol_content)) echo (0 + $product_alcohol_content);?>"/>
      </div>
 
      <div class="inner-form">
        <label for="product-brand">Brand: </label>
-       <input type="text" name="product[brand]" id="product-brand" value="<?php if(isset($product['brand'])) echo $product['brand'];?>"/>
+       <input type="text" name="product[product_brand]" id="product-brand" value="<?php if(isset($product_brand)) echo $product_brand;?>"/>
      </div>
 
      <div class="inner-form">
       <label for="product-offer">Offer: </label>
-      <input type="text" name="product[product_discount]" id="product-offer" value="<?php if(isset($product['product_discount'])) echo $product['product_discount'];?>"/>
+      <input type="text" name="product[product_discount]" id="product-offer" value="<?php if(isset($product_discount)) echo (0 + $product_discount);?>"/>
      </div>
 
      <div class="inner-form">
       <label for="product-price">Price (£): </label>
-      <input type="text" name="product[product_price]" id="product-price" required value="<?php if(isset($product['product_price'])) echo $product['product_price'];?>"/>
+      <input type="text" name="product[product_price]" id="product-price" required value="<?php if(isset($product_price)) echo (0 + $product_price);?>"/>
      </div>
 
      <div class="inner-form">
       <label for="productImage">Image: </label>
-      <input type="file" name="productImage" id="productImage">
+      <input type="file" name="productImage" id="productImage" style="display:none;"/>
+      <label for="productImage" style="width: 10.3em;"><?php 
+      if(isset($product_id)){
+        if(file_exists('images/products/' . $product_id . '.png'))
+          echo $product_name . '.png';
+        else
+          echo 'Upload Image';
+      }
+      else{
+        echo 'Upload Image';
+      } ?>
+      </label>
      </div>
 
      <div class="inner-formBtn">

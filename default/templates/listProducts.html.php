@@ -1,11 +1,4 @@
 
-<?php
-if(count($_SESSION['basket'])>0){
-    $variables = array();
-    echo loadTemplate('../templates/basket.html.php',$variables);
-}
-?>
-
 <div class="accordian">
     <div class="filter-name"><h2>Filter</h2></div>
     <!-- REFERENCE: https://www.youtube.com/watch?v=VTdSW57--yM -->
@@ -42,7 +35,8 @@ if(count($_SESSION['basket'])>0){
     <ul class="all-products">
         <?php
             foreach($products as $product){
-                echo loadTemplate('../templates/miniProduct.html.php',$product);
+                $product['link'] = $link;
+                echo loadTemplate('../templates/productMini.html.php',$product);
             }
         ?>
     </ul>

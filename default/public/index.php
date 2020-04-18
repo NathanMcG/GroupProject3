@@ -2,10 +2,12 @@
 
 	session_start();
 
+	//Ensures basket is array
 	if(!isset($_SESSION['basket'])){
 		$_SESSION['basket'] = array();
 	}
 
+	//Manages changing basket details
 	if(isset($_POST['basket_id'])){
 		if(isset($_POST['+'])){
 			$_SESSION['basket'][$_POST['basket_id']]['quantity'] = $_SESSION['basket'][$_POST['basket_id']]['quantity'] + 1;
@@ -31,6 +33,16 @@
 	else {
 		require '../pages/home.php';
 	}
+
+
+
+
+	//Displays basket
+    if(count($_SESSION['basket'])>0){
+        $variables = array();
+        $content .= loadTemplate('../templates/basket.html.php',$variables);
+    }
+
 
 	require  '../templates/layout.html.php';
 

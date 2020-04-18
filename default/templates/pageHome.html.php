@@ -14,8 +14,10 @@
             $products = $productsTable->findAll();
             array_reverse($products);
             for($i=0;$i<6;$i++){
-                if(isset($products[$i]))
-                    echo loadTemplate('../templates/miniProduct.html.php',$products[$i]);
+                if(isset($products[$i])){
+                    $products[$i]['link'] = 'product';
+                    echo loadTemplate('../templates/productMini.html.php',$products[$i]);
+                }
             }
         ?>
     </ul></div>

@@ -36,7 +36,7 @@
                     }
                 ?>
                 <span class="pipe">|</span>
-                <a href="?page=register">REGISTER</a>
+                <a href="?page=userForm">REGISTER</a>
             </ul>
         </header>
         <div id="nav-icon"><i class="fas fa-bars"></i></div>

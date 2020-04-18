@@ -24,10 +24,7 @@
             console.log(data);
             return actions.order.capture().then(function(details) {
             // This function shows a transaction success message to your buyer.
-                console.log(details);
-                console.log(details.payer.address.toString());
-                console.log(details.payer.email_address);
-                alert('Transaction completed by ' + details.payer.name.given_name);
+                document.getElementById("order").submit();
             });
         }
     }).render('#paypal-button-container');
