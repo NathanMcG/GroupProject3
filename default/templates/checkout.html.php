@@ -13,7 +13,7 @@
         'product_name' => $product['product_name'],
         'product_price' => $product['product_price'],
         'quantity' => $basketItem['quantity'],
-        'gift' => $basketItem['gift'],);
+        'gift' => $basketItem['gift']);
     $list[] = $listItem;
 
     $total = $total + ($product['product_price']*$basketItem['quantity']);
