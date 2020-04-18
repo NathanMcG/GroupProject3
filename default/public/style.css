@@ -291,6 +291,8 @@ main{
 }
 
 .inner-reviews {
+    display: flex;
+    justify-content: flex-start;
     border: 1px solid #fff;
 }
 .reviews .inner-form {
@@ -326,13 +328,13 @@ input[type="radio"] {
 
 
 .user-order-details {
+    
     flex: 2 0 50%;
 }
 
 .list-products {
     flex: 2 0 80%;
 }
-
 .search-results, 
 .orders-list,
 .all-products {
