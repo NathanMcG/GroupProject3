@@ -1,4 +1,4 @@
-<li style="width: 100%;">
+<li style="width: 65%; align-self: center;" >
     <img src="images/products/<?php
     if(!file_exists('images/products/' . $product_id . '.png'))
         echo 'bottle';

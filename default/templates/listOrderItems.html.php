@@ -3,11 +3,11 @@
         <?php
             foreach($list as $item){
                 if(isset($review))
-                    echo '<div style="width:50%;">';
+                    echo '<div style="width:50%; display: flex; justify-content: flex-end;">';
                 echo loadTemplate('../templates/orderItem.html.php',$item);
                 echo '</div>';
                 if(isset($review)){
-                    echo '<div style="width:50%;">';
+                    echo '<div style="width:50%; display: flex; justify-content: flex-start;">';
                     echo loadTemplate('../templates/formReview.html.php',$item);
                     
                     echo '</div>';
