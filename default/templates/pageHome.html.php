@@ -1,4 +1,4 @@
-<div>
+<div style="width: 100%;">
     <div class="slideshow">
 <?php
     $variables = array();

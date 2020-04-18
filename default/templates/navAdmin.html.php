@@ -13,7 +13,7 @@
 <div class="user-home">
     <div class="user-row">
         <div class="user-col"><section class="user-box"><i class="fas fa-plus"></i> <a href="?page=productForm&type=add" class="user-options">Add Products</a> </section></div>
-        <div class="user-col"><section class="user-box"><i class="fas fa-newspaper"></i> <a href="#" class="user-options">Manage Adverts</a> </section></div>
+        <div class="user-col"><section class="user-box"><i class="fas fa-newspaper"></i> <a href="?page=advertForm" class="user-options">Manage Adverts</a> </section></div>
         <div class="user-col"><section class="user-box"><i class="fas fa-user"></i> <a href="#" class="user-options">Manage Offers</a> </section></div>
         
     </div>
