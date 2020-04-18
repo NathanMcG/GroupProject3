@@ -1,5 +1,5 @@
     <!--Review Section-->
-  <div class="reviews" style="padding: 0;">
+  <div class="reviews">
     <div class="inner-reviews">
             <form action="" method="POST">
             <h3 style="color: #fff; font-weight: 700; padding-left: 2%;">Reviews</h3>
@@ -24,7 +24,7 @@
             </div>
             <div class="inner-form" style="width: 100%;">
                 <label for="reviewtext">Text </label>
-                <textarea name="review_text"  rows="5" cols="40" id="reviewtext" value="review_text" style="height: 25px;overflow: scroll;"></textarea>
+                <textarea name="review_text"  rows="5" cols="40" id="reviewtext" value="review_text"></textarea>
             </div>
             <div class="inner-formBtn">
                 <input type="submit" name="submit" value="Submit" />

@@ -5,8 +5,8 @@
                 if(isset($review))
                     echo '<div style="width:50%;">';
                 echo loadTemplate('../templates/orderItem.html.php',$item);
+                echo '</div>';
                 if(isset($review)){
-                    echo '</div>';
                     echo '<div style="width:50%;">';
                     echo loadTemplate('../templates/formReview.html.php',$item);
                     
