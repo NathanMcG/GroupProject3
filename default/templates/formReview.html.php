@@ -10,7 +10,7 @@
 ?>
 
 
-  <div class="reviews" style="padding: 0; margin-left: 30px;">
+  <div class="reviews" style="padding: 0; margin-left: 30px;width: 100%;">
     <div class="inner-reviews">
             <form action="" method="POST" style="width: 100%;">
             <h3 style="color: #fff; font-weight: 700; padding-left: 2%;">Review</h3>
