@@ -8,8 +8,6 @@
     $usersTable = new DatabaseTable('users',null);
   }
 
-  
-
 //LOADING CONTENT
 if(isset($_POST['user'])){
     //If form subbmitted load with those details

@@ -10,10 +10,10 @@
 
     $fileExtensions = ['jpeg','jpg','png']; // Get all the file extensions
 
-    $fileName = $_FILES['productImage']['name'];
-    $fileSize = $_FILES['productImage']['size'];
-    $fileTmpName  = $_FILES['productImage']['tmp_name'];
-    $fileType = $_FILES['productImage']['type'];
+    $fileName = $_FILES['image']['name'];
+    $fileSize = $_FILES['image']['size'];
+    $fileTmpName  = $_FILES['image']['tmp_name'];
+    $fileType = $_FILES['image']['type'];
     $fileExtension_explode = explode('.',$fileName);
     $fileExtension = strtolower(end($fileExtension_explode));
 
@@ -32,14 +32,14 @@
         if (empty($errors)) {
             $didUpload = move_uploaded_file($fileTmpName, $uploadPath);
 
-            if ($didUpload) {
+            /*if ($didUpload) {
                 echo "The file " . basename($fileName) . " has been uploaded";
             } else {
                 echo "An error occurred somewhere. Try again or contact the admin";
-            }
+            }*/
         } else {
             foreach ($errors as $error) {
-                echo $error . "These are the errors" . "\n";
+                /*echo $error . "These are the errors" . "\n";*/
             }
         }
     }

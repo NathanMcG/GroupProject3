@@ -4,6 +4,11 @@
 
     $title = 'Your Orders';
 
+    if(isset($_POST['review'])){
+        $reviewsTable = new DatabaseTable('reviews','review_id');
+        $reviewsTable->save($_POST['review']);
+    }
+
     $ordersTable = new DatabaseTable('orders','order_id');
     $order_itemTable = new DatabaseTable('order_item',null);
     $productsTable = new DatabaseTable('products',null);
@@ -15,7 +20,8 @@
         foreach($orderItems as $orderItem)
         {
             $product = $productsTable->find('product_id',$orderItem['product_id'])[0];
-            $listItem = array('product_id' => $orderItem['product_id'],
+            $listItem = array('order_id' => $orderItem['order_id'],
+                'product_id' => $orderItem['product_id'],
                 'brand' => $product['product_brand'],
                 'product_name' => $product['product_name'],
                 'product_price' => $product['product_price'],

@@ -4,7 +4,7 @@
         
     </div>
     <div class="user-row">
-        <div class="user-col"><section class="user-box"><i class="fas fa-box-open"></i> <a href="#" class="user-options">Your Orders</a> </section> </div>
+        <div class="user-col"><section class="user-box"><i class="fas fa-box-open"></i> <a href="?page=orders" class="user-options">Your Orders</a> </section> </div>
         <div class="user-col"><section class="user-box"><i class="fas fa-shopping-basket"></i> <a href="?page=checkout" class="user-options">Checkout</a> </section> </div>
     </div> 
 </div>

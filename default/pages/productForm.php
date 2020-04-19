@@ -34,6 +34,15 @@
         if(is_numeric($_POST['product']['product_alcohol_content']) && is_numeric($_POST['product']['product_discount']) && is_numeric($_POST['product']['product_price'])){
             $productsTable->save($_POST['product']);
             $variables['message'] = 'Submission Successfull';
+            if(isset($_FILES['image'])){
+                if(isset($_POST['product']['product_id'])){
+                    uploadImage('products',$_POST['product']['product_id']);
+                }
+                else{
+                    $products = $productsTable->findAll();
+                    uploadImage('products',$products[count($products)-1]['product_id']);
+                }
+            }
         }
         else{
             $variables['message'] = 'Validation Error';

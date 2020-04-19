@@ -1,4 +1,4 @@
-<div class="lastOrder-form">
+<div class="lastOrder-form" style="padding-top: 20px;">
 
     <?php
         if(isset($message)){
@@ -6,10 +6,10 @@
         }
     ?>
 
-    <form action="" method="POST">
+    <form action="" method="POST" enctype="multipart/form-data">
 
-        <?php if(isset($product_id)){?>
-            <input type="hidden" name="product[product_id]" value="<?=$product_id?>" />
+        <?php if(isset($advert_id)){ ?>
+            <input type="hidden" name="advert[advert_id]" value="<?=$advert_id?>" />
         <?php } ?>
 
         <div class="inner-form">
@@ -30,6 +30,22 @@
         <div class="inner-form">
             <label for="link">Advert Link: </label>
             <input type="text" name="advert[link]" id="link" required value="<?php if(isset($link)) echo $link;?>" />
+        </div>
+
+        <div class="inner-form">
+            <label for="image">Advert Image: </label>
+                <input type="file" name="image" id="image" style="display:none;" />
+                <label for="image" style="width: 10em;"><?php 
+                if(isset($file_name)){
+                    if(file_exists('images/adverts/' . $file_name))
+                        echo $file_name;
+                    else
+                        echo 'Upload Image';
+                }
+                else{
+                    echo 'Upload Image';
+                } ?>
+            </label>
         </div>
 
         <div class="inner-formBtn">

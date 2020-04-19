@@ -68,9 +68,9 @@
      </div>
 
      <div class="inner-form">
-      <label for="productImage">Image: </label>
-      <input type="file" name="productImage" id="productImage" style="display:none;"/>
-      <label for="productImage" style="width: 10.3em;"><?php 
+      <label for="image">Image: </label>
+      <input type="file" name="image" id="image" style="display:none;"/>
+      <label for="image" style="width: 10.3em;"><?php 
       if(isset($product_id)){
         if(file_exists('images/products/' . $product_id . '.png'))
           echo $product_name . '.png';

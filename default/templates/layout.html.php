@@ -40,7 +40,7 @@
             </ul>
         </header>
         <div id="nav-icon"><i class="fas fa-bars"></i></div>
-        <nav id="nav">
+        <nav id="nav" style="z-index: 1;">
             <ul>
                 <li class="main-nav"><a href="#" class="drop-down" >Alcohol<span><i class="fas fa-angle-down"></i></span></a>
                     <ul class="sub-nav">

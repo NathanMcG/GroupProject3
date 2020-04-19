@@ -133,6 +133,7 @@ nav ul .main-nav a {
     width: 45%;
     text-align: left;
     column-rule: 1px solid #000;
+    z-index: 1;
 }
 
 .sub-nav li {
@@ -313,9 +314,9 @@ main{
 input[type="radio"] {
     margin: 0 30px 0 0;
 }
-.reviews .inner-radioBtn {
+/*.reviews .inner-radioBtn {
     display: inline;
-}
+}*/
 
 /*Searching and Orders*/
 .search-container, 

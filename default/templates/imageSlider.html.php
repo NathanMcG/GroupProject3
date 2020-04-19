@@ -104,7 +104,7 @@ img {vertical-align: middle;}
 </style>
 </head>
 
-<div class="slideshow-container">
+<div class="slideshow-container" style="z-index: 0;">
 
 <?php
     //Load Adverts
@@ -131,7 +131,7 @@ img {vertical-align: middle;}
 
         echo '<div class="mySlides fade"><a href="' . $advert['link'] . '">
             <div class="numbertext">' . ($i+2) . ' / ' . (count($validAdverts)+1) . '</div>
-            <img src="images/adverts/' . $validAdverts[$i]['file_name'] . '" style="width:100%">
+            <img src="images/adverts/' . $validAdverts[$i]['file_name'] . '.png" style="width:100%">
         </a></div>';
 
     }
