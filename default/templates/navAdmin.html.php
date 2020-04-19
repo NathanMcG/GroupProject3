@@ -19,7 +19,7 @@
     </div>
     <div class="user-row" style="width: auto;">
         <div class="user-col"><section class="user-box"><i class="fas fa-wine-bottle"></i> <a href="?page=productForm" class="user-options">Manage Products</a> </section></div>
-        <div class="user-col"><section class="user-box"><i class="fas fa-sitemap"></i> <a href="#" class="user-options" style="word-wrap: none;">Manage Drink Types</a> </section> </div>
+        <div class="user-col"><section class="user-box"><i class="fas fa-sitemap"></i> <a href="?page=typeForm" class="user-options" style="word-wrap: none;">Manage Drink Types</a> </section> </div>
         <div class="user-col"><section class="user-box"><i class="fas fa-box-open"></i> <a href="#" class="user-options">Manage Orders</a> </section> </div>
         <div class="user-col"><section class="user-box"><i class="fas fa-user"></i> <a href="#" class="user-options">Manage Admins</a> </section> </div>
     </div> 
