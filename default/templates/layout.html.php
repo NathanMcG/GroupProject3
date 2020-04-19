@@ -50,10 +50,10 @@
                             $typesTable = new DatabaseTable('types',null);
 
                             foreach($classes as $class){
-                                echo '<li class="sub-head">' . $class['classification_name'] . '</li>';
-                                $types = $typesTable->find('classification_name',$class['classification_name']);
+                                echo '<li class="sub-head"><a href="?page=results&CID=' . $class['classification_id'] . '">' . $class['classification_name'] . '</a></li>';
+                                $types = $typesTable->find('classification_id',$class['classification_id']);
                                 foreach($types as $type){
-                                    echo '<li><a href="#">- ' . $type['type_name'] . '</a></li>';
+                                    echo '<li><a href="?page=results&TID=' . $type['type_id'] . '">- ' . $type['type_name'] . '</a></li>';
                                 }
                             }?>
                     </ul> 
@@ -66,10 +66,10 @@
                             $typesTable = new DatabaseTable('types',null);
 
                             foreach($classes as $class){
-                                echo '<li class="sub-head">' . $class['classification_name'] . '</li>';
-                                $types = $typesTable->find('classification_name',$class['classification_name']);
+                                echo '<li class="sub-head"><a href="?page=results&CID=' . $class['classification_id'] . '">' . $class['classification_name'] . '</a></li>';
+                                $types = $typesTable->find('classification_id',$class['classification_id']);
                                 foreach($types as $type){
-                                    echo '<li><a href="#">- ' . $type['type_name'] . '</a></li>';
+                                    echo '<li><a href="?page=results&TID=' . $type['type_id'] . '">- ' . $type['type_name'] . '</a></li>';
                                 }
                             }?>
                     </ul> 

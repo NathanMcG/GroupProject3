@@ -28,7 +28,11 @@
           $typesTable = new DatabaseTable('types',null);
           $types = $typesTable->findAll();
           foreach($types as $type){?>
-            <option value="<?=$type['type_name']?>" <?php if(isset($type_name)){if($type_name == $type['type_name']) echo 'selected';}?> ><?=$type['classification_name']?>: <?=$type['type_name']?></option>
+            <option value="<?=$type['type_id']?>" <?php if(isset($type_id)){if($type_id == $type['type_id']) echo 'selected';}?> >
+              <?php $classificationTable = new DatabaseTable('classifications',null);
+                $class = $classificationTable->find('classification_id',$type['classification_id'])[0];
+                echo $class['classification_name']; ?>: <?=$type['type_name']?>
+            </option>
           <?php } ?>
         </select> 
      </div>
