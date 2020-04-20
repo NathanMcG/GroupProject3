@@ -11,9 +11,10 @@ img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  width: 1000px;
   position: relative;
   margin: auto;
+  margin-top: 30px;
 }
 
 /* Next & previous buttons */
@@ -121,9 +122,9 @@ img {vertical-align: middle;}
       }
     }
 
-    echo '<div class="mySlides fade"><a href="' . $advert['link'] . '">
+    echo '<div class="mySlides fade"><a href="">
             <div class="numbertext">1 / ' . (count($validAdverts)+1) . '</div>
-            <img src="images/adverts/default.png" style="width:100%">
+            <img src="images/adverts/LastOrdersAd.png" style="width:100%">
         </a></div>';
 
 
