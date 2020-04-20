@@ -247,43 +247,42 @@ main{
 }
 
 /*User Section Page*/
-
-.user-home {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex: 2 0 auto;
-    margin-top: 40px;
-    font-size: 25px;
-}
-
-.user-row {
-    display: flex;
-    flex-flow: row wrap;
-    width: 300px;
-}
-
-.user-col{
+.user-section {
     display: flex;
     flex-direction: column;
-    flex-basis: 100%;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #fff;
+    padding-top: 0.5%;
+}
+.user, .user-admin {
+    padding-top: 2%;
+}
+.user table tr td,
+.user-admin table tr td {
+    width: 250px;
+    color: #fff;
+    padding-left: 20px;
+    padding-bottom: 4%;
+    
 }
 
-.user-box{
-    height: 60px; 
-}
-.user-box, .user-options{
+.user a,
+.user-admin a {
     color: #fff;
 }
-
-.user-box  .fas{
-    padding: 1em 0.5em 1em 2em;
+.user tr.border_right td,
+.user-admin tr.border_right td {
+    border-collapse:collapse;
+    border-right: 1px solid #fff;
+}
+.user tr.border_right td:last-child,
+.user-admin tr.border_right td:last-child {
+    border: none;
 }
 
 
-.user-row:first-child .user-box {
-    border-right: 1px solid #000;
-}
 /* REVIEW SECTION*/
 .reviews {
     width: 52%;
