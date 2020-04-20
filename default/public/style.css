@@ -322,7 +322,7 @@ input[type="radio"] {
     margin: 0 30px 0 0;
 }
 
-/*Searching and Orders*/
+/*SEARCHING, ORDERS AND RESULT PAGE (LISTING ALL PRODUCTS)*/
 .search-container, 
 .user-order-details,
 .list-products {
@@ -491,11 +491,7 @@ button.filter-acc:hover, button.filter-acc.open-current {
     color: #2b2e1e;
 }
 
-/* Home Page*/
-.image-slider {
-}
-
-/* Product Page */
+/* PRODUCT PAGE */
 .alcohol-card{
     display: flex;
     flex-direction: column;
@@ -713,10 +709,11 @@ button.filter-acc:hover, button.filter-acc.open-current {
         column-count: 1;
         column-rule: none;
         width: 100%;
+        text-align: center;
     }
     .sub-nav a{
         width: 100%;
-        margin: 0 auto;
+        
     }
 
     .sub-block .sub-nav {
@@ -843,6 +840,19 @@ and (max-width: 1024px) {
 
 }
 
+@media screen and (max-width: 500px) {
+    .user-home {
+        margin-top: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .user-box  .fas{
+        padding: 0;
+    }
+    .user-row:first-child .user-box {
+        border-right: none;
+    }
+}
 /*@media screen and (min-width : 1536px) {
     #nav > ul > .main-nav > a {
         padding: 5px 11.3em 5px 5px;
@@ -894,6 +904,31 @@ h1{
 } */
 
 
+
+
+/*/ Page wrapper /*/
+/*#mainPageWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+} */
+
+/*/ Main sidebar /*/
+/* #sidebar{
+    border:0.5px solid #f2b662;
+    margin: 0;
+    min-width: 304.5px;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #c93d67;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+} */
+
 /*/ Media query for making the basket disappear /*/
 @media screen and (max-width: 720px)   {
 
@@ -902,7 +937,6 @@ h1{
     }
 }
 
-<<<<<<< HEAD
 /* NOT NEEDED */
 /*/ Media query for making the sidebar disappear /*/
 /*@media screen and (max-width: 600px)   {
@@ -1043,8 +1077,6 @@ and (max-width: 1024px){
   padding: 0 0px;
   
 }
-=======
->>>>>>> parent of a60bcc9... Update style.css
 
 /*/ Toggle class "shown" /*/
 .shown {
