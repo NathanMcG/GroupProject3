@@ -11,7 +11,7 @@
             <td><i class="fas fa-newspaper"></i> <a href="?page=advertForm" class="user-options">Manage Adverts</a></td>
             </tr>
             <tr class="border_right">
-            <td><i class="fas fa-percentage"></i> <a href="#" class="user-options">Manage Offers</a></td>
+            <td><i class="fas fa-percentage"></i> <a href="?page=manageOffers" class="user-options">Manage Offers</a></td>
             <td><i class="fas fa-wine-bottle"></i> <a href="?page=productForm" class="user-options">Manage Products</a></td>
             </tr>
             <tr class="border_right">

@@ -5,22 +5,19 @@
 
         <p>Filter</p>
 
-        <form action="/" method="GET" id="admin_user_form">
+        <form action="/" method="GET" name="admin">
 
             <div class="inner-form">
                 <input type="hidden" name="page" value="manageAdmins">
                 <label>Type:</label>
                 <div class="inner-radioBtn">
                     <label for="admin">Admin</label>
-                    <input type="radio" id="admin_user" name="filter" value="Admins" <?php if(isset($_GET['filter'])){ if($_GET['filter'] == 'Admins'){ echo 'checked'; }} else{ echo 'checked'; }?>>
+                    <input type="radio" id="admin_user" name="filter" value="Admins" onClick="submitForm();" <?php if(isset($_GET['filter'])){ if($_GET['filter'] == 'Admins'){ echo 'checked'; }} else{ echo 'checked'; }?>>
                     <label for="admin_user">User</label>
-                    <input type="radio" id="admin_user" name="filter" value="Users" <?php if(isset($_GET['filter'])){ if($_GET['filter'] == 'Admins'){ echo 'checked'; }}?>/>
+                    <input type="radio" id="admin_user" name="filter" value="Users" onClick="submitForm();" <?php if(isset($_GET['filter'])){ if($_GET['filter'] == 'Users'){ echo 'checked'; }}?>/>
                 </div>
             </div>
 
-            <div class="inner-formBtn">
-                <input type="submit" name="submit" value="Submit" />
-            </div>
 
         </form>
 
@@ -46,7 +43,7 @@
 </div>
 
 <script>
-    document.getElementById("admin_user").onclick = function() {
-        this.form.submit();
+    function submitForm(){
+        document.admin.submit();
     };
 </script>

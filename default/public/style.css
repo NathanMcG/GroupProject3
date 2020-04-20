@@ -689,6 +689,15 @@ button.filter-acc:hover, button.filter-acc.open-current {
 }
 
 
+.div-button{
+    width:50%;border: solid 3px #c93d67;padding:10px;color:#ffff;
+}
+
+.selected-button{
+    background-color:#c93d67;
+}
+
+
 .footer{
     border: 1px solid #f2b662;
     padding: 10px;

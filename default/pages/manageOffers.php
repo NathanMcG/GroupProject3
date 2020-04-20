@@ -1,3 +1,3 @@
 <?php
     $title = 'Offers';
-    $content = '';
+    $content = loadTemplate('../templates/pageManageOffers.html.php',array());
