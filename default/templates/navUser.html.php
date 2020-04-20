@@ -1,13 +1,10 @@
-<div class="user" >
-<h1 style="padding-left:20px; padding-bottom: 5px;"> User: </h1>
-    <table cellspacing="0" style="width: 100%;">
-    <tr class="border_right">
-    <td><a href="?page=userForm&UID=true" class="user-options"><i class="fas fa-user"></i> Update Details</a></td>   
-    <td><a href="?page=orders" class="user-options"><i class="fas fa-box-open"></i> Your Orders</a></td>
-    </tr>
-    <tr class="border_right" >
-    <td></td>
-    <td><a href="?page=checkout" class="user-options"><i class="fas fa-shopping-basket"></i>  Checkout</a></td> 
-    </tr>
-    </table>  
+<div class="user-home">
+    <div class="user-row">
+        <div class="user-col"><section class="user-box"><i class="fas fa-user"></i> <a href="?page=userForm&UID=true" class="user-options">Update Details</a> </section></div>
+        
+    </div>
+    <div class="user-row">
+        <div class="user-col"><section class="user-box"><i class="fas fa-box-open"></i> <a href="?page=orders" class="user-options">Your Orders</a> </section> </div>
+        <div class="user-col"><section class="user-box"><i class="fas fa-shopping-basket"></i> <a href="?page=checkout" class="user-options">Checkout</a> </section> </div>
+    </div> 
 </div>

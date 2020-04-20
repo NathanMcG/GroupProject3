@@ -251,43 +251,30 @@ main{
 .user-section, 
 .ofg-section {
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 2 0 auto;
+    margin-top: 40px;
+    font-size: 25px;
+}
+
+.user-row {
+    display: flex;
+    flex-flow: row wrap;
+    width: 300px;
+}
+
+.user-col{
+    display: flex;
     flex-direction: column;
-    width: 100%;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 0.5%;
+    flex-basis: 100%;
 }
-.user, .user-admin {
-    padding-top: 2%;
+
+.user-box{
+    height: 60px; 
 }
-.user table tr td,
-.user-admin table tr td {
-    width: 250px;
+.user-box, .user-options{
     color: #fff;
-    padding-left: 20px;
-    padding-bottom: 4%;
-    
-}
-
-.user a,
-.user-admin a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.user a:hover,
-.user-admin a:hover {
-    color: rgb(173, 173, 173);
-}
-
-.user tr.border_right td,
-.user-admin tr.border_right td {
-    border-collapse:collapse;
-    border-right: 1px solid #fff;
-}
-.user tr.border_right td:last-child,
-.user-admin tr.border_right td:last-child {
-    border: none;
 }
 
 /*OFFERS, FAVOURITES, GIFTS PAGE*/
@@ -319,7 +306,14 @@ main{
     flex: 1 0 auto;
 }
 
+.user-box  .fas{
+    padding: 1em 0.5em 1em 2em;
+}
 
+
+.user-row:first-child .user-box {
+    border-right: 1px solid #000;
+}
 /* REVIEW SECTION*/
 .reviews {
     width: 52%;
@@ -353,7 +347,7 @@ input[type="radio"] {
     margin: 0 30px 0 0;
 }
 
-/*SEARCHING, ORDERS AND RESULT PAGE (LISTING ALL PRODUCTS)*/
+/*Searching and Orders*/
 .search-container, 
 .user-order-details,
 .list-products {
@@ -522,7 +516,11 @@ button.filter-acc:hover, button.filter-acc.open-current {
     color: #2b2e1e;
 }
 
-/* PRODUCT PAGE */
+/* Home Page*/
+.image-slider {
+}
+
+/* Product Page */
 .alcohol-card{
     display: flex;
     flex-direction: column;
@@ -717,7 +715,7 @@ button.filter-acc:hover, button.filter-acc.open-current {
         width: 60vw;
     }
     #nav {
-        display: block;
+        display: none;
     }
     #nav > ul {
         width: auto;
@@ -740,11 +738,10 @@ button.filter-acc:hover, button.filter-acc.open-current {
         column-count: 1;
         column-rule: none;
         width: 100%;
-        text-align: center;
     }
     .sub-nav a{
         width: 100%;
-        
+        margin: 0 auto;
     }
 
     .sub-block .sub-nav {
@@ -752,6 +749,16 @@ button.filter-acc:hover, button.filter-acc.open-current {
     }
     .sub-nav li {
         display: none;
+    }
+    #nav-icon {
+        display: block;
+        height: 35px;
+        background-color: rgba(125, 94, 103, 0.5);
+        color: #fff;
+        cursor: pointer;
+        text-align: right;
+        margin-right: 5px;
+        font-size: 25px;
     }
 }
 
@@ -944,19 +951,19 @@ h1{
     color: #fff;
 } */
 
-
+/*/         Results Page         /*/
 
 
 /*/ Page wrapper /*/
-/*#mainPageWrapper {
+#mainPageWrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-} */
+}
 
 /*/ Main sidebar /*/
-/* #sidebar{
+#sidebar{
     border:0.5px solid #f2b662;
     margin: 0;
     min-width: 304.5px;
@@ -968,7 +975,7 @@ h1{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-} */
+}
 
 /*/ Media query for making the basket disappear /*/
 @media screen and (max-width: 720px)   {
@@ -978,24 +985,21 @@ h1{
     }
 }
 
-/* NOT NEEDED */
 /*/ Media query for making the sidebar disappear /*/
-/*@media screen and (max-width: 600px)   {
+@media screen and (max-width: 600px)   {
     #sidebar{
     display: none;
-    } */
+    }
 
-/* NOT NEEDED */
 /*/ Media query for making the results display in a centre column /*/
- /* #results {
+  #results {
     margin-left: 7em;
     }
 
-} */
+}
 
-/* NOT NEEDED */
 /*/ The results table /*/
-/* #results {
+#results {
     display: grid;
     grid-row-gap: 0px;
     grid-column-gap: 0px;
@@ -1004,30 +1008,25 @@ h1{
     width: 100%;
     flex: 1;
 
-} */
+}
 
-/* NOT NEEDED */
 /*/ Each element inside the results table /*/
-/* #results > .element {
+#results > .element {
     border: 0.5px solid #f2b662;
         column-width: 13em;
 
-}*/
+}
 
 /*/ Media query for making the results table shrink when the window is minimized. /*/
-
-/* NOT NEEDED */
-/*
 @media screen and (max-width: 780px)   
 and (max-width: 1024px){
     #results {
         grid-template-columns: auto;
     }
-} */
+}
 
-/* NOT NEEDED */
+
 /*/ Filter /*/
-/*
 #filter{
     font-size: 16px;
     text-decoration: underline;
@@ -1040,43 +1039,38 @@ and (max-width: 1024px){
     margin-top: 5.5px;
     margin-bottom: 5.5px;
    
-} */
+}
 
 /*/ Types dropdown bar /*/
-/*
 #types {
     margin-left: -1px;
     margin-top: 0px;
     font-size: 15px;
     
-} */
+}
 
 /*/ Price dropdown bar /*/
-/*
 #price {
     margin-left: -1px;
     margin-top: -1.5px;
     font-size: 15px;
-} */
+}
 
 /*/ Brands dropdown bar /*/
-/*
 #brands {
     margin-left: -1px;
     margin-top: -1.5px;
     font-size: 15px;
-} */
+}
 
 /*/ Volume dropdown bar /*/
-/*
 #volume {
     margin-left: -1px;
     margin-top: -2px;
     font-size: 15px;
-}*/
+}
 
 /*/ sidebarSectionMethod /*/
-/*
 .sidebarSectionMethod {
     font-size: 16px;
     color: white;
@@ -1092,13 +1086,12 @@ and (max-width: 1024px){
     align-items: center;
     justify-content: center;
 
-} */
+}
 
 /*/ Store the label inside the sidebarSectionMethod /*/
-/*
 .sidebarSectionMethod > label {
     width: 100%;
-} */
+}
 
 /*/ Toggle /*/
 .toggle {
