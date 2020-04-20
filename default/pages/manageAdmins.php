@@ -4,7 +4,6 @@
     $usersTable = new DatabaseTable('users','user_id');
     if(isset($_POST['submit'])){
         $user = $usersTable->find('user_id',$_POST['UID'])[0];
-        var_dump($user);
         if($user['admin'] == 1){
             $user['admin'] = 0;
         }
@@ -14,7 +13,6 @@
         for($i=0;$i<13;$i++){
             unset($user[$i]);
         }
-        var_dump($user);
         $usersTable->save($user);
     }
 

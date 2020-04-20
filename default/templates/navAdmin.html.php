@@ -19,7 +19,7 @@
             <td><i class="fas fa-box-open"></i> <a href="#" class="user-options">Manage Orders</a></td>
             </tr>
             <tr class="border_right">
-            <td><i class="fas fa-user"></i> <a href="#" class="user-options">Manage Admins</a></td>
+            <td><i class="fas fa-user"></i> <a href="?page=manageAdmins" class="user-options">Manage Admins</a></td>
             <td></td>
             </tr>
     </table>
