@@ -322,7 +322,7 @@ input[type="radio"] {
     margin: 0 30px 0 0;
 }
 
-/*Searching and Orders*/
+/*SEARCHING, ORDERS AND RESULT PAGE (LISTING ALL PRODUCTS)*/
 .search-container, 
 .user-order-details,
 .list-products {
@@ -491,11 +491,7 @@ button.filter-acc:hover, button.filter-acc.open-current {
     color: #2b2e1e;
 }
 
-/* Home Page*/
-.image-slider {
-}
-
-/* Product Page */
+/* PRODUCT PAGE */
 .alcohol-card{
     display: flex;
     flex-direction: column;
@@ -713,10 +709,11 @@ button.filter-acc:hover, button.filter-acc.open-current {
         column-count: 1;
         column-rule: none;
         width: 100%;
+        text-align: center;
     }
     .sub-nav a{
         width: 100%;
-        margin: 0 auto;
+        
     }
 
     .sub-block .sub-nav {
@@ -843,6 +840,19 @@ and (max-width: 1024px) {
 
 }
 
+@media screen and (max-width: 500px) {
+    .user-home {
+        margin-top: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .user-box  .fas{
+        padding: 0;
+    }
+    .user-row:first-child .user-box {
+        border-right: none;
+    }
+}
 /*@media screen and (min-width : 1536px) {
 
     #nav > ul > .main-nav > a {
@@ -904,6 +914,31 @@ h1{
 } */
 
 
+
+
+/*/ Page wrapper /*/
+/*#mainPageWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+} */
+
+/*/ Main sidebar /*/
+/* #sidebar{
+    border:0.5px solid #f2b662;
+    margin: 0;
+    min-width: 304.5px;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #c93d67;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+} */
+
 /*/ Media query for making the basket disappear /*/
 @media screen and (max-width: 720px)   {
 
@@ -912,6 +947,150 @@ h1{
     }
 }
 
+/* NOT NEEDED */
+/*/ Media query for making the sidebar disappear /*/
+/*@media screen and (max-width: 600px)   {
+    #sidebar{
+    display: none;
+    } */
+
+/* NOT NEEDED */
+/*/ Media query for making the results display in a centre column /*/
+ /* #results {
+    margin-left: 7em;
+    }
+
+} */
+
+/* NOT NEEDED */
+/*/ The results table /*/
+/* #results {
+    display: grid;
+    grid-row-gap: 0px;
+    grid-column-gap: 0px;
+    grid-template-columns: 2.035fr 2.035fr 2.035fr 2.03fr;
+    grid-template-rows: auto;
+    width: 100%;
+    flex: 1;
+
+} */
+
+/* NOT NEEDED */
+/*/ Each element inside the results table /*/
+/* #results > .element {
+    border: 0.5px solid #f2b662;
+        column-width: 13em;
+
+}*/
+
+/*/ Media query for making the results table shrink when the window is minimized. /*/
+
+/* NOT NEEDED */
+/*
+@media screen and (max-width: 780px)   
+and (max-width: 1024px){
+    #results {
+        grid-template-columns: auto;
+    }
+} */
+
+/* NOT NEEDED */
+/*/ Filter /*/
+/*
+#filter{
+    font-size: 16px;
+    text-decoration: underline;
+    color: white;
+    background-color: #c93d67;
+    padding: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 5.5px;
+    margin-bottom: 5.5px;
+   
+} */
+
+/*/ Types dropdown bar /*/
+/*
+#types {
+    margin-left: -1px;
+    margin-top: 0px;
+    font-size: 15px;
+    
+} */
+
+/*/ Price dropdown bar /*/
+/*
+#price {
+    margin-left: -1px;
+    margin-top: -1.5px;
+    font-size: 15px;
+} */
+
+/*/ Brands dropdown bar /*/
+/*
+#brands {
+    margin-left: -1px;
+    margin-top: -1.5px;
+    font-size: 15px;
+} */
+
+/*/ Volume dropdown bar /*/
+/*
+#volume {
+    margin-left: -1px;
+    margin-top: -2px;
+    font-size: 15px;
+}*/
+
+/*/ sidebarSectionMethod /*/
+/*
+.sidebarSectionMethod {
+    font-size: 16px;
+    color: white;
+    background-color: #c93d67;
+    border: 1px solid #f2b662;
+    white-space: nowrap;
+    padding: 10px; 
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+} */
+
+/*/ Store the label inside the sidebarSectionMethod /*/
+/*
+.sidebarSectionMethod > label {
+    width: 100%;
+} */
+
+/*/ Toggle /*/
+.toggle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    border: 1.5px solid #f2b662;
+    padding: 5px;
+}
+
+/*/ Toggle on hover /*/
+.toggle:hover {
+    color: #f2b662;
+}
+
+/*/ Sidebar form /*/
+#sidebar form {
+  width: 101%;
+  padding: 0 0px;
+  
+}
 
 /*/ Toggle class "shown" /*/
 .shown {
