@@ -854,18 +854,15 @@ and (max-width: 1024px) {
     }
 }
 /*@media screen and (min-width : 1536px) {
-
     #nav > ul > .main-nav > a {
         padding: 5px 11.3em 5px 5px;
         font-size: 20px;
     }
-
 } */
 
 
 
 /* #pull-out{
-
     position: fixed;
     z-index: 1;
     right: 0;
@@ -883,13 +880,9 @@ and (max-width: 1024px) {
     margin-right: -300px;
     
 }
-
-
 #pull-out.hidden {
     margin-right: 0px;
 }
-
-
 #pull-out a.nav-toggle {
     position: absolute;
     content:url(../public/images/basket.png);
@@ -901,13 +894,10 @@ and (max-width: 1024px) {
     border-radius: 30px 30px 30px 30px;
     border-style: solid;
     border-color:black;
-
 }
-
 #pull-out .pressed{
     margin-right:0;
 }
-
 h1{
     padding-bottom: 100pt;
     color: #fff;
@@ -959,7 +949,6 @@ h1{
  /* #results {
     margin-left: 7em;
     }
-
 } */
 
 /* NOT NEEDED */
@@ -972,7 +961,6 @@ h1{
     grid-template-rows: auto;
     width: 100%;
     flex: 1;
-
 } */
 
 /* NOT NEEDED */
@@ -980,7 +968,6 @@ h1{
 /* #results > .element {
     border: 0.5px solid #f2b662;
         column-width: 13em;
-
 }*/
 
 /*/ Media query for making the results table shrink when the window is minimized. /*/
@@ -1060,7 +1047,6 @@ and (max-width: 1024px){
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 } */
 
 /*/ Store the label inside the sidebarSectionMethod /*/
