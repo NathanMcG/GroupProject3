@@ -271,7 +271,14 @@ main{
 .user a,
 .user-admin a {
     color: #fff;
+    text-decoration: none;
 }
+
+.user a:hover,
+.user-admin a:hover {
+    color: rgb(173, 173, 173);
+}
+
 .user tr.border_right td,
 .user-admin tr.border_right td {
     border-collapse:collapse;

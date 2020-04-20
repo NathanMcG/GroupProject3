@@ -8,19 +8,19 @@
     <h1 style="padding-left:20px; padding-bottom: 5px;"> Admin: </h1>
     <table cellspacing="0" style="width: 100%;">
             <tr class="border_right">
-            <td style="width: 200px"><i class="fas fa-plus"></i> <a href="?page=productForm&type=add" class="user-options">Add Products</a></td>
-            <td><i class="fas fa-newspaper"></i> <a href="?page=advertForm" class="user-options">Manage Adverts</a></td>
+            <td><a href="?page=productForm&type=add" class="user-options"><i class="fas fa-plus"></i>  Add Products</a></td>
+            <td><a href="?page=advertForm" class="user-options"> <i class="fas fa-newspaper"></i> Manage Adverts</a></td>
             </tr>
             <tr class="border_right">
-            <td><i class="fas fa-percentage"></i> <a href="#" class="user-options">Manage Offers</a></td>
-            <td><i class="fas fa-wine-bottle"></i> <a href="?page=productForm" class="user-options">Manage Products</a></td>
+            <td><a href="#" class="user-options"> <i class="fas fa-percentage"></i> Manage Offers</a></td>
+            <td><a href="?page=productForm" class="user-options"> <i class="fas fa-wine-bottle"></i> Manage Products</a></td>
             </tr>
             <tr class="border_right">
-            <td><i class="fas fa-sitemap"></i> <a href="?page=typeForm" class="user-options" style="word-wrap: none;">Manage Drink Types</a></td>
-            <td><i class="fas fa-box-open"></i> <a href="#" class="user-options">Manage Orders</a></td>
+            <td><a href="?page=typeForm" class="user-options" style="word-wrap: none;"> <i class="fas fa-sitemap"></i> Manage Drink Types</a></td>
+            <td><a href="#" class="user-options"> <i class="fas fa-box-open"></i> Manage Orders</a></td>
             </tr>
             <tr class="border_right">
-            <td><i class="fas fa-user"></i> <a href="#" class="user-options">Manage Admins</a></td>
+            <td><a href="#" class="user-options"><i class="fas fa-user"></i>  Manage Admins</a></td>
             <td></td>
             </tr>
     </table>
