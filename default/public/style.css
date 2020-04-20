@@ -30,7 +30,8 @@ body{
 
 #header .searching {
     align-self: flex-end;
-    padding: 0 65px;
+    padding: 0;
+    margin: auto;
 }
 
 .searchText{
@@ -56,6 +57,7 @@ body{
 
 #header .topNav {
     align-self: flex-end;
+    margin-right: 7px;
 }
 
 .topNav a, .topNav .pipe {
@@ -386,6 +388,8 @@ input[type="radio"] {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .search-results li, 
