@@ -1,9 +1,10 @@
 <?php
     $title = 'Favourites';
-    $content = '
+    $variables = array();
+    $content = loadTemplate('../templates/offerGiftsFav.html.php',$variables);
     
     
-    <html>
+    /*<html>
     <head>
     </head>
     <body>
@@ -16,10 +17,10 @@
 
 
 
-    
+
     </body>
-    </html>
-  ';
+    </html> */
+
 
   
 

@@ -247,7 +247,9 @@ main{
 }
 
 /*User Section Page*/
-.user-section {
+/* ofg-section = offer, favourties, gifts*/
+.user-section, 
+.ofg-section {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -286,6 +288,35 @@ main{
 .user tr.border_right td:last-child,
 .user-admin tr.border_right td:last-child {
     border: none;
+}
+
+/*OFFERS, FAVOURITES, GIFTS PAGE*/
+.top-section {
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 auto;
+    padding: 1% 0;
+}
+
+.large-card {
+    border-right: 1px solid #fff;
+}
+
+.large-card:last-child {
+    border-right:none;
+}
+
+.large-card table tr td {
+    width: 250px;
+}
+
+.large-card li {
+    color: #fff;
+    list-style: none;
+    padding: 5% 0;
+}
+.bottom-section {
+    flex: 1 0 auto;
 }
 
 
@@ -376,7 +407,7 @@ input[type="radio"] {
 .all-products li {
     display: flex;
     flex-direction: column;
-    padding: 0 45px;
+    padding: 0 40px;
     border: 1px solid #f2b662;
 }
 .search-results a img,
