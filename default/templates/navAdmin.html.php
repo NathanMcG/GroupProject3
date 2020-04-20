@@ -1,28 +1,28 @@
-<div class="user-section">
+<div class="user-home">
+<div >
+<h1> User: </h1>
 <?php
     $variables = array();
     echo loadTemplate('../templates/navUser.html.php',$variables);
 ?>
+</div>
 
-    <div class="user-admin" >
-    <h1 style="padding-left:20px; padding-bottom: 5px;"> Admin: </h1>
-    <table cellspacing="0" style="width: 100%;">
-            <tr class="border_right">
-            <td><a href="?page=productForm&type=add" class="user-options"><i class="fas fa-plus"></i>  Add Products</a></td>
-            <td><a href="?page=advertForm" class="user-options"> <i class="fas fa-newspaper"></i> Manage Adverts</a></td>
-            </tr>
-            <tr class="border_right">
-            <td><a href="#" class="user-options"> <i class="fas fa-percentage"></i> Manage Offers</a></td>
-            <td><a href="?page=productForm" class="user-options"> <i class="fas fa-wine-bottle"></i> Manage Products</a></td>
-            </tr>
-            <tr class="border_right">
-            <td><a href="?page=typeForm" class="user-options" style="word-wrap: none;"> <i class="fas fa-sitemap"></i> Manage Drink Types</a></td>
-            <td><a href="#" class="user-options"> <i class="fas fa-box-open"></i> Manage Orders</a></td>
-            </tr>
-            <tr class="border_right">
-            <td><a href="#" class="user-options"><i class="fas fa-user"></i>  Manage Admins</a></td>
-            <td></td>
-            </tr>
-    </table>
+<div>
+<h1> Admin: </h1>
+
+<div class="user-home" >
+    <div class="user-row" >
+        <div class="user-col"><section class="user-box"><i class="fas fa-plus"></i> <a href="?page=productForm&type=add" class="user-options">Add Products</a> </section></div>
+        <div class="user-col"><section class="user-box"><i class="fas fa-newspaper"></i> <a href="?page=advertForm" class="user-options">Manage Adverts</a> </section></div>
+        <div class="user-col"><section class="user-box"><i class="fas fa-percentage"></i> <a href="?page=manageOffers" class="user-options">Manage Offers</a> </section></div>
+        
     </div>
+    <div class="user-row" style="width: auto;">
+        <div class="user-col"><section class="user-box"><i class="fas fa-wine-bottle"></i> <a href="?page=productForm" class="user-options">Manage Products</a> </section></div>
+        <div class="user-col"><section class="user-box"><i class="fas fa-sitemap"></i> <a href="?page=typeForm" class="user-options" style="word-wrap: none;">Manage Drink Types</a> </section> </div>
+        <div class="user-col"><section class="user-box"><i class="fas fa-box-open"></i> <a href="?page=manageOrders" class="user-options">Manage Orders</a> </section> </div>
+        <div class="user-col"><section class="user-box"><i class="fas fa-user"></i> <a href="?page=manageAdmins" class="user-options">Manage Admins</a> </section> </div>
+    </div> 
+</div>
+</div>
 </div>
