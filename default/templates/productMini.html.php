@@ -17,7 +17,7 @@
     else
         echo $product_id;
 
-    ?>.png" alt="product image" class="img-product" max-width="100px" height="100px"></a>
+    ?>.png" alt="product image" class="img-product" width="100px" height="100px"></a>
         <article>
             <label><strong>Name: </strong><a href="<?=$link?>"><?=$product_name?></a></label>
             <label><strong>Price: </strong> <?=$product_price?></label>
