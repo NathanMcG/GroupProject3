@@ -253,7 +253,6 @@ main{
     width: 100%;
     justify-content: flex-start;
     align-items: center;
-    border: 1px solid #fff;
     padding-top: 0.5%;
 }
 .user, .user-admin {
