@@ -246,6 +246,78 @@ main{
       padding: 15px 30px;
 }
 
+/*User Section Page*/
+/* ofg-section = offer, favourties, gifts*/
+.user-section, 
+.ofg-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 0.5%;
+}
+.user, .user-admin {
+    padding-top: 2%;
+}
+.user table tr td,
+.user-admin table tr td {
+    width: 250px;
+    color: #fff;
+    padding-left: 20px;
+    padding-bottom: 4%;
+    
+}
+
+.user a,
+.user-admin a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.user a:hover,
+.user-admin a:hover {
+    color: rgb(173, 173, 173);
+}
+
+.user tr.border_right td,
+.user-admin tr.border_right td {
+    border-collapse:collapse;
+    border-right: 1px solid #fff;
+}
+.user tr.border_right td:last-child,
+.user-admin tr.border_right td:last-child {
+    border: none;
+}
+
+/*OFFERS, FAVOURITES, GIFTS PAGE*/
+.top-section {
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 auto;
+    padding: 1% 0;
+}
+
+.large-card {
+    border-right: 1px solid #fff;
+}
+
+.large-card:last-child {
+    border-right:none;
+}
+
+.large-card table tr td {
+    width: 250px;
+}
+
+.large-card li {
+    color: #fff;
+    list-style: none;
+    padding: 5% 0;
+}
+.bottom-section {
+    flex: 1 0 auto;
+}
 
 
 /* REVIEW SECTION*/
