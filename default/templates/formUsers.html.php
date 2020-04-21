@@ -77,7 +77,8 @@
      </div>
 
      <div class="inner-formBtn">
-     <input type="submit" name="submit" value="Register" />
+     <input type="submit" name="submit" value="Save Updated Details" />
+     <input type="submit" name="submit" value="Register your account" />
      </div>
 
    </form>
