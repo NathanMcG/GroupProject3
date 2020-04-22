@@ -204,12 +204,15 @@ main{
 .login-form > input[type="date"],
 .inner-form > input[type="date"],
 .inner-form > textarea,
-.inner-form > #volume{
+.inner-form > #volume,
+.inner-form > #product_tpe{
     padding: 5px 2px;
     border: 1px solid #f2b662;
     background-color: #fff;
     color: #000;
 }
+
+
 
 #product-vol{
     width: 50px;
