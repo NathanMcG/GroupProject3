@@ -22,7 +22,7 @@
      </div>
 
      <div class="inner-form">
-        <label for="product-tpe">Type: </label>
+        <label for="product-type" id="product-type">Type: </label>
         <select id="product_tpe" name="product[type_name]" >
         <?php
           $typesTable = new DatabaseTable('types',null);

@@ -197,6 +197,7 @@ main{
     margin-right: 10px;
     align-self: center;
 }
+
 .login-form > input[type="text"],
 .inner-form > input[type="text"],
 .login-form > input[type="password"],
@@ -210,6 +211,10 @@ main{
     border: 1px solid #f2b662;
     background-color: #fff;
     color: #000;
+}
+
+.inner-form > #product_tpe{
+    width: 170px;
 }
 
 
@@ -232,10 +237,6 @@ main{
     color: #fff;
 } */
 
-.inner-formBtn {
-    /*display: flex;
-    justify-content: flex-end;*/
-}
 
 .inner-formBtn > input[type="submit"] {
     padding: 5px;
