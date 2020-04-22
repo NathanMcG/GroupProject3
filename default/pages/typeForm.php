@@ -26,7 +26,7 @@
                 $product['type_id'] = -1;
                 $productsTable->save($product);
             }
-            $typesTable->delete($type['type_id']);
+            $typesTable->delete($_GET['TID']);
         }
         header("Location: ?page=typeForm");
     }

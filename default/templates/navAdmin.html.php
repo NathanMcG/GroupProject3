@@ -16,7 +16,7 @@
             </tr>
             <tr class="border_right">
             <td><i class="fas fa-sitemap"></i> <a href="?page=typeForm" class="user-options" style="word-wrap: none;">Manage Drink Types</a></td>
-            <td><i class="fas fa-box-open"></i> <a href="#" class="user-options">Manage Orders</a></td>
+            <td><i class="fas fa-box-open"></i> <a href="?page=manageOffers" class="user-options">Manage Orders</a></td>
             </tr>
             <tr class="border_right">
             <td><i class="fas fa-user"></i> <a href="?page=manageAdmins" class="user-options">Manage Admins</a></td>
