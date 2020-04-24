@@ -26,7 +26,9 @@
                 'product_name' => $product['product_name'],
                 'product_price' => $product['product_price'],
                 'quantity' => $orderItem['quantity'],
-                'gift' => $orderItem['gift']);
+                'gift' => $orderItem['gift'],
+                'order_date' => $order['order_date'],
+                'delivery_date' => $order['delivery_date']);
             $list[] = $listItem;
         }
     }

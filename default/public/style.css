@@ -206,14 +206,18 @@ main{
 .inner-form > input[type="date"],
 .inner-form > textarea,
 .inner-form > #volume,
-.inner-form > #product_tpe{
+.inner-form > #product_tpe,
+.inner-form > #where,
+.inner-form > #is{
     padding: 5px 2px;
     border: 1px solid #f2b662;
     background-color: #fff;
     color: #000;
 }
 
-.inner-form > #product_tpe{
+.inner-form > #product_tpe,
+.inner-form > #where,
+.inner-form > #is{
     width: 170px;
 }
 
