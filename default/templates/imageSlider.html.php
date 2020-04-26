@@ -124,7 +124,7 @@ img {vertical-align: middle;}
 
     echo '<div class="mySlides fade"><a href="">
             <div class="numbertext">1 / ' . (count($validAdverts)+1) . '</div>
-            <img src="images/adverts/LastOrdersAd.png" style="width:100%">
+            <img src="/images/adverts/LastOrdersAd.png" style="width:100%">
         </a></div>';
 
 
@@ -132,7 +132,7 @@ img {vertical-align: middle;}
 
         echo '<div class="mySlides fade"><a href="' . $advert['link'] . '">
             <div class="numbertext">' . ($i+2) . ' / ' . (count($validAdverts)+1) . '</div>
-            <img src="images/adverts/' . $validAdverts[$i]['file_name'] . '.png" style="width:100%">
+            <img src="/images/adverts/' . $validAdverts[$i]['file_name'] . '.png" style="width:100%">
         </a></div>';
 
     }

@@ -9,7 +9,7 @@
     else{
         if(login()){
             echo 'HOME';
-            header('location: ?page=home');
+            header('location: /home');
         }
         else{
             $content = loadTemplate('../templates/login.html.php',$_POST['details']);

@@ -13,7 +13,7 @@
 
         if(isset($_POST['delete'])){
             $productsTable->delete($_GET['PID']);
-            header("Location: ?page=user");
+            header("Location: /user");
         }
         elseif(isset($_GET['PID'])){
             $product = $productsTable->find('product_id',$_GET['PID'])[0];

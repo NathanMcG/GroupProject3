@@ -122,13 +122,13 @@ span.td
 
             <div style="margin-top: 30px;">
                 <h4 style=" color: black;">TOTAL: £<?=$total?></h4>
-                <form action="?page=checkout" method="POST">
+                <form action="/checkout" method="POST">
                     <input type="submit" name="checkout" value="Checkout" style="margin-right: -10.5em; margin-top: -2.3em; float:top; float: right; padding: 9px 2.1em 0.7em 0px; border-radius: 8em 8em 8em 8em;  text-indent: 25%; border-color: black; border-style:solid; background-color:#c93d67; font-size:x-large; color: #ffff;">
                 </form>
             </div>
     </div>
       
-    <button onclick="myFunction()" class="nav-toggle"><img src="images/basket.png" style="max-width: 100%;border-radius: 50%;"></i></section></button>
+    <button onclick="myFunction()" class="nav-toggle"><img src="/images/basket.png" style="max-width: 100%;border-radius: 50%;"></i></section></button>
 
 </div>
 

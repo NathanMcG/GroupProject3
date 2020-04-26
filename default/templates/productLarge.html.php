@@ -2,7 +2,7 @@
 <div class="alchol-prod-section">
     <section class="alcohol-card">
         <div class="alcohol-image">
-            <img src="images/products/<?php
+            <img src="/images/products/<?php
             if(!file_exists('images/products/' . $product_id . '.png'))
                 echo 'bottle';
             else
@@ -52,7 +52,7 @@
                 <li>Or next day delivery</li>
             </div>
             <div class="add-form">
-                <form action="?page=product&PID=<?=$_GET['PID']?>" method="POST">
+                <form action="/product/?PID=<?=$_GET['PID']?>" method="POST">
                     <ul>
                         <li>
                             <label>Quantity</label>

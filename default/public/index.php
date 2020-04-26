@@ -27,12 +27,21 @@
 	require '../loadTemplate.php';
 	require '../classes/DatabaseTable.php';
 
-	if (isset($_GET['page'])) {
+	$page = '../pages/' . ltrim(explode('/?', $_SERVER['REQUEST_URI'])[0], '/') . '.php';
+
+	if(file_exists($page)){
+		require $page;
+	}
+	else{
+		require '../pages/home.php';
+	}
+
+	/*if (isset($_GET['page'])) {
 		require '../pages/' . $_GET['page'] . '.php';
 	}
 	else {
 		require '../pages/home.php';
-	}
+	}*/
 
 
 

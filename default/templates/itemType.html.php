@@ -8,7 +8,7 @@
         </article>
 
         <article style="width: 15%;height: 49px;margin-left: 20px;position: absolute;right: 10px;">
-            <form action="?page=typeForm&TID=<?=$type_id?>" method="POST" style="height: 100%;width: 100%;">
+            <form action="/typeForm/?TID=<?=$type_id?>" method="POST" style="height: 100%;width: 100%;">
 
                 <input type="submit" name="edit" value="Edit" style="width: 100%;height: 40%;margin-top: 3px;margin-bottom: 3px;color: #fff;border: 1px solid #f2b662;background-color: #c93d67;"/>
 

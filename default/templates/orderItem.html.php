@@ -1,6 +1,6 @@
 <li style="width: 100%; align-self: flex-start;" >
     <div style="width:100px;height:100px">
-    <img src="images/products/<?php
+    <img src="/images/products/<?php
     if(!file_exists('images/products/' . $product_id . '.png'))
         echo 'bottle';
     else

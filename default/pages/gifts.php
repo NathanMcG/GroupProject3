@@ -8,7 +8,7 @@
   }
 
   $orderItemsTable = new DatabaseTable('order_item',null);
-  $orderItems = $orderItemsTable->findAll();
+  $orderItems = $orderItemsTable->find('gift',1);
   $productsList = array();
 
   foreach($orderItems as $orderItem){
@@ -28,7 +28,7 @@
   }
 
 
-  $title = 'Favourites';
-  $content = loadTemplate('../templates/offerGiftsFav.html.php',array('products' => $products,'title' => 'Favourites'));
+  $title = 'Gift Ideas';
+  $content = loadTemplate('../templates/offerGiftsFav.html.php',array('products' => $products,'title' => 'Gift Ideas'));
 
 ?>

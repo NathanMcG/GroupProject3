@@ -5,10 +5,9 @@
 
         <p>Filter</p>
 
-        <form action="/" method="GET" name="admin">
+        <form action="/manageAdmins/" method="GET" name="admin">
 
             <div class="inner-form">
-                <input type="hidden" name="page" value="manageAdmins">
                 <label>Type:</label>
                 <div class="inner-radioBtn">
                     <label for="admin">Admin</label>
@@ -27,8 +26,7 @@
 
         <p>Search by User</p>
 
-        <form action="" method="GET">
-            <input type="hidden" name="page" value="manageAdmins">
+        <form action="/manageAdmins/" method="GET">
             <div class="inner-form">
                 <label for="firstname">Email: </label>
                 <input type="text" name="filter" id="email" value="" required />

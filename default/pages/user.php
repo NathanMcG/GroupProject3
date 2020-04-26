@@ -2,10 +2,6 @@
 
     require '../isUser.php';
 
-    if(!isset($_SESSION['id'])){
-        header('Location: ?page=login');
-    }
-
     $userTable = new DatabaseTable('users',null);
     $user = $userTable->find('user_id',$_SESSION['id']);
     $title = $user[0]['user_firstname'] . '\'s area';

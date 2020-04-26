@@ -28,7 +28,7 @@
             }
             $typesTable->delete($_GET['TID']);
         }
-        header("Location: ?page=typeForm");
+        header("Location: /typeForm");
     }
 
     if(isset($_POST['submit'])){

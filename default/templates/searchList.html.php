@@ -1,7 +1,7 @@
 <div class="search-container">
     <ul class="search-results">
         <li>
-            <img src="images/bottle.png" alt="product image" class="img-product" width="100px" height="100px">
+            <img src="/images/bottle.png" alt="product image" class="img-product" width="100px" height="100px">
             <article>
                 <a href="">Alcohol Name</a>
                 <label>£10.00</label>
@@ -12,7 +12,7 @@
             </article>
         </li>
         <li>
-            <img src="images/bottle.png" alt="product image" class="img-product" width="100px" height="100px">
+            <img src="/images/bottle.png" alt="product image" class="img-product" width="100px" height="100px">
             <article>
                 <a href="">Alcohol Name</a>
                 <label>£10.00</label>

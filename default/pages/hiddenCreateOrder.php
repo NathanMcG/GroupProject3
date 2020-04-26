@@ -53,4 +53,4 @@
 
 ?>
 
-<script>location.replace("?page=orders");</script>
+<script>location.replace("/orders");</script>

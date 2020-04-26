@@ -3,7 +3,6 @@
 <?php
         if(isset($_POST['detailsConf'])){
             $order_details = $_POST['order_details'];
-
         }
         else{
             $usersTable = new DatabaseTable('users',null);
@@ -17,12 +16,12 @@
         }
     ?>
 
-    <form action="?page=hiddenCreateOrder" method="POST" id="order">
+    <form action="/hiddenCreateOrder" method="POST" id="order">
         <input type="hidden" name="order[order_address]" value="<?=$order_details['firstname']?> <?=$order_details['surname']?>,<?=$order_details['address1']?>,<?=$order_details['address2']?>,<?=$order_details['postcode']?>" />
         <input type="hidden" name="order[order_email]" value="<?=$order_details['email']?>" />
     </form>
 
-    <form action="?page=checkout" method="POST" style="max-width: 60%;">
+    <form action="/checkout" method="POST" style="max-width: 60%;">
 
         <div class="inner-form">
             <label for="email">Email: </label>

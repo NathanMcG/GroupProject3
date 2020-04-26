@@ -1,43 +1,34 @@
 
 <div class="ofg-section">
-    <div class="top-section">
-        <?php 
-        for($i=0;$i<2;$i++){ ?>
-        <div class="large-card">
-            <table cellspacing="0" style="width: 100%;">
-                <tr class="border_right">
-                <td style="text-align: center; vertical-align: middle;"> <!--REFERENCE: https://stackoverflow.com/a/8603927-->
-                    <a href="#"><img src="images/products/bottle.png" alt="product image"  width="150px" height="200px"></a>
-                </td>   
-                <td>
-                <article>
-                    <li><label><strong>Name: </strong><a href="">Alcohol</a></label></li>
-                    <li><label><strong>Price: </strong> 16.00</label></li>
-                    <li><label><strong>Brand: </strong> AAAAAAA</label></li>
-                    <li><label><strong>Rating:</strong>
-                    <?php ?>
-                    </label></li>
-                </article>
-                </td>
-                </tr>
-            </table>
-        </div>
-        <?php }?>
-    </div>
-    <div class="bottom-section">
-    <div class="list-products"><ul class="all-products">
-        <?php
-            $productsTable = new DatabaseTable('products',null);
-            $products = $productsTable->findAll();
-            array_reverse($products);
-            for($i=0;$i<6;$i++){
-                if(isset($products[$i])){
-                    $products[$i]['link'] = 'product';
-                    echo loadTemplate('../templates/productMini.html.php',$products[$i]);
-                }
-            }
-        ?>
-    </ul></div>
-    </div>   
+
+    <h1 style="margin:auto;margin-bottom:20px;margin-top:30px;color:#f2b662;"><?=$title?></h1>
+
+    <?php $i = 1;
+    foreach($products as $product){
+        $product['link'] = 'product';
+        if($i % 7 == 1){ ?>
+            <div class="top-section">
+                <?=loadTemplate('../templates/productMedium.html.php',$product)?>
+        <?php }
+        if($i % 7 == 2){ ?>
+                <?=loadTemplate('../templates/productMedium.html.php',$product)?>
+            </div>
+        <?php }
+        if($i % 7 == 3){ ?>
+            <div class="bottom-section" style="width:100%;">
+                <div class="list-products"><ul class="all-products">
+                    <?=loadTemplate('../templates/productMini.html.php',$product)?>
+        <?php }
+        if($i % 7 >= 4 && $i % 7 <= 6){
+            echo loadTemplate('../templates/productMini.html.php',$product);
+        }
+        if($i % 7 == 0){ ?>
+                    <?=loadTemplate('../templates/productMini.html.php',$product)?>
+                </div></ul>
+            </div>
+        <?php }
+        $i++;
+    }?>
+     
 
 </div>

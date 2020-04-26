@@ -1,6 +1,6 @@
 <?php
     if(!isset($_SESSION['id'])){
-        header("Location: ?page=login");
+        header("Location: /login");
     }
     else{
         $usersTable = new DatabaseTable('users',null);
