@@ -52,7 +52,7 @@
                                 echo '<li class="sub-head"><a href="/results/?CID=' . $class['classification_id'] . '">' . $class['classification_name'] . '</a></li>';
                                 $types = $typesTable->find('classification_id',$class['classification_id']);
                                 foreach($types as $type){
-                                    echo '<li><a href="/results&TID=' . $type['type_id'] . '">- ' . $type['type_name'] . '</a></li>';
+                                    echo '<li><a href="/results/?TID=' . $type['type_id'] . '">- ' . $type['type_name'] . '</a></li>';
                                 }
                             }?>
                     </ul> 

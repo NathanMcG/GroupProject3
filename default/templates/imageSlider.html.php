@@ -117,7 +117,7 @@ img {vertical-align: middle;}
     foreach($adverts as $advert){
       $currDate = new DateTime();
       $currDate = $currDate->format('Y-m-d');
-      if($advert['start_date']<$currDate && $currDate<$advert['end_date']){
+      if($advert['start_date']<=$currDate && $currDate<=$advert['end_date']){
         $validAdverts[] = $advert;
       }
     }
