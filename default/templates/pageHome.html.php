@@ -13,7 +13,7 @@
             $productsTable = new DatabaseTable('products',null);
             $products = $productsTable->findAll();
             array_reverse($products);
-            for($i=0;$i<6;$i++){
+            for($i=0;$i<5;$i++){
                 if(isset($products[$i])){
                     $products[$i]['link'] = 'product';
                     echo loadTemplate('../templates/productMini.html.php',$products[$i]);
