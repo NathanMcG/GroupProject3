@@ -23,7 +23,7 @@
 
      <div class="inner-form">
         <label for="product-type" id="product-type">Type: </label>
-        <select id="product_tpe" name="product[type_name]" >
+        <select id="product_tpe" name="product[type_id]" >
         <?php
           $typesTable = new DatabaseTable('types',null);
           $types = $typesTable->findAll();

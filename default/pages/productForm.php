@@ -1,7 +1,7 @@
 <?php
 
     require '../isAdmin.php';
-    //require '../fileUpload.php';
+    require '../fileUpload.php';
     $productsTable = new DatabaseTable('products','product_id');
 
     if(isset($_GET['type'])){
