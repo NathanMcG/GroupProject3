@@ -66,7 +66,7 @@ class DatabaseTable {
 		catch (Exception $e) {
 			$this->update($record);
 		}
-	}
+	 }
 
 	public function update($record) {
 
@@ -82,8 +82,8 @@ class DatabaseTable {
 
 	         $record['primaryKey'] = $record[$this->primaryKey];
 
-	         $stmt = $this->pdo->prepare($query);
-
+			 $stmt = $this->pdo->prepare($query);
+			 
 	         $stmt->execute($record);
 	}
 

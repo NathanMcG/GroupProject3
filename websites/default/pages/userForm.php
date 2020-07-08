@@ -1,12 +1,10 @@
 <?php
-  if(isset($_GET['UID'])){
+  if (isset($_GET['UID'])) {
     $title = 'Update Details';
-    $usersTable = new DatabaseTable('users','user_id');
-  }
-  else{
+  } else{
     $title = 'Register';
-    $usersTable = new DatabaseTable('users',null);
   }
+  $usersTable = new DatabaseTable('users','user_id');
 
 //LOADING CONTENT
 if(isset($_POST['user'])){
