@@ -8,6 +8,7 @@
     ?>.png" alt="product image" class="img-product" style="max-width:100px;max-height:100px;">
     </div>
 
+<?php $order_id = $_POST['order_id'] ?? ''; ?>
     <h2 style="width: 2%;margin:5px;"><?=$order_id?></h2>
 
     <h2 style="width: 40%;margin:5px;"><?php if(isset($brand)){echo $brand . ' ' . $product_name;}else echo $order_email;?></h2>
